@@ -100,13 +100,19 @@ function renderList(filterRegion, searchQuery = '') {
 
     // Filter our records based on BOTH active region selection AND search term
     const filtered = allPlaces.filter(place => {
-        // Match region first
+        // 1. Match region button filter first
         const matchesRegion = (filterRegion === 'ALL' || place.region === filterRegion);
         
-        // Match text query second (checks title or note)
+        // 2. Check if the user is typing search terms related to "favourites"
+        const isSearchingFavourite = place.isFavourite && 
+            ["favourites", "favorites", "favs", "kevin"].some(keyword => keyword.includes(cleanQuery));
+
+        // 3. Match text query (checks title, note, region name, or favorite keywords)
         const matchesSearch = !cleanQuery || 
             place.title.toLowerCase().includes(cleanQuery) || 
-            place.note.toLowerCase().includes(cleanQuery);
+            place.note.toLowerCase().includes(cleanQuery) ||
+            place.region.toLowerCase().includes(cleanQuery) ||
+            isSearchingFavourite; 
 
         return matchesRegion && matchesSearch;
     });
@@ -119,7 +125,7 @@ function renderList(filterRegion, searchQuery = '') {
             
             // Build the favorite tag if the boolean is true
             const favoriteTagMarkup = place.isFavourite 
-                ? `<span class="tag tag-favourite">💛 Kevin's Favourites</span>` 
+                ? `<span class="tag tag-favourite">❤️ Kevin's Favourites</span>` 
                 : '';
             
             htmlContent += `
@@ -129,9 +135,9 @@ function renderList(filterRegion, searchQuery = '') {
                         ${favoriteTagMarkup}
                     </div>
                     <div style="font-weight: bold; font-size: 1.1em; display: flex; align-items: center;">
-                        <span>📍 ${place.title}</span>
+                        <span>${place.title}</span>
                     </div>
-                    <div class="note-text" style="margin-top: 5px;">📝 ${place.note || 'No notes left.'}</div>
+                    <div class="note-text" style="margin-top: 5px;">📑 ${place.note || '-'}</div>
                 </div>
             `;
         });
