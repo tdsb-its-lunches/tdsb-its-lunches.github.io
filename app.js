@@ -1,7 +1,7 @@
 // global array to store all parsed data
 let allPlaces = [];
 
-// on initial page load, fetch data from csv file
+// on initial page load, fetch data from csv file, then run processCSV() on the data
 document.addEventListener('DOMContentLoaded', () => {
     fetch('TDSB ITS Lunch Spots.csv')
         .then(response => {
@@ -18,25 +18,37 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 });
 
-// main logic to process data
+// main logic to process then display data
 function processCSV(csvText) {
     const rows = csvText.split('\n');
-    allPlaces = []; // reset array if needed
+    allPlaces = []; // reset global array if needed
 
-    // loop through places beginning from row 5
-    for (let i = 5; i < rows.length; i++) {
+    // loop through non-empty rows beginning from row 6
+    for (let i = 6; i < rows.length; i++) {
         const row = rows[i].trim();
         if (row === '') continue; 
 
-        // split row, comma delimited; placeName is in index 0
+        // split rows, comma delimited; placeName is in index 0
         const columns = row.split(',');
         const placeName = columns[0] ? columns[0].trim() : '';
+        console.log(columns)
 
-        // placeDescription starts in index 1 and continues until we encounter an index beginning with `https://`
-        let placeDescription = columns.slice(1).join(',').trim();
-        const httpIndex = placeDescription.indexOf('https://');
-        if (httpIndex !== -1) {
-            placeDescription = placeDescription.substring(0, httpIndex).trim();
+        // find column index that contains `https://` (placeDescription runs from 1 to there, and tags are immediately afterwards)
+        let urlColumnIndex = columns.findIndex(col => col.trim().includes('https://'));
+        console.log("column url: " + urlColumnIndex)
+
+        let placeDescription = '';
+        let isFavourite = false;
+
+        if (urlColumnIndex !== -1) {
+            placeDescription = columns.slice(1, urlColumnIndex).join(',').trim(); // description from 1 until url col
+            const tag = columns[urlColumnIndex + 1] ? columns[urlColumnIndex + 1].trim() : ''; // tags immediately after url col
+            console.log(tag)
+            isFavourite = tag !== '';
+            console.log(isFavourite)
+        }
+        else {
+            placeDescription = columns.slice(1).join(',').trim();
         }
 
         // clean up description
@@ -72,7 +84,8 @@ function processCSV(csvText) {
             allPlaces.push({
                 title: placeName,
                 note: placeDescription,
-                region: region
+                region: region,
+                isFavourite: isFavourite
             });
         }
     }
@@ -81,9 +94,6 @@ function processCSV(csvText) {
     renderList('ALL');
 }
 
-// Keep the DOMContentLoaded and processCSV functions exactly the same as before!
-
-// 1. Modified renderList to accept both region and search term
 function renderList(filterRegion, searchQuery = '') {
     let htmlContent = '';
     const cleanQuery = searchQuery.toLowerCase().trim();
@@ -107,11 +117,21 @@ function renderList(filterRegion, searchQuery = '') {
         filtered.forEach(place => {
             const tagClass = `tag-${place.region.toLowerCase().replace(' ', '-')}`;
             
+            // Build the favorite tag if the boolean is true
+            const favoriteTagMarkup = place.isFavourite 
+                ? `<span class="tag tag-favourite">💛 Kevin's Favourites</span>` 
+                : '';
+            
             htmlContent += `
                 <div class="place-card">
-                    <span class="tag ${tagClass}">${place.region}</span>
-                    <div style="font-weight: bold; font-size: 1.1em;">📍 ${place.title}</div>
-                    <div class="note-text">📝 ${place.note || 'No notes left.'}</div>
+                    <div class="place-card-tags">
+                        <span class="tag ${tagClass}">${place.region}</span>
+                        ${favoriteTagMarkup}
+                    </div>
+                    <div style="font-weight: bold; font-size: 1.1em; display: flex; align-items: center;">
+                        <span>📍 ${place.title}</span>
+                    </div>
+                    <div class="note-text" style="margin-top: 5px;">📝 ${place.note || 'No notes left.'}</div>
                 </div>
             `;
         });
