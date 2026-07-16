@@ -3,6 +3,7 @@ Thanks for checking this page out! This is managed by Kevin Mao. I just wanted a
 
 ## List last fetched on July 16th, 2026.
 The Google Maps list is located here: <b>https://maps.app.goo.gl/nkrdUonVovC1N86S9</b>.
+
 The site is hosted at: <b>https://tdsb-its-lunches.github.io/</b>.
 
 The site is fairly simple, but I split the three regions into three areas:
