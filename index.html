@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TDSB ITS Lunch Spots</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="card">
+        <h2>ITS Lunch Spots</h2>
+        <p>Food spots near 1 Civic/BCI, Woodbine MS, and 140 Borough; some are takeout spots, some are sit-down
+            restaurants, and some may be just for taking some snacks into the office! 😊
+            <br>
+            Managed by Kevin Mao 🙋‍♂️
+        </p>
+
+        <!-- NEW CONTROL PANEL WRAPPER -->
+        <div class="control-panel">
+
+            <!-- Filter buttons on the left -->
+            <div class="filter-buttons">
+                <button class="btn active" onclick="filterPlaces('ALL')">All Regions</button>
+                <button class="btn btn-etobicoke" onclick="filterPlaces('ETOBICOKE')">Etobicoke</button>
+                <button class="btn btn-scarborough" onclick="filterPlaces('SCARBOROUGH')">Scarborough</button>
+                <button class="btn btn-north-york" onclick="filterPlaces('NORTH YORK')">North York</button>
+            </div>
+
+            <!-- Search bar on the right -->
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="🔍 Search name or notes..." oninput="handleSearch()">
+            </div>
+
+        </div>
+
+        <div id="output">Loading CSV data...</div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
