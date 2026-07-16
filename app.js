@@ -90,6 +90,15 @@ function processCSV(csvText) {
         }
     }
 
+    // shuffle list
+    for (let i = allPlaces.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        // Swap elements at i and j
+        const temp = allPlaces[i];
+        allPlaces[i] = allPlaces[j];
+        allPlaces[j] = temp;
+    }
+
     // render global list, intially with ALL filter
     renderList('ALL');
 }
