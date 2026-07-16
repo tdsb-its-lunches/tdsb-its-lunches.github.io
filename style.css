@@ -137,3 +137,21 @@ body {
     text-transform: uppercase;
     margin-bottom: 0;
 }
+
+@media (max-width: 600px) {
+    .control-panel {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 15px;
+    }
+
+    .search-container {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .filter-buttons {
+        justify-content: center;
+        width: 100%;
+    }
+}
