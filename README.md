@@ -1,7 +1,7 @@
 # TDSB ITS Lunch Spots
 Thanks for checking this page out! This is managed by Kevin Mao. I just wanted an easy way to choose lunch at the office, because it can get difficult when there are many people who are potentially interested in coming!
 
-## List last fetched on July 16th, 2026.
+## List last fetched on July 20th, 2026.
 The Google Maps list is located here: <b>https://maps.app.goo.gl/nkrdUonVovC1N86S9</b>.
 
 The site is hosted at: <b>https://tdsb-its-lunches.github.io/</b>.

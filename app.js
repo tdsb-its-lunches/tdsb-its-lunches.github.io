@@ -1,6 +1,15 @@
 // global array to store all parsed data
 let allPlaces = [];
 
+// force browser to start at the top on reload/refresh
+if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+}
+
+window.addEventListener('beforeunload', () => {
+    window.scrollTo(0, 0);
+});
+
 // on initial page load, fetch data from csv file, then run processCSV() on the data
 document.addEventListener('DOMContentLoaded', () => {
     fetch('TDSB ITS Lunch Spots.csv')
@@ -26,26 +35,24 @@ function processCSV(csvText) {
     // loop through non-empty rows beginning from row 6
     for (let i = 6; i < rows.length; i++) {
         const row = rows[i].trim();
-        if (row === '') continue; 
+        if (row === '') continue;
 
         // split rows, comma delimited; placeName is in index 0
         const columns = row.split(',');
         const placeName = columns[0] ? columns[0].trim() : '';
-        console.log(columns)
 
         // find column index that contains `https://` (placeDescription runs from 1 to there, and tags are immediately afterwards)
         let urlColumnIndex = columns.findIndex(col => col.trim().includes('https://'));
-        console.log("column url: " + urlColumnIndex)
 
         let placeDescription = '';
         let isFavourite = false;
+        let urlData = '';
 
         if (urlColumnIndex !== -1) {
+            urlData = columns[urlColumnIndex].trim();
             placeDescription = columns.slice(1, urlColumnIndex).join(',').trim(); // description from 1 until url col
             const tag = columns[urlColumnIndex + 1] ? columns[urlColumnIndex + 1].trim() : ''; // tags immediately after url col
-            console.log(tag)
             isFavourite = tag !== '';
-            console.log(isFavourite)
         }
         else {
             placeDescription = columns.slice(1).join(',').trim();
@@ -84,6 +91,7 @@ function processCSV(csvText) {
             allPlaces.push({
                 title: placeName,
                 note: placeDescription,
+                url: urlData,
                 region: region,
                 isFavourite: isFavourite
             });
@@ -111,17 +119,17 @@ function renderList(filterRegion, searchQuery = '') {
     const filtered = allPlaces.filter(place => {
         // 1. Match region button filter first
         const matchesRegion = (filterRegion === 'ALL' || place.region === filterRegion);
-        
+
         // 2. Check if the user is typing search terms related to "favourites"
-        const isSearchingFavourite = place.isFavourite && 
+        const isSearchingFavourite = place.isFavourite &&
             ["favourites", "favorites", "favs", "kevin"].some(keyword => keyword.includes(cleanQuery));
 
         // 3. Match text query (checks title, note, region name, or favorite keywords)
-        const matchesSearch = !cleanQuery || 
-            place.title.toLowerCase().includes(cleanQuery) || 
+        const matchesSearch = !cleanQuery ||
+            place.title.toLowerCase().includes(cleanQuery) ||
             place.note.toLowerCase().includes(cleanQuery) ||
             place.region.toLowerCase().includes(cleanQuery) ||
-            isSearchingFavourite; 
+            isSearchingFavourite;
 
         return matchesRegion && matchesSearch;
     });
@@ -131,12 +139,18 @@ function renderList(filterRegion, searchQuery = '') {
     } else {
         filtered.forEach(place => {
             const tagClass = `tag-${place.region.toLowerCase().replace(' ', '-')}`;
-            
+
             // Build the favorite tag if the boolean is true
-            const favoriteTagMarkup = place.isFavourite 
-                ? `<span class="tag tag-favourite">❤️ Kevin's Favourites</span>` 
+            const favoriteTagMarkup = place.isFavourite
+                ? `<span class="tag tag-favourite">❤️ Kevin's Favourites</span>`
                 : '';
-            
+
+            const linkMarkup = place.url
+                ? `<a href="${place.url}" target="_blank" rel="noopener noreferrer" style="margin-left: 4px; display: inline-flex; align-items: center;" title="Google Maps">
+        <img src="img/location.png" alt="Location icon" style="width: 20px; height: 20px; object-fit: contain;" />
+       </a>`
+                : '';
+
             htmlContent += `
                 <div class="place-card">
                     <div class="place-card-tags">
@@ -145,8 +159,12 @@ function renderList(filterRegion, searchQuery = '') {
                     </div>
                     <div style="font-weight: bold; font-size: 1.1em; display: flex; align-items: center;">
                         <span>${place.title}</span>
+                        ${linkMarkup}
                     </div>
-                    <div class="note-text" style="margin-top: 5px;">📑 ${place.note || '-'}</div>
+                    <div class="note-text" style="margin-top: 5px; display: flex; align-items: center; gap: 4px;">
+                        <img src="img/note.png" alt="Note icon" style="width: 16px; height: 16px; object-fit: contain;" />
+                        <span>${place.note || '-'}</span>
+                    </div>
                 </div>
             `;
         });
@@ -159,7 +177,7 @@ function renderList(filterRegion, searchQuery = '') {
 function filterPlaces(region) {
     const buttons = document.querySelectorAll('.filter-buttons .btn');
     buttons.forEach(btn => btn.classList.remove('active'));
-    
+
     if (event && event.target) {
         event.target.classList.add('active');
     }
@@ -171,9 +189,9 @@ function filterPlaces(region) {
 // search bar functionality
 function handleSearch() {
     const currentSearch = document.getElementById('searchInput').value;
-    
+
     const activeBtn = document.querySelector('.filter-buttons .btn.active');
-    
+
     let currentRegion = 'ALL';
     if (activeBtn) {
         if (activeBtn.textContent.includes('Etobicoke')) currentRegion = 'ETOBICOKE';
@@ -182,4 +200,22 @@ function handleSearch() {
     }
 
     renderList(currentRegion, currentSearch);
+}
+
+// display button when user scrolls down 200px from top
+window.onscroll = function() {
+    const btn = document.getElementById("backToTopBtn");
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        btn.classList.add("show");
+    } else {
+        btn.classList.remove("show");
+    }
+};
+
+// scroll back to top
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
 }

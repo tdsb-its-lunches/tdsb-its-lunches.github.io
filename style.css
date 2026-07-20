@@ -6,15 +6,61 @@ body {
     padding: 20px;
 }
 
+.title-header {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 6px;
+    font-size: 2em;
+    font-weight: normal;
+}
+
 .tag {
-    font-family: 'Roboto', sans-serif;
     letter-spacing: 0.5px;
+
+    display: inline-block;
+    padding: 4px 8px;
+    font-size: 11px;
+    font-weight: bold;
+    border-radius: 4px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.tag-etobicoke {
+    background-color: #e67e22;
+}
+
+.tag-scarborough {
+    background-color: #9b59b6;
+}
+
+.tag-north-york {
+    background-color: #2ecc71;
+}
+
+.tag-unknown {
+    background-color: #7f8c8d;
+}
+
+.tag-favourite {
+    background-color: #ff4757;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.place-card-tags {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 8px;
 }
 
 .filter-buttons {
-    margin: 15px 0 25px 0;
     display: flex;
+    flex-wrap: wrap;
     gap: 10px;
+    margin: 0;    
 }
 
 .btn {
@@ -42,33 +88,6 @@ body {
     position: relative;
 }
 
-.tag {
-    display: inline-block;
-    padding: 4px 8px;
-    font-size: 11px;
-    font-weight: bold;
-    border-radius: 4px;
-    color: #fff;
-    margin-bottom: 8px;
-    text-transform: uppercase;
-}
-
-.tag-etobicoke {
-    background-color: #e67e22;
-}
-
-.tag-scarborough {
-    background-color: #9b59b6;
-}
-
-.tag-north-york {
-    background-color: #2ecc71;
-}
-
-.tag-unknown {
-    background-color: #7f8c8d;
-}
-
 .note-text {
     white-space: pre-wrap;
     margin: 5px 0 0 0;
@@ -82,13 +101,6 @@ body {
     margin: 20px 0;
 }
 
-.filter-buttons {
-    margin: 0;
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-}
-
 .search-container {
     margin: 0;
     width: 100%; 
@@ -99,43 +111,22 @@ body {
 #searchInput {
     width: 100%;
     padding: 8px 14px;
-    font-family: 'Roboto', sans-serif;
+    padding-left: 32px; 
     font-size: 14px;
     border: 1px solid #ccc;
     border-radius: 6px;
     box-sizing: border-box;
     outline: none;
     transition: border-color 0.2s;
+
+    background-image: url('img/search.png');
+    background-repeat: no-repeat;
+    background-position: 10px center; 
+    background-size: 20px 20px; 
 }
 
 #searchInput:focus {
     border-color: #333;
-}
-
-.tag-favourite {
-    background-color: #ff4757;
-    display: inline-flex;
-    align-items: center;
-    gap: 4px;
-}
-
-
-.place-card-tags {
-    display: flex;
-    gap: 6px;
-    margin-bottom: 8px;
-}
-
-
-.tag {
-    display: inline-block;
-    padding: 4px 8px;
-    font-size: 11px;
-    font-weight: bold;
-    border-radius: 4px;
-    color: #fff;
-    text-transform: uppercase;
-    margin-bottom: 0;
 }
 
 @media (max-width: 800px) {
@@ -154,4 +145,45 @@ body {
         justify-content: center;
         width: 100%;
     }
+}
+
+#backToTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #333;
+    cursor: pointer;
+
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.3s ease, visibility 0.3s ease, background-color 0.2s ease, transform 0.2s ease;
+}
+
+#backToTopBtn.show {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+#backToTopBtn:hover {
+    background-color: #555;
+}
+
+#backToTopBtn img {
+    width: 18px;
+    height: 18px;
+    display: block;
 }
