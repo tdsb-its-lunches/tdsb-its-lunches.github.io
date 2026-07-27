@@ -19,7 +19,7 @@ def fetch_intersections_in_batch(places_needing_address):
 
     intersections = {}
     unresolved_places = list(places_needing_address)
-    radii = [500, 1500, 5000, 10000]  # Progressive radius expansion up to 10km
+    radii = [500, 1500, 3000]  # Progressive radius expansion up to 10km
 
     for radius in radii:
         if not unresolved_places:
