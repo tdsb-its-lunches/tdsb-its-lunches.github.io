@@ -11,7 +11,7 @@ OUTPUT_FILE = 'places.json'
 def fetch_intersections_in_batch(places_needing_address):
     """
     Queries OpenStreetMap Overpass API for ALL coordinates in a single request.
-    Expands search radius iteratively (500m up to 5000m) to ALWAYS find major roads.
+    Searches strictly for major arterial roads (primary, secondary, trunk) up to 10km radius.
     Strips suburbs and returns only clean road names (e.g., 'Yonge St & Dundas St W').
     """
     if not places_needing_address:
@@ -19,13 +19,13 @@ def fetch_intersections_in_batch(places_needing_address):
 
     intersections = {}
     unresolved_places = list(places_needing_address)
-    radii = [500, 1500, 5000, 10000]  # Progressive radius expansion in meters
+    radii = [500, 1500, 5000, 10000]  # Progressive radius expansion up to 10km
 
     for radius in radii:
         if not unresolved_places:
             break
 
-        # Query major arterial roads (primary, secondary, trunk)
+        # Query major arterial roads ONLY (primary, secondary, trunk)
         around_queries = []
         for p in unresolved_places:
             around_queries.append(
@@ -34,7 +34,7 @@ def fetch_intersections_in_batch(places_needing_address):
         
         combined_around = "\n".join(around_queries)
         overpass_ql = f"""
-        [out:json][timeout:25];
+        [out:json][timeout:30];
         (
           {combined_around}
         );
@@ -47,7 +47,7 @@ def fetch_intersections_in_batch(places_needing_address):
 
         try:
             print(f"Searching major roads within {radius}m for {len(unresolved_places)} places...")
-            with urllib.request.urlopen(req, timeout=20) as response:
+            with urllib.request.urlopen(req, timeout=25) as response:
                 result = json.loads(response.read().decode('utf-8'))
                 elements = result.get('elements', [])
 
