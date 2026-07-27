@@ -12,61 +12,75 @@ OUTPUT_FILE = 'places.json'
 
 def fetch_intersections_in_batch(places_needing_address):
     """
-    Queries OpenStreetMap Overpass API for ALL coordinates in a single request.
-    Returns a dictionary mapping (lat, lng) -> "Road A & Road B".
+    Queries OpenStreetMap Overpass API in small chunks to prevent payload size
+    and rate limit errors. Returns a dict mapping (lat, lng) -> "Road A & Road B".
     """
     if not places_needing_address:
         return {}
 
-    # Build multi-location Overpass QL query (300m radius per location)
-    around_queries = []
-    for p in places_needing_address:
-        around_queries.append(f'way(around:500,{p["latitude"]},{p["longitude"]})["highway"~"primary|secondary|tertiary|trunk"]["name"];')
-    
-    combined_around = "\n".join(around_queries)
-    overpass_ql = f"""
-    [out:json][timeout:20];
-    (
-      {combined_around}
-    );
-    out tags center;
-    """
-
-    url = "https://overpass-api.de/api/interpreter"
-    data = urllib.parse.urlencode({'data': overpass_ql}).encode('utf-8')
-    req = urllib.request.Request(url, data=data, headers={'User-Agent': 'FastMapExporterScript/1.0'})
-
     intersections = {}
+    CHUNK_SIZE = 10  # Max locations per Overpass call to prevent timeout/414 errors
 
-    try:
-        print("Batch looking up intersections on OpenStreetMap...")
-        with urllib.request.urlopen(req, timeout=15) as response:
-            result = json.loads(response.read().decode('utf-8'))
-            elements = result.get('elements', [])
+    for i in range(0, len(places_needing_address), CHUNK_SIZE):
+        chunk = places_needing_address[i:i + CHUNK_SIZE]
+        
+        # Build multi-location Overpass QL query (500m radius per location)
+        around_queries = [
+            f'way(around:500,{p["latitude"]},{p["longitude"]})["highway"~"primary|secondary|tertiary|trunk"]["name"];'
+            for p in chunk
+        ]
+        
+        combined_around = "\n".join(around_queries)
+        overpass_ql = f"""
+        [out:json][timeout:25];
+        (
+          {combined_around}
+        );
+        out tags center;
+        """
 
-            # Match returned ways back to each location by distance
-            for p in places_needing_address:
-                plat, plng = p['latitude'], p['longitude']
-                nearby_roads = []
+        url = "https://overpass-api.de/api/interpreter"
+        data = urllib.parse.urlencode({'data': overpass_ql}).encode('utf-8')
+        
+        # Custom User-Agent to prevent GitHub Actions IP blocks
+        req = urllib.request.Request(
+            url, 
+            data=data, 
+            headers={'User-Agent': 'CustomMapExporterScript/2.0 (github-action-exporter)'}
+        )
 
-                for el in elements:
-                    road_name = el.get('tags', {}).get('name')
-                    center = el.get('center', {})
-                    clat, clng = center.get('lat'), center.get('lon')
+        try:
+            print(f"Looking up batch {i // CHUNK_SIZE + 1} of {(len(places_needing_address) + CHUNK_SIZE - 1) // CHUNK_SIZE} on OpenStreetMap...")
+            with urllib.request.urlopen(req, timeout=25) as response:
+                result = json.loads(response.read().decode('utf-8'))
+                elements = result.get('elements', [])
 
-                    if road_name and clat and clng:
-                        # Distance check (~500m radius threshold)
-                        dist = ((plat - clat)**2 + (plng - clng)**2) ** 0.5
-                        if dist < 0.005 and road_name not in nearby_roads:
-                            nearby_roads.append(road_name)
+                # Match returned ways back to each location by distance
+                for p in chunk:
+                    plat, plng = p['latitude'], p['longitude']
+                    nearby_roads = []
 
-                if len(nearby_roads) >= 2:
-                    intersections[(plat, plng)] = f"{nearby_roads[0]} & {nearby_roads[1]}"
-                elif len(nearby_roads) == 1:
-                    intersections[(plat, plng)] = f"{nearby_roads[0]}"
+                    for el in elements:
+                        road_name = el.get('tags', {}).get('name')
+                        center = el.get('center', {})
+                        clat, clng = center.get('lat'), center.get('lon')
 
-    except Exception as e:
-        print(f"Batch Overpass lookup failed: {e}")
+                        if road_name and clat and clng:
+                            # Distance check (~500m radius threshold)
+                            dist = ((plat - clat)**2 + (plng - clng)**2) ** 0.5
+                            if dist < 0.005 and road_name not in nearby_roads:
+                                nearby_roads.append(road_name)
+
+                    if len(nearby_roads) >= 2:
+                        intersections[(plat, plng)] = f"{nearby_roads[0]} & {nearby_roads[1]}"
+                    elif len(nearby_roads) == 1:
+                        intersections[(plat, plng)] = f"{nearby_roads[0]}"
+
+            # Polite delay between batch requests to avoid rate limits
+            time.sleep(1)
+
+        except Exception as e:
+            print(f"Batch lookup failed for chunk starting at index {i}: {e}")
 
     return intersections
 
@@ -135,7 +149,7 @@ def fetch_and_convert():
     # Collect items that need address/intersection lookup
     needing_lookup = [p for p in raw_places if not p['address'] and p['latitude'] and p['longitude']]
     
-    # Run 1 single batch lookup for all locations
+    # Run batch lookups in small chunks
     intersections = fetch_intersections_in_batch(needing_lookup)
 
     places = []
@@ -144,7 +158,7 @@ def fetch_and_convert():
         lat, lng = p['latitude'], p['longitude']
         name = p['name']
 
-        # Safe variable initialization to fix UnboundLocalError
+        # Safe variable initialization
         intersection = ""
         if (lat, lng) in intersections:
             intersection = intersections[(lat, lng)]
@@ -181,7 +195,7 @@ def fetch_and_convert():
     with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
         json.dump(places, f, indent=2, ensure_ascii=False)
 
-    print(f"Done! Successfully saved {len(places)} locations to {OUTPUT_FILE}")
+    print(f"Done! Successfully resolved {len(intersections)} intersections and saved {len(places)} total locations to {OUTPUT_FILE}")
 
 if __name__ == '__main__':
     fetch_and_convert()
