@@ -18,10 +18,10 @@ def fetch_intersections_in_batch(places_needing_address):
     if not places_needing_address:
         return {}
 
-    # Build multi-location Overpass QL query
+    # Build multi-location Overpass QL query (300m radius per location)
     around_queries = []
     for p in places_needing_address:
-        around_queries.append(f'way(around:2000,{p["latitude"]},{p["longitude"]})["highway"~"primary|secondary|trunk"]["name"];')
+        around_queries.append(f'way(around:300,{p["latitude"]},{p["longitude"]})["highway"~"primary|secondary|tertiary|trunk"]["name"];')
     
     combined_around = "\n".join(around_queries)
     overpass_ql = f"""
@@ -55,9 +55,9 @@ def fetch_intersections_in_batch(places_needing_address):
                     clat, clng = center.get('lat'), center.get('lon')
 
                     if road_name and clat and clng:
-                        # Simple Euclidean distance check (~150m boundary)
+                        # Distance check (~300m radius threshold)
                         dist = ((plat - clat)**2 + (plng - clng)**2) ** 0.5
-                        if dist < 0.002 and road_name not in nearby_roads:
+                        if dist < 0.003 and road_name not in nearby_roads:
                             nearby_roads.append(road_name)
 
                 if len(nearby_roads) >= 2:
@@ -132,7 +132,7 @@ def fetch_and_convert():
                 'longitude': lng
             })
 
-    # Collect items that need address lookup
+    # Collect items that need address/intersection lookup
     needing_lookup = [p for p in raw_places if not p['address'] and p['latitude'] and p['longitude']]
     
     # Run 1 single batch lookup for all locations
@@ -144,6 +144,8 @@ def fetch_and_convert():
         lat, lng = p['latitude'], p['longitude']
         name = p['name']
 
+        # Safe variable initialization to fix UnboundLocalError
+        intersection = ""
         if (lat, lng) in intersections:
             intersection = intersections[(lat, lng)]
 
