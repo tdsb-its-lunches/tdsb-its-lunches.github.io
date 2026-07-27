@@ -15,11 +15,11 @@
     "name": "شاورما حطب و نار Charc Shawarma",
     "layer": "Etobicoke",
     "description": "",
-    "address": "Tomken Road & Burnhamthorpe Road East",
+    "address": "Near Burnhamthorpe Road East",
     "latitude": 43.6139648,
     "longitude": -79.6112419,
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=%D8%B4%D8%A7%D9%88%D8%B1%D9%85%D8%A7%20%D8%AD%D8%B7%D8%A8%20%D9%88%20%D9%86%D8%A7%D8%B1%20Charc%20Shawarma%20Tomken%20Road%20%26%20Burnhamthorpe%20Road%20East",
-    "google_maps_directions_url": "https://www.google.com/maps/dir/?api=1&destination=%D8%B4%D8%A7%D9%88%D8%B1%D9%85%D8%A7%20%D8%AD%D8%B7%D8%A8%20%D9%88%20%D9%86%D8%A7%D8%B1%20Charc%20Shawarma%20Tomken%20Road%20%26%20Burnhamthorpe%20Road%20East"
+    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=%D8%B4%D8%A7%D9%88%D8%B1%D9%85%D8%A7%20%D8%AD%D8%B7%D8%A8%20%D9%88%20%D9%86%D8%A7%D8%B1%20Charc%20Shawarma%20Near%20Burnhamthorpe%20Road%20East",
+    "google_maps_directions_url": "https://www.google.com/maps/dir/?api=1&destination=%D8%B4%D8%A7%D9%88%D8%B1%D9%85%D8%A7%20%D8%AD%D8%B7%D8%A8%20%D9%88%20%D9%86%D8%A7%D8%B1%20Charc%20Shawarma%20Near%20Burnhamthorpe%20Road%20East"
   },
   {
     "id": "",
@@ -257,11 +257,11 @@
     "name": "Rancho Relaxo To Go Kipling",
     "layer": "Etobicoke",
     "description": "",
-    "address": "Jutland Road & Kipling Avenue",
+    "address": "Near Kipling Avenue",
     "latitude": 43.6267699,
     "longitude": -79.5286872,
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Rancho%20Relaxo%20To%20Go%20Kipling%20Jutland%20Road%20%26%20Kipling%20Avenue",
-    "google_maps_directions_url": "https://www.google.com/maps/dir/?api=1&destination=Rancho%20Relaxo%20To%20Go%20Kipling%20Jutland%20Road%20%26%20Kipling%20Avenue"
+    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Rancho%20Relaxo%20To%20Go%20Kipling%20Near%20Kipling%20Avenue",
+    "google_maps_directions_url": "https://www.google.com/maps/dir/?api=1&destination=Rancho%20Relaxo%20To%20Go%20Kipling%20Near%20Kipling%20Avenue"
   },
   {
     "id": "",
@@ -323,22 +323,22 @@
     "name": "Apache Burgers",
     "layer": "Etobicoke",
     "description": "",
-    "address": "Aukland Road & Dundas Street West",
+    "address": "Dundas Street West & Bloor Street West",
     "latitude": 43.6393184,
     "longitude": -79.5377775,
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Apache%20Burgers%20Aukland%20Road%20%26%20Dundas%20Street%20West",
-    "google_maps_directions_url": "https://www.google.com/maps/dir/?api=1&destination=Apache%20Burgers%20Aukland%20Road%20%26%20Dundas%20Street%20West"
+    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Apache%20Burgers%20Dundas%20Street%20West%20%26%20Bloor%20Street%20West",
+    "google_maps_directions_url": "https://www.google.com/maps/dir/?api=1&destination=Apache%20Burgers%20Dundas%20Street%20West%20%26%20Bloor%20Street%20West"
   },
   {
     "id": "",
     "name": "Haroo Korean Restaurant 하루",
     "layer": "Etobicoke",
     "description": "",
-    "address": "Aukland Road & Bloor Street West",
+    "address": "Near Bloor Street West",
     "latitude": 43.6412616,
     "longitude": -79.5392484,
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Haroo%20Korean%20Restaurant%20%ED%95%98%EB%A3%A8%20Aukland%20Road%20%26%20Bloor%20Street%20West",
-    "google_maps_directions_url": "https://www.google.com/maps/dir/?api=1&destination=Haroo%20Korean%20Restaurant%20%ED%95%98%EB%A3%A8%20Aukland%20Road%20%26%20Bloor%20Street%20West"
+    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Haroo%20Korean%20Restaurant%20%ED%95%98%EB%A3%A8%20Near%20Bloor%20Street%20West",
+    "google_maps_directions_url": "https://www.google.com/maps/dir/?api=1&destination=Haroo%20Korean%20Restaurant%20%ED%95%98%EB%A3%A8%20Near%20Bloor%20Street%20West"
   },
   {
     "id": "",
@@ -411,11 +411,11 @@
     "name": "Bravo Bistro",
     "layer": "Etobicoke",
     "description": "",
-    "address": "Orbitor Drive & Matheson Boulevard East",
+    "address": "",
     "latitude": 43.6594946,
     "longitude": -79.6035247,
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Bravo%20Bistro%20Orbitor%20Drive%20%26%20Matheson%20Boulevard%20East",
-    "google_maps_directions_url": "https://www.google.com/maps/dir/?api=1&destination=Bravo%20Bistro%20Orbitor%20Drive%20%26%20Matheson%20Boulevard%20East"
+    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Bravo%20Bistro%4043.6594946%2C-79.6035247",
+    "google_maps_directions_url": "https://www.google.com/maps/dir/?api=1&destination=43.6594946,-79.6035247"
   },
   {
     "id": "",
@@ -433,22 +433,22 @@
     "name": "Banh Mi Ba Le",
     "layer": "Etobicoke",
     "description": "",
-    "address": "Constitution Boulevard & Stanfield Road",
+    "address": "Near Dundas Street East",
     "latitude": 43.6041065,
     "longitude": -79.5908893,
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Banh%20Mi%20Ba%20Le%20Constitution%20Boulevard%20%26%20Stanfield%20Road",
-    "google_maps_directions_url": "https://www.google.com/maps/dir/?api=1&destination=Banh%20Mi%20Ba%20Le%20Constitution%20Boulevard%20%26%20Stanfield%20Road"
+    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Banh%20Mi%20Ba%20Le%20Near%20Dundas%20Street%20East",
+    "google_maps_directions_url": "https://www.google.com/maps/dir/?api=1&destination=Banh%20Mi%20Ba%20Le%20Near%20Dundas%20Street%20East"
   },
   {
     "id": "",
     "name": "Adonis",
     "layer": "Etobicoke",
     "description": "",
-    "address": "Stanfield Road & Dundas Street East",
+    "address": "Near Dundas Street East",
     "latitude": 43.6028558,
     "longitude": -79.5880161,
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Adonis%20Stanfield%20Road%20%26%20Dundas%20Street%20East",
-    "google_maps_directions_url": "https://www.google.com/maps/dir/?api=1&destination=Adonis%20Stanfield%20Road%20%26%20Dundas%20Street%20East"
+    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Adonis%20Near%20Dundas%20Street%20East",
+    "google_maps_directions_url": "https://www.google.com/maps/dir/?api=1&destination=Adonis%20Near%20Dundas%20Street%20East"
   },
   {
     "id": "",
@@ -499,11 +499,11 @@
     "name": "P Jay's Jamaican Take-Out",
     "layer": "Scarborough",
     "description": "",
-    "address": "Kennedy Road & Huntingwood Drive",
+    "address": "Near Kennedy Road",
     "latitude": 43.7963617,
     "longitude": -79.2929548,
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=P%20Jay%27s%20Jamaican%20Take-Out%20Kennedy%20Road%20%26%20Huntingwood%20Drive",
-    "google_maps_directions_url": "https://www.google.com/maps/dir/?api=1&destination=P%20Jay%27s%20Jamaican%20Take-Out%20Kennedy%20Road%20%26%20Huntingwood%20Drive"
+    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=P%20Jay%27s%20Jamaican%20Take-Out%20Near%20Kennedy%20Road",
+    "google_maps_directions_url": "https://www.google.com/maps/dir/?api=1&destination=P%20Jay%27s%20Jamaican%20Take-Out%20Near%20Kennedy%20Road"
   },
   {
     "id": "",
@@ -576,11 +576,11 @@
     "name": "Federick Restaurant",
     "layer": "Scarborough",
     "description": "",
-    "address": "Bellamy Road North & Ellesmere Road",
+    "address": "Near Ellesmere Road",
     "latitude": 43.774958,
     "longitude": -79.2409474,
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Federick%20Restaurant%20Bellamy%20Road%20North%20%26%20Ellesmere%20Road",
-    "google_maps_directions_url": "https://www.google.com/maps/dir/?api=1&destination=Federick%20Restaurant%20Bellamy%20Road%20North%20%26%20Ellesmere%20Road"
+    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Federick%20Restaurant%20Near%20Ellesmere%20Road",
+    "google_maps_directions_url": "https://www.google.com/maps/dir/?api=1&destination=Federick%20Restaurant%20Near%20Ellesmere%20Road"
   },
   {
     "id": "",
@@ -598,22 +598,22 @@
     "name": "The Roti Hut",
     "layer": "Scarborough",
     "description": "",
-    "address": "Invergordon Avenue & McCowan Road",
+    "address": "Near McCowan Road",
     "latitude": 43.7868557,
     "longitude": -79.2586158,
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=The%20Roti%20Hut%20Invergordon%20Avenue%20%26%20McCowan%20Road",
-    "google_maps_directions_url": "https://www.google.com/maps/dir/?api=1&destination=The%20Roti%20Hut%20Invergordon%20Avenue%20%26%20McCowan%20Road"
+    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=The%20Roti%20Hut%20Near%20McCowan%20Road",
+    "google_maps_directions_url": "https://www.google.com/maps/dir/?api=1&destination=The%20Roti%20Hut%20Near%20McCowan%20Road"
   },
   {
     "id": "",
     "name": "Francesca Italian Bakery & Delicatessen",
     "layer": "Scarborough",
     "description": "",
-    "address": "Invergordon Avenue & McCowan Road",
+    "address": "Near McCowan Road",
     "latitude": 43.7877317,
     "longitude": -79.2569177,
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Francesca%20Italian%20Bakery%20%26%20Delicatessen%20Invergordon%20Avenue%20%26%20McCowan%20Road",
-    "google_maps_directions_url": "https://www.google.com/maps/dir/?api=1&destination=Francesca%20Italian%20Bakery%20%26%20Delicatessen%20Invergordon%20Avenue%20%26%20McCowan%20Road"
+    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Francesca%20Italian%20Bakery%20%26%20Delicatessen%20Near%20McCowan%20Road",
+    "google_maps_directions_url": "https://www.google.com/maps/dir/?api=1&destination=Francesca%20Italian%20Bakery%20%26%20Delicatessen%20Near%20McCowan%20Road"
   },
   {
     "id": "",
@@ -664,11 +664,11 @@
     "name": "Thairoomgrand York Mills",
     "layer": "North York",
     "description": "",
-    "address": "York Mills Road & Lesmill Road",
+    "address": "Near York Mills Road",
     "latitude": 43.7544152,
     "longitude": -79.3511697,
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Thairoomgrand%20York%20Mills%20York%20Mills%20Road%20%26%20Lesmill%20Road",
-    "google_maps_directions_url": "https://www.google.com/maps/dir/?api=1&destination=Thairoomgrand%20York%20Mills%20York%20Mills%20Road%20%26%20Lesmill%20Road"
+    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Thairoomgrand%20York%20Mills%20Near%20York%20Mills%20Road",
+    "google_maps_directions_url": "https://www.google.com/maps/dir/?api=1&destination=Thairoomgrand%20York%20Mills%20Near%20York%20Mills%20Road"
   },
   {
     "id": "",
@@ -686,88 +686,88 @@
     "name": "Chiang Mai York Mills",
     "layer": "North York",
     "description": "",
-    "address": "York Mills Road & Lesmill Road",
+    "address": "Near York Mills Road",
     "latitude": 43.7551311,
     "longitude": -79.352003,
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Chiang%20Mai%20York%20Mills%20York%20Mills%20Road%20%26%20Lesmill%20Road",
-    "google_maps_directions_url": "https://www.google.com/maps/dir/?api=1&destination=Chiang%20Mai%20York%20Mills%20York%20Mills%20Road%20%26%20Lesmill%20Road"
+    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Chiang%20Mai%20York%20Mills%20Near%20York%20Mills%20Road",
+    "google_maps_directions_url": "https://www.google.com/maps/dir/?api=1&destination=Chiang%20Mai%20York%20Mills%20Near%20York%20Mills%20Road"
   },
   {
     "id": "",
     "name": "IKEA North York",
     "layer": "North York",
     "description": "",
-    "address": "Esther Shiner Boulevard & Provost Drive",
+    "address": "",
     "latitude": 43.7676,
     "longitude": -79.3693,
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=IKEA%20North%20York%20Esther%20Shiner%20Boulevard%20%26%20Provost%20Drive",
-    "google_maps_directions_url": "https://www.google.com/maps/dir/?api=1&destination=IKEA%20North%20York%20Esther%20Shiner%20Boulevard%20%26%20Provost%20Drive"
+    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=IKEA%20North%20York%4043.7676%2C-79.3693",
+    "google_maps_directions_url": "https://www.google.com/maps/dir/?api=1&destination=43.7676,-79.3693"
   },
   {
     "id": "",
     "name": "Som Tum Jinda - Fairview Mall",
     "layer": "North York",
     "description": "",
-    "address": "Near Don Mills Road",
+    "address": "Sheppard Avenue East & Don Mills Road",
     "latitude": 43.7768056,
     "longitude": -79.3466198,
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Som%20Tum%20Jinda%20-%20Fairview%20Mall%20Near%20Don%20Mills%20Road",
-    "google_maps_directions_url": "https://www.google.com/maps/dir/?api=1&destination=Som%20Tum%20Jinda%20-%20Fairview%20Mall%20Near%20Don%20Mills%20Road"
+    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Som%20Tum%20Jinda%20-%20Fairview%20Mall%20Sheppard%20Avenue%20East%20%26%20Don%20Mills%20Road",
+    "google_maps_directions_url": "https://www.google.com/maps/dir/?api=1&destination=Som%20Tum%20Jinda%20-%20Fairview%20Mall%20Sheppard%20Avenue%20East%20%26%20Don%20Mills%20Road"
   },
   {
     "id": "",
     "name": "Bingz Crispy Burger Fairview Mall",
     "layer": "North York",
     "description": "",
-    "address": "Near Don Mills Road",
+    "address": "Sheppard Avenue East & Don Mills Road",
     "latitude": 43.7767356,
     "longitude": -79.3465467,
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Bingz%20Crispy%20Burger%20Fairview%20Mall%20Near%20Don%20Mills%20Road",
-    "google_maps_directions_url": "https://www.google.com/maps/dir/?api=1&destination=Bingz%20Crispy%20Burger%20Fairview%20Mall%20Near%20Don%20Mills%20Road"
+    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Bingz%20Crispy%20Burger%20Fairview%20Mall%20Sheppard%20Avenue%20East%20%26%20Don%20Mills%20Road",
+    "google_maps_directions_url": "https://www.google.com/maps/dir/?api=1&destination=Bingz%20Crispy%20Burger%20Fairview%20Mall%20Sheppard%20Avenue%20East%20%26%20Don%20Mills%20Road"
   },
   {
     "id": "",
     "name": "Good Catch Cafe (Fairview Mall)",
     "layer": "North York",
     "description": "",
-    "address": "Near Don Mills Road",
+    "address": "Sheppard Avenue East & Don Mills Road",
     "latitude": 43.7768691,
     "longitude": -79.3466092,
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Good%20Catch%20Cafe%20%28Fairview%20Mall%29%20Near%20Don%20Mills%20Road",
-    "google_maps_directions_url": "https://www.google.com/maps/dir/?api=1&destination=Good%20Catch%20Cafe%20%28Fairview%20Mall%29%20Near%20Don%20Mills%20Road"
+    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Good%20Catch%20Cafe%20%28Fairview%20Mall%29%20Sheppard%20Avenue%20East%20%26%20Don%20Mills%20Road",
+    "google_maps_directions_url": "https://www.google.com/maps/dir/?api=1&destination=Good%20Catch%20Cafe%20%28Fairview%20Mall%29%20Sheppard%20Avenue%20East%20%26%20Don%20Mills%20Road"
   },
   {
     "id": "",
     "name": "Molly Tea (CF Fairview Mall)",
     "layer": "North York",
     "description": "",
-    "address": "Near Don Mills Road",
+    "address": "Don Mills Road & Sheppard Avenue East",
     "latitude": 43.7772759,
     "longitude": -79.3464009,
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Molly%20Tea%20%28CF%20Fairview%20Mall%29%20Near%20Don%20Mills%20Road",
-    "google_maps_directions_url": "https://www.google.com/maps/dir/?api=1&destination=Molly%20Tea%20%28CF%20Fairview%20Mall%29%20Near%20Don%20Mills%20Road"
+    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Molly%20Tea%20%28CF%20Fairview%20Mall%29%20Don%20Mills%20Road%20%26%20Sheppard%20Avenue%20East",
+    "google_maps_directions_url": "https://www.google.com/maps/dir/?api=1&destination=Molly%20Tea%20%28CF%20Fairview%20Mall%29%20Don%20Mills%20Road%20%26%20Sheppard%20Avenue%20East"
   },
   {
     "id": "",
     "name": "ON HING BBQ",
     "layer": "North York",
     "description": "",
-    "address": "Near Don Mills Road East",
+    "address": "Don Mills Road & Don Mills Road East",
     "latitude": 43.7857182,
     "longitude": -79.352364,
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=ON%20HING%20BBQ%20Near%20Don%20Mills%20Road%20East",
-    "google_maps_directions_url": "https://www.google.com/maps/dir/?api=1&destination=ON%20HING%20BBQ%20Near%20Don%20Mills%20Road%20East"
+    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=ON%20HING%20BBQ%20Don%20Mills%20Road%20%26%20Don%20Mills%20Road%20East",
+    "google_maps_directions_url": "https://www.google.com/maps/dir/?api=1&destination=ON%20HING%20BBQ%20Don%20Mills%20Road%20%26%20Don%20Mills%20Road%20East"
   },
   {
     "id": "",
     "name": "Allan’s Pastry Shop",
     "layer": "North York",
     "description": "",
-    "address": "Near Don Mills Road East",
+    "address": "Don Mills Road & Don Mills Road East",
     "latitude": 43.7857448,
     "longitude": -79.3523088,
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Allan%E2%80%99s%20Pastry%20Shop%20Near%20Don%20Mills%20Road%20East",
-    "google_maps_directions_url": "https://www.google.com/maps/dir/?api=1&destination=Allan%E2%80%99s%20Pastry%20Shop%20Near%20Don%20Mills%20Road%20East"
+    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Allan%E2%80%99s%20Pastry%20Shop%20Don%20Mills%20Road%20%26%20Don%20Mills%20Road%20East",
+    "google_maps_directions_url": "https://www.google.com/maps/dir/?api=1&destination=Allan%E2%80%99s%20Pastry%20Shop%20Don%20Mills%20Road%20%26%20Don%20Mills%20Road%20East"
   },
   {
     "id": "",
@@ -818,22 +818,22 @@
     "name": "John Anderson's Hamburgers",
     "layer": "North York",
     "description": "",
-    "address": "Ferncrest Gate & Victoria Park Avenue",
+    "address": "Near Victoria Park Avenue",
     "latitude": 43.7886606,
     "longitude": -79.3307811,
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=John%20Anderson%27s%20Hamburgers%20Ferncrest%20Gate%20%26%20Victoria%20Park%20Avenue",
-    "google_maps_directions_url": "https://www.google.com/maps/dir/?api=1&destination=John%20Anderson%27s%20Hamburgers%20Ferncrest%20Gate%20%26%20Victoria%20Park%20Avenue"
+    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=John%20Anderson%27s%20Hamburgers%20Near%20Victoria%20Park%20Avenue",
+    "google_maps_directions_url": "https://www.google.com/maps/dir/?api=1&destination=John%20Anderson%27s%20Hamburgers%20Near%20Victoria%20Park%20Avenue"
   },
   {
     "id": "",
     "name": "P Jay's Jamaican Take-Out",
     "layer": "North York",
     "description": "",
-    "address": "Kennedy Road & Huntingwood Drive",
+    "address": "Near Kennedy Road",
     "latitude": 43.7963617,
     "longitude": -79.2929548,
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=P%20Jay%27s%20Jamaican%20Take-Out%20Kennedy%20Road%20%26%20Huntingwood%20Drive",
-    "google_maps_directions_url": "https://www.google.com/maps/dir/?api=1&destination=P%20Jay%27s%20Jamaican%20Take-Out%20Kennedy%20Road%20%26%20Huntingwood%20Drive"
+    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=P%20Jay%27s%20Jamaican%20Take-Out%20Near%20Kennedy%20Road",
+    "google_maps_directions_url": "https://www.google.com/maps/dir/?api=1&destination=P%20Jay%27s%20Jamaican%20Take-Out%20Near%20Kennedy%20Road"
   },
   {
     "id": "",
