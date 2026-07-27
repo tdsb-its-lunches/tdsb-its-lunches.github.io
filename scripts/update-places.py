@@ -116,6 +116,7 @@ def fetch_and_convert_all():
                 encoded_query = urllib.parse.quote(query)
                 google_maps_url = f"https://www.google.com/maps/search/?api=1&query={encoded_query}"
                 google_maps_dir_url = f"https://www.google.com/maps/dir/?api=1&destination={lat},{lng}"
+
             # --- Style & Icon Info ---
             style_url_el = placemark.find('kml:styleUrl', ns)
             style_url = style_url_el.text.strip() if style_url_el is not None and style_url_el.text else ''
