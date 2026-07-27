@@ -1,0 +1,28 @@
+name: Update Map Data
+
+on:
+  schedule:
+    # Runs automatically every night at 00:00 UTC
+    - cron: '0 0 * * *'
+  # Allows you to manually trigger the script anytime from GitHub's UI
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run Python conversion script
+        run: python3 scripts/update-places.py
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add .
+          git diff --quiet && git diff --staged --quiet || (git commit -m "chore: auto-update map places [skip ci]" && git push)
