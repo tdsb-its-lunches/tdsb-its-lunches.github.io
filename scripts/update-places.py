@@ -19,17 +19,17 @@ def fetch_intersections_in_batch(places_needing_address):
 
     intersections = {}
     unresolved_places = list(places_needing_address)
-    radii = [500, 1500, 5000]  # Progressive radius expansion in meters
+    radii = [500, 1500, 5000, 10000]  # Progressive radius expansion in meters
 
     for radius in radii:
         if not unresolved_places:
             break
 
-        # Query major arterial roads (primary, secondary, tertiary, trunk)
+        # Query major arterial roads (primary, secondary, trunk)
         around_queries = []
         for p in unresolved_places:
             around_queries.append(
-                f'way(around:{radius},{p["latitude"]},{p["longitude"]})["highway"~"primary|secondary|tertiary|trunk"]["name"];'
+                f'way(around:{radius},{p["latitude"]},{p["longitude"]})["highway"~"primary|secondary|trunk"]["name"];'
             )
         
         combined_around = "\n".join(around_queries)
