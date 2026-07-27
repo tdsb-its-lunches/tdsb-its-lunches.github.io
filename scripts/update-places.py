@@ -1,11 +1,41 @@
 import urllib.request
+import urllib.parse
 import xml.etree.ElementTree as ET
 import json
 import os
 import re
+import time
 
 KML_URL = 'https://www.google.com/maps/d/kml?forcekml=1&mid=1O0RXbcC3VxTbI9mXsxr8RoI8eD-aaBM'
-OUTPUT_FILE = 'places.json' # Saved directly to root
+OUTPUT_FILE = 'places.json'
+
+def get_nearest_intersection(lat, lng):
+    """Fetches nearest streets/intersection using OpenStreetMap (Nominatim)."""
+    if not lat or not lng:
+        return ""
+    
+    try:
+        # Nominatim reverse geocode endpoint
+        url = f"https://nominatim.openstreetmap.org/reverse?format=json&lat={lat}&lon={lng}&zoom=17&addressdetails=1"
+        req = urllib.request.Request(url, headers={'User-Agent': 'MyMapExporterScript/1.0'})
+        
+        with urllib.request.urlopen(req) as response:
+            data = json.loads(response.read().decode())
+            address_data = data.get('address', {})
+            
+            road = address_data.get('road') or address_data.get('pedestrian') or address_data.get('street')
+            suburb = address_data.get('neighbourhood') or address_data.get('suburb') or address_data.get('city_district')
+            
+            if road and suburb:
+                return f"Near {road} ({suburb})"
+            elif road:
+                return f"Near {road}"
+            elif suburb:
+                return suburb
+    except Exception as e:
+        print(f"Failed to fetch intersection for {lat},{lng}: {e}")
+        
+    return ""
 
 def fetch_and_convert():
     print("Fetching KML dataset from Google My Maps...")
@@ -26,9 +56,7 @@ def fetch_and_convert():
         layer_name_el = container.find('kml:name', ns)
         layer_name = layer_name_el.text.strip() if layer_name_el is not None and layer_name_el.text else 'Default Layer'
 
-        for placemark in container.findall('.//kml:Placemark', ns):
-            placemark_id = placemark.get('id') or ''
-            
+        for placemark in container.findall('.//kml:Placemark', ns):            
             # --- Name ---
             name_el = placemark.find('kml:name', ns)
             name = name_el.text.strip() if name_el is not None and name_el.text else 'Unnamed Location'
@@ -36,8 +64,6 @@ def fetch_and_convert():
             # --- Description ---
             desc_el = placemark.find('kml:description', ns)
             raw_description = desc_el.text.strip() if desc_el is not None and desc_el.text else ''
-            
-            # Clean HTML to get plain text description
             clean_description = re.sub(r'<[^>]+>', ' ', raw_description)
             clean_description = ' '.join(clean_description.split())
 
@@ -50,8 +76,10 @@ def fetch_and_convert():
                     lng = float(coords[0])
                     lat = float(coords[1])
 
-            # --- Address ---
+            # --- Address / Intersection ---
             address = ''
+            
+            # 1. Try to get standard Google Maps address if present
             for data in placemark.findall('.//kml:Data', ns):
                 if data.get('name') in ['address', 'Address', 'location']:
                     val_el = data.find('kml:value', ns)
@@ -61,6 +89,12 @@ def fetch_and_convert():
             for simple_data in placemark.findall('.//kml:SimpleData', ns):
                 if simple_data.get('name') in ['address', 'Address', 'location'] and simple_data.text:
                     address = simple_data.text.strip()
+
+            # 2. If Google didn't give a full address, lookup nearest street/intersection from coordinates
+            if not address and lat and lng:
+                address = get_nearest_intersection(lat, lng)
+                # Respect OpenStreetMap rate limit (1 request per second)
+                time.sleep(1)
 
             # --- Navigation & Search URLs ---
             google_maps_url = ""
@@ -79,7 +113,6 @@ def fetch_and_convert():
 
             # --- Lean JSON Output ---
             places.append({
-                'id': placemark_id,
                 'name': name,
                 'layer': layer_name,
                 'description': clean_description,
