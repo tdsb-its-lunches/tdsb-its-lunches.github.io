@@ -2,9 +2,8 @@ name: Update Map Data
 
 on:
   schedule:
-    # Runs automatically every night at 00:00 UTC
+    # runs automatically every night at 00:00 UTC
     - cron: '0 0 * * *'
-  # Allows you to manually trigger the script anytime from GitHub's UI
   workflow_dispatch:
 
 permissions:
