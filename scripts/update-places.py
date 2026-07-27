@@ -1,11 +1,13 @@
 import urllib.request
+import urllib.parse
 import xml.etree.ElementTree as ET
 import json
-import os
 import re
+import time
 
-KML_URL = 'https://www.google.com/maps/d/kml?forcekml=1&mid=1O0RXbcC3VxTbI9mXsxr8RoI8eD-aaBM'
-OUTPUT_FILE = 'places.json' # Saved directly to root
+# Cache buster parameter (_t) forces Google to output fresh KML data
+KML_URL = f'https://www.google.com/maps/d/kml?forcekml=1&mid=1O0RXbcC3VxTbI9mXsxr8RoI8eD-aaBM&_t={int(time.time())}'
+OUTPUT_FILE = 'places.json'
 
 def fetch_and_convert():
     print("Fetching KML dataset from Google My Maps...")
@@ -36,10 +38,7 @@ def fetch_and_convert():
             # --- Description ---
             desc_el = placemark.find('kml:description', ns)
             raw_description = desc_el.text.strip() if desc_el is not None and desc_el.text else ''
-            
-            # Clean HTML to get plain text description
-            clean_description = re.sub(r'<[^>]+>', ' ', raw_description)
-            clean_description = ' '.join(clean_description.split())
+            clean_description = ' '.join(re.sub(r'<[^>]+>', ' ', raw_description).split())
 
             # --- Coordinates ---
             coord_el = placemark.find('.//kml:coordinates', ns)
@@ -50,40 +49,22 @@ def fetch_and_convert():
                     lng = float(coords[0])
                     lat = float(coords[1])
 
-            # --- Address ---
-            address = ''
-            for data in placemark.findall('.//kml:Data', ns):
-                if data.get('name') in ['address', 'Address', 'location']:
-                    val_el = data.find('kml:value', ns)
-                    if val_el is not None and val_el.text:
-                        address = val_el.text.strip()
-
-            for simple_data in placemark.findall('.//kml:SimpleData', ns):
-                if simple_data.get('name') in ['address', 'Address', 'location'] and simple_data.text:
-                    address = simple_data.text.strip()
-
             # --- Navigation & Search URLs ---
             google_maps_url = ""
             google_maps_dir_url = ""
 
-            if address:
-                query = f"{name} {address}"
-                encoded_query = urllib.parse.quote(query)
-                google_maps_url = f"https://www.google.com/maps/search/?api=1&query={encoded_query}"
-                google_maps_dir_url = f"https://www.google.com/maps/dir/?api=1&destination={encoded_query}"
-            elif lat and lng:
+            if lat and lng:
                 query = f"{name}@{lat},{lng}"
                 encoded_query = urllib.parse.quote(query)
                 google_maps_url = f"https://www.google.com/maps/search/?api=1&query={encoded_query}"
                 google_maps_dir_url = f"https://www.google.com/maps/dir/?api=1&destination={lat},{lng}"
 
-            # --- Lean JSON Output ---
+            # --- Clean JSON Output ---
             places.append({
                 'id': placemark_id,
                 'name': name,
                 'layer': layer_name,
                 'description': clean_description,
-                'address': address,
                 'latitude': lat,
                 'longitude': lng,
                 'google_maps_url': google_maps_url,
