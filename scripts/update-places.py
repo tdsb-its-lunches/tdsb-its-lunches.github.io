@@ -21,7 +21,7 @@ def fetch_intersections_in_batch(places_needing_address):
     # Build multi-location Overpass QL query
     around_queries = []
     for p in places_needing_address:
-        around_queries.append(f'way(around:150,{p["latitude"]},{p["longitude"]})["highway"~"primary|secondary|tertiary|trunk"]["name"];')
+        around_queries.append(f'way(around:500,{p["latitude"]},{p["longitude"]})["highway"~"primary|secondary|trunk"]["name"];')
     
     combined_around = "\n".join(around_queries)
     overpass_ql = f"""
