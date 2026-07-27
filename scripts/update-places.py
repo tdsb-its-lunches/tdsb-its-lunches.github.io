@@ -100,17 +100,22 @@ def fetch_and_convert_all():
             phone = custom_data.get('phone') or custom_data.get('Phone Number') or custom_data.get('tel') or ''
             website = custom_data.get('website') or custom_data.get('Website') or custom_data.get('url') or ''
 
-            # --- Generate Navigation & Search URLs ---
+            # --- 5. Generate Navigation & Search URLs ---
             google_maps_url = ""
             google_maps_dir_url = ""
-            if lat and lng:
-                google_maps_url = f"https://www.google.com/maps/search/?api=1&query={lat},{lng}"
-                google_maps_dir_url = f"https://www.google.com/maps/dir/?api=1&destination={lat},{lng}"
-            elif address:
-                encoded_addr = urllib.parse.quote(address)
-                google_maps_url = f"https://www.google.com/maps/search/?api=1&query={encoded_addr}"
-                google_maps_dir_url = f"https://www.google.com/maps/dir/?api=1&destination={encoded_addr}"
 
+            # Prefer searching by Name + Address for exact business matching
+            if address:
+                query = f"{name} {address}"
+                encoded_query = urllib.parse.quote(query)
+                google_maps_url = f"https://www.google.com/maps/search/?api=1&query={encoded_query}"
+                google_maps_dir_url = f"https://www.google.com/maps/dir/?api=1&destination={encoded_query}"
+            elif lat and lng:
+                # Fallback to Name + Coordinates
+                query = f"{name}@{lat},{lng}"
+                encoded_query = urllib.parse.quote(query)
+                google_maps_url = f"https://www.google.com/maps/search/?api=1&query={encoded_query}"
+                google_maps_dir_url = f"https://www.google.com/maps/dir/?api=1&destination={lat},{lng}"
             # --- Style & Icon Info ---
             style_url_el = placemark.find('kml:styleUrl', ns)
             style_url = style_url_el.text.strip() if style_url_el is not None and style_url_el.text else ''
