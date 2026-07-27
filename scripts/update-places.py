@@ -28,9 +28,7 @@ def fetch_and_convert():
         layer_name_el = container.find('kml:name', ns)
         layer_name = layer_name_el.text.strip() if layer_name_el is not None and layer_name_el.text else 'Default Layer'
 
-        for placemark in container.findall('.//kml:Placemark', ns):
-            placemark_id = placemark.get('id') or ''
-            
+        for placemark in container.findall('.//kml:Placemark', ns):            
             # --- Name ---
             name_el = placemark.find('kml:name', ns)
             name = name_el.text.strip() if name_el is not None and name_el.text else 'Unnamed Location'
@@ -61,7 +59,6 @@ def fetch_and_convert():
 
             # --- Clean JSON Output ---
             places.append({
-                'id': placemark_id,
                 'name': name,
                 'layer': layer_name,
                 'description': clean_description,

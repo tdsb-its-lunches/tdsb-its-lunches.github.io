@@ -10,104 +10,63 @@ window.addEventListener('beforeunload', () => {
     window.scrollTo(0, 0);
 });
 
-// on initial page load, fetch data from csv file, then run processCSV() on the data
+// on initial page load, fetch data from places.json, then process and render
 document.addEventListener('DOMContentLoaded', () => {
-    fetch('TDSB ITS Lunch Spots.csv')
+    fetch('places.json')
         .then(response => {
             if (!response.ok) {
-                throw new Error('There was an issue finding TDSB ITS Lunch Spots.csv.');
+                throw new Error('There was an issue finding places.json.');
             }
-            return response.text();
+            return response.json();
         })
-        .then(text => {
-            processCSV(text);
+        .then(data => {
+            processPlacesData(data);
         })
         .catch(error => {
             document.getElementById('output').textContent = `Error: ${error.message}`;
         });
 });
 
-// main logic to process then display data
-function processCSV(csvText) {
-    const rows = csvText.split('\n');
-    allPlaces = []; // reset global array if needed
+// main logic to process then display JSON data
+function processPlacesData(data) {
+    allPlaces = data.map(item => {
+        const layerUpper = (item.layer || '').toUpperCase();
+        const descUpper = (item.description || '').toUpperCase();
 
-    // loop through non-empty rows beginning from row 6
-    for (let i = 6; i < rows.length; i++) {
-        const row = rows[i].trim();
-        if (row === '') continue;
-
-        // split rows, comma delimited; placeName is in index 0
-        const columns = row.split(',');
-        const placeName = columns[0] ? columns[0].trim() : '';
-
-        // find column index that contains `https://` (placeDescription runs from 1 to there, and tags are immediately afterwards)
-        let urlColumnIndex = columns.findIndex(col => col.trim().includes('https://'));
-
-        let placeDescription = '';
-        let isFavourite = false;
-        let urlData = '';
-
-        if (urlColumnIndex !== -1) {
-            urlData = columns[urlColumnIndex].trim();
-            placeDescription = columns.slice(1, urlColumnIndex).join(',').trim(); // description from 1 until url col
-            const tag = columns[urlColumnIndex + 1] ? columns[urlColumnIndex + 1].trim() : ''; // tags immediately after url col
-            isFavourite = tag !== '';
-        }
-        else {
-            placeDescription = columns.slice(1).join(',').trim();
+        // Determine Region from Layer Name (or Description)
+        let region = 'UNKNOWN';
+        if (layerUpper.includes('ETOBICOKE') || descUpper.includes('ETOBICOKE')) {
+            region = 'ETOBICOKE';
+        } else if (layerUpper.includes('SCARBOROUGH') || descUpper.includes('SCARBOROUGH')) {
+            region = 'SCARBOROUGH';
+        } else if (layerUpper.includes('NORTH YORK') || descUpper.includes('NORTH YORK')) {
+            region = 'NORTH YORK';
         }
 
-        // clean up description
-        while (placeDescription.startsWith('"') || placeDescription.startsWith(',')) {
-            placeDescription = placeDescription.substring(1).trim();
-        }
-        while (placeDescription.endsWith('"') || placeDescription.endsWith(',')) {
-            placeDescription = placeDescription.substring(0, placeDescription.length - 1).trim();
-        }
+        // Determine if it's a Favourite
+        const isFavourite = layerUpper.includes('FAV') || 
+                            descUpper.includes('FAV') || 
+                            layerUpper.includes('KEVIN') || 
+                            descUpper.includes('KEVIN');
 
-        // determine region by checking end of placeDescription, and remove region from description
-        if (placeName || placeDescription) {
-            let region = 'UNKNOWN';
-            let upperNote = placeDescription.toUpperCase();
+        return {
+            title: item.name || 'Unnamed Location',
+            note: item.description || '',
+            url: item.google_maps_url || '',
+            region: region,
+            isFavourite: isFavourite
+        };
+    });
 
-            if (upperNote.endsWith('(ETOBICOKE)')) {
-                region = 'ETOBICOKE';
-                placeDescription = placeDescription.substring(0, placeDescription.length - 11).trim();
-            } else if (upperNote.endsWith('(SCARBOROUGH)')) {
-                region = 'SCARBOROUGH';
-                placeDescription = placeDescription.substring(0, placeDescription.length - 13).trim();
-            } else if (upperNote.endsWith('(NORTH YORK)')) {
-                region = 'NORTH YORK';
-                placeDescription = placeDescription.substring(0, placeDescription.length - 12).trim();
-            }
-
-            // clean up description again
-            while (placeDescription.endsWith('"') || placeDescription.endsWith(',')) {
-                placeDescription = placeDescription.substring(0, placeDescription.length - 1).trim();
-            }
-
-            // add restaurant object into global list
-            allPlaces.push({
-                title: placeName,
-                note: placeDescription,
-                url: urlData,
-                region: region,
-                isFavourite: isFavourite
-            });
-        }
-    }
-
-    // shuffle list
+    // Shuffle list
     for (let i = allPlaces.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
-        // Swap elements at i and j
         const temp = allPlaces[i];
         allPlaces[i] = allPlaces[j];
         allPlaces[j] = temp;
     }
 
-    // render global list, intially with ALL filter
+    // render global list, initially with ALL filter
     renderList('ALL');
 }
 
