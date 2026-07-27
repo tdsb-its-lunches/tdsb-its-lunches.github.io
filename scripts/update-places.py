@@ -18,14 +18,19 @@ def fetch_intersections_in_batch(places_needing_address):
     if not places_needing_address:
         return {}
 
-    # Build multi-location Overpass QL query (300m radius per location)
+    # 500m search radius gives high accuracy without overloading Overpass
+    SEARCH_RADIUS_METERS = 500
+    # 0.005 degrees is approximately 550 meters
+    DEGREE_THRESHOLD = 0.005
+
+    # Build multi-location Overpass QL query
     around_queries = []
     for p in places_needing_address:
-        around_queries.append(f'way(around:2000,{p["latitude"]},{p["longitude"]})["highway"~"primary|secondary|tertiary|trunk"]["name"];')
+        around_queries.append(f'way(around:{SEARCH_RADIUS_METERS},{p["latitude"]},{p["longitude"]})["highway"~"primary|secondary|tertiary|trunk"]["name"];')
     
     combined_around = "\n".join(around_queries)
     overpass_ql = f"""
-    [out:json][timeout:20];
+    [out:json][timeout:30];
     (
       {combined_around}
     );
@@ -40,7 +45,8 @@ def fetch_intersections_in_batch(places_needing_address):
 
     try:
         print("Batch looking up intersections on OpenStreetMap...")
-        with urllib.request.urlopen(req, timeout=15) as response:
+        # Increased socket timeout to 25s for safety
+        with urllib.request.urlopen(req, timeout=25) as response:
             result = json.loads(response.read().decode('utf-8'))
             elements = result.get('elements', [])
 
@@ -55,9 +61,9 @@ def fetch_intersections_in_batch(places_needing_address):
                     clat, clng = center.get('lat'), center.get('lon')
 
                     if road_name and clat and clng:
-                        # Distance check (~300m radius threshold)
+                        # Aligned distance threshold (~500m boundary check)
                         dist = ((plat - clat)**2 + (plng - clng)**2) ** 0.5
-                        if dist < 0.003 and road_name not in nearby_roads:
+                        if dist < DEGREE_THRESHOLD and road_name not in nearby_roads:
                             nearby_roads.append(road_name)
 
                 if len(nearby_roads) >= 2:
