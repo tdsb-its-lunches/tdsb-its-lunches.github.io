@@ -4,8 +4,10 @@ import xml.etree.ElementTree as ET
 import json
 import os
 import re
+import time
 
-KML_URL = 'https://www.google.com/maps/d/kml?forcekml=1&mid=1O0RXbcC3VxTbI9mXsxr8RoI8eD-aaBM'
+# Cache buster parameter (_t) forces Google to output fresh KML data
+KML_URL = f'https://www.google.com/maps/d/kml?forcekml=1&mid=1O0RXbcC3VxTbI9mXsxr8RoI8eD-aaBM&_t={int(time.time())}'
 OUTPUT_FILE = 'places.json'
 
 def fetch_intersections_in_batch(places_needing_address):
