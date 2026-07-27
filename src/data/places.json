@@ -1,0 +1,2466 @@
+[
+  {
+    "id": "",
+    "name": "Sikgaek Korean Restaurant and Bar",
+    "layer": "Etobicoke",
+    "description": {
+      "raw_html": "",
+      "clean_text": ""
+    },
+    "location": {
+      "address": "",
+      "latitude": 43.5967634,
+      "longitude": -79.5967456,
+      "elevation": 0.0
+    },
+    "contact": {
+      "phone": "",
+      "website": ""
+    },
+    "links": {
+      "google_maps_search": "https://www.google.com/maps/search/?api=1&query=43.5967634,-79.5967456",
+      "google_maps_directions": "https://www.google.com/maps/dir/?api=1&destination=43.5967634,-79.5967456"
+    },
+    "media": {
+      "images": []
+    },
+    "style": {
+      "style_id": "#icon-1899-7CB342-nodesc",
+      "icon_url": null,
+      "color_kml_hex": null
+    },
+    "custom_table_columns": {}
+  },
+  {
+    "id": "",
+    "name": "شاورما حطب و نار Charc Shawarma",
+    "layer": "Etobicoke",
+    "description": {
+      "raw_html": "",
+      "clean_text": ""
+    },
+    "location": {
+      "address": "",
+      "latitude": 43.6139648,
+      "longitude": -79.6112419,
+      "elevation": 0.0
+    },
+    "contact": {
+      "phone": "",
+      "website": ""
+    },
+    "links": {
+      "google_maps_search": "https://www.google.com/maps/search/?api=1&query=43.6139648,-79.6112419",
+      "google_maps_directions": "https://www.google.com/maps/dir/?api=1&destination=43.6139648,-79.6112419"
+    },
+    "media": {
+      "images": []
+    },
+    "style": {
+      "style_id": "#icon-1899-7CB342-nodesc",
+      "icon_url": null,
+      "color_kml_hex": null
+    },
+    "custom_table_columns": {}
+  },
+  {
+    "id": "",
+    "name": "Yaseen’s Shawarma",
+    "layer": "Etobicoke",
+    "description": {
+      "raw_html": "",
+      "clean_text": ""
+    },
+    "location": {
+      "address": "",
+      "latitude": 43.6294982,
+      "longitude": -79.6282119,
+      "elevation": 0.0
+    },
+    "contact": {
+      "phone": "",
+      "website": ""
+    },
+    "links": {
+      "google_maps_search": "https://www.google.com/maps/search/?api=1&query=43.6294982,-79.6282119",
+      "google_maps_directions": "https://www.google.com/maps/dir/?api=1&destination=43.6294982,-79.6282119"
+    },
+    "media": {
+      "images": []
+    },
+    "style": {
+      "style_id": "#icon-1899-7CB342-nodesc",
+      "icon_url": null,
+      "color_kml_hex": null
+    },
+    "custom_table_columns": {}
+  },
+  {
+    "id": "",
+    "name": "Brandt Meat Manufacturing Plant & European Food Market Factory Outlet",
+    "layer": "Etobicoke",
+    "description": {
+      "raw_html": "",
+      "clean_text": ""
+    },
+    "location": {
+      "address": "",
+      "latitude": 43.6168678,
+      "longitude": -79.5692721,
+      "elevation": 0.0
+    },
+    "contact": {
+      "phone": "",
+      "website": ""
+    },
+    "links": {
+      "google_maps_search": "https://www.google.com/maps/search/?api=1&query=43.6168678,-79.5692721",
+      "google_maps_directions": "https://www.google.com/maps/dir/?api=1&destination=43.6168678,-79.5692721"
+    },
+    "media": {
+      "images": []
+    },
+    "style": {
+      "style_id": "#icon-1899-7CB342-nodesc",
+      "icon_url": null,
+      "color_kml_hex": null
+    },
+    "custom_table_columns": {}
+  },
+  {
+    "id": "",
+    "name": "Orda Uyghur Kebab",
+    "layer": "Etobicoke",
+    "description": {
+      "raw_html": "",
+      "clean_text": ""
+    },
+    "location": {
+      "address": "",
+      "latitude": 43.618967,
+      "longitude": -79.572711,
+      "elevation": 0.0
+    },
+    "contact": {
+      "phone": "",
+      "website": ""
+    },
+    "links": {
+      "google_maps_search": "https://www.google.com/maps/search/?api=1&query=43.618967,-79.572711",
+      "google_maps_directions": "https://www.google.com/maps/dir/?api=1&destination=43.618967,-79.572711"
+    },
+    "media": {
+      "images": []
+    },
+    "style": {
+      "style_id": "#icon-1899-7CB342-nodesc",
+      "icon_url": null,
+      "color_kml_hex": null
+    },
+    "custom_table_columns": {}
+  },
+  {
+    "id": "",
+    "name": "Starsky Fine Foods",
+    "layer": "Etobicoke",
+    "description": {
+      "raw_html": "",
+      "clean_text": ""
+    },
+    "location": {
+      "address": "",
+      "latitude": 43.6222335,
+      "longitude": -79.5680487,
+      "elevation": 0.0
+    },
+    "contact": {
+      "phone": "",
+      "website": ""
+    },
+    "links": {
+      "google_maps_search": "https://www.google.com/maps/search/?api=1&query=43.6222335,-79.5680487",
+      "google_maps_directions": "https://www.google.com/maps/dir/?api=1&destination=43.6222335,-79.5680487"
+    },
+    "media": {
+      "images": []
+    },
+    "style": {
+      "style_id": "#icon-1899-7CB342-nodesc",
+      "icon_url": null,
+      "color_kml_hex": null
+    },
+    "custom_table_columns": {}
+  },
+  {
+    "id": "",
+    "name": "Blue Danube Sausage House Ltd.",
+    "layer": "Etobicoke",
+    "description": {
+      "raw_html": "",
+      "clean_text": ""
+    },
+    "location": {
+      "address": "",
+      "latitude": 43.6218182,
+      "longitude": -79.5751447,
+      "elevation": 0.0
+    },
+    "contact": {
+      "phone": "",
+      "website": ""
+    },
+    "links": {
+      "google_maps_search": "https://www.google.com/maps/search/?api=1&query=43.6218182,-79.5751447",
+      "google_maps_directions": "https://www.google.com/maps/dir/?api=1&destination=43.6218182,-79.5751447"
+    },
+    "media": {
+      "images": []
+    },
+    "style": {
+      "style_id": "#icon-1899-7CB342-nodesc",
+      "icon_url": null,
+      "color_kml_hex": null
+    },
+    "custom_table_columns": {}
+  },
+  {
+    "id": "",
+    "name": "Pho Ngoc Yen Restaurant - Mississauga",
+    "layer": "Etobicoke",
+    "description": {
+      "raw_html": "",
+      "clean_text": ""
+    },
+    "location": {
+      "address": "",
+      "latitude": 43.6387365,
+      "longitude": -79.6436581,
+      "elevation": 0.0
+    },
+    "contact": {
+      "phone": "",
+      "website": ""
+    },
+    "links": {
+      "google_maps_search": "https://www.google.com/maps/search/?api=1&query=43.6387365,-79.6436581",
+      "google_maps_directions": "https://www.google.com/maps/dir/?api=1&destination=43.6387365,-79.6436581"
+    },
+    "media": {
+      "images": []
+    },
+    "style": {
+      "style_id": "#icon-1899-7CB342-nodesc",
+      "icon_url": null,
+      "color_kml_hex": null
+    },
+    "custom_table_columns": {}
+  },
+  {
+    "id": "",
+    "name": "Angara Indian and Hakka Cuisine",
+    "layer": "Etobicoke",
+    "description": {
+      "raw_html": "",
+      "clean_text": ""
+    },
+    "location": {
+      "address": "",
+      "latitude": 43.6488904,
+      "longitude": -79.6045535,
+      "elevation": 0.0
+    },
+    "contact": {
+      "phone": "",
+      "website": ""
+    },
+    "links": {
+      "google_maps_search": "https://www.google.com/maps/search/?api=1&query=43.6488904,-79.6045535",
+      "google_maps_directions": "https://www.google.com/maps/dir/?api=1&destination=43.6488904,-79.6045535"
+    },
+    "media": {
+      "images": []
+    },
+    "style": {
+      "style_id": "#icon-1899-7CB342-nodesc",
+      "icon_url": null,
+      "color_kml_hex": null
+    },
+    "custom_table_columns": {}
+  },
+  {
+    "id": "",
+    "name": "Palmyra Mediterranean House",
+    "layer": "Etobicoke",
+    "description": {
+      "raw_html": "",
+      "clean_text": ""
+    },
+    "location": {
+      "address": "",
+      "latitude": 43.6486296,
+      "longitude": -79.6049209,
+      "elevation": 0.0
+    },
+    "contact": {
+      "phone": "",
+      "website": ""
+    },
+    "links": {
+      "google_maps_search": "https://www.google.com/maps/search/?api=1&query=43.6486296,-79.6049209",
+      "google_maps_directions": "https://www.google.com/maps/dir/?api=1&destination=43.6486296,-79.6049209"
+    },
+    "media": {
+      "images": []
+    },
+    "style": {
+      "style_id": "#icon-1899-7CB342-nodesc",
+      "icon_url": null,
+      "color_kml_hex": null
+    },
+    "custom_table_columns": {}
+  },
+  {
+    "id": "",
+    "name": "Gus Tacos",
+    "layer": "Etobicoke",
+    "description": {
+      "raw_html": "",
+      "clean_text": ""
+    },
+    "location": {
+      "address": "",
+      "latitude": 43.5987203,
+      "longitude": -79.5441183,
+      "elevation": 0.0
+    },
+    "contact": {
+      "phone": "",
+      "website": ""
+    },
+    "links": {
+      "google_maps_search": "https://www.google.com/maps/search/?api=1&query=43.5987203,-79.5441183",
+      "google_maps_directions": "https://www.google.com/maps/dir/?api=1&destination=43.5987203,-79.5441183"
+    },
+    "media": {
+      "images": []
+    },
+    "style": {
+      "style_id": "#icon-1899-7CB342-nodesc",
+      "icon_url": null,
+      "color_kml_hex": null
+    },
+    "custom_table_columns": {}
+  },
+  {
+    "id": "",
+    "name": "OBQ Burgers",
+    "layer": "Etobicoke",
+    "description": {
+      "raw_html": "",
+      "clean_text": ""
+    },
+    "location": {
+      "address": "",
+      "latitude": 43.6052089,
+      "longitude": -79.5471835,
+      "elevation": 0.0
+    },
+    "contact": {
+      "phone": "",
+      "website": ""
+    },
+    "links": {
+      "google_maps_search": "https://www.google.com/maps/search/?api=1&query=43.6052089,-79.5471835",
+      "google_maps_directions": "https://www.google.com/maps/dir/?api=1&destination=43.6052089,-79.5471835"
+    },
+    "media": {
+      "images": []
+    },
+    "style": {
+      "style_id": "#icon-1899-7CB342-nodesc",
+      "icon_url": null,
+      "color_kml_hex": null
+    },
+    "custom_table_columns": {}
+  },
+  {
+    "id": "",
+    "name": "Congee Queen - Mississauga(Dundas&Hwy427)",
+    "layer": "Etobicoke",
+    "description": {
+      "raw_html": "",
+      "clean_text": ""
+    },
+    "location": {
+      "address": "",
+      "latitude": 43.6209004,
+      "longitude": -79.5725479,
+      "elevation": 0.0
+    },
+    "contact": {
+      "phone": "",
+      "website": ""
+    },
+    "links": {
+      "google_maps_search": "https://www.google.com/maps/search/?api=1&query=43.6209004,-79.5725479",
+      "google_maps_directions": "https://www.google.com/maps/dir/?api=1&destination=43.6209004,-79.5725479"
+    },
+    "media": {
+      "images": []
+    },
+    "style": {
+      "style_id": "#icon-1899-7CB342-nodesc",
+      "icon_url": null,
+      "color_kml_hex": null
+    },
+    "custom_table_columns": {}
+  },
+  {
+    "id": "",
+    "name": "Sanaa AlYemen Restaurant",
+    "layer": "Etobicoke",
+    "description": {
+      "raw_html": "",
+      "clean_text": ""
+    },
+    "location": {
+      "address": "",
+      "latitude": 43.6252537,
+      "longitude": -79.5679268,
+      "elevation": 0.0
+    },
+    "contact": {
+      "phone": "",
+      "website": ""
+    },
+    "links": {
+      "google_maps_search": "https://www.google.com/maps/search/?api=1&query=43.6252537,-79.5679268",
+      "google_maps_directions": "https://www.google.com/maps/dir/?api=1&destination=43.6252537,-79.5679268"
+    },
+    "media": {
+      "images": []
+    },
+    "style": {
+      "style_id": "#icon-1899-7CB342-nodesc",
+      "icon_url": null,
+      "color_kml_hex": null
+    },
+    "custom_table_columns": {}
+  },
+  {
+    "id": "",
+    "name": "FAT FORK",
+    "layer": "Etobicoke",
+    "description": {
+      "raw_html": "",
+      "clean_text": ""
+    },
+    "location": {
+      "address": "",
+      "latitude": 43.6258803,
+      "longitude": -79.5654697,
+      "elevation": 0.0
+    },
+    "contact": {
+      "phone": "",
+      "website": ""
+    },
+    "links": {
+      "google_maps_search": "https://www.google.com/maps/search/?api=1&query=43.6258803,-79.5654697",
+      "google_maps_directions": "https://www.google.com/maps/dir/?api=1&destination=43.6258803,-79.5654697"
+    },
+    "media": {
+      "images": []
+    },
+    "style": {
+      "style_id": "#icon-1899-7CB342-nodesc",
+      "icon_url": null,
+      "color_kml_hex": null
+    },
+    "custom_table_columns": {}
+  },
+  {
+    "id": "",
+    "name": "PHO NGOC YEN 2 Etobicoke",
+    "layer": "Etobicoke",
+    "description": {
+      "raw_html": "",
+      "clean_text": ""
+    },
+    "location": {
+      "address": "",
+      "latitude": 43.6177116,
+      "longitude": -79.5428901,
+      "elevation": 0.0
+    },
+    "contact": {
+      "phone": "",
+      "website": ""
+    },
+    "links": {
+      "google_maps_search": "https://www.google.com/maps/search/?api=1&query=43.6177116,-79.5428901",
+      "google_maps_directions": "https://www.google.com/maps/dir/?api=1&destination=43.6177116,-79.5428901"
+    },
+    "media": {
+      "images": []
+    },
+    "style": {
+      "style_id": "#icon-1899-7CB342-nodesc",
+      "icon_url": null,
+      "color_kml_hex": null
+    },
+    "custom_table_columns": {}
+  },
+  {
+    "id": "",
+    "name": "IKEA Etobicoke",
+    "layer": "Etobicoke",
+    "description": {
+      "raw_html": "",
+      "clean_text": ""
+    },
+    "location": {
+      "address": "",
+      "latitude": 43.6183642,
+      "longitude": -79.534526,
+      "elevation": 0.0
+    },
+    "contact": {
+      "phone": "",
+      "website": ""
+    },
+    "links": {
+      "google_maps_search": "https://www.google.com/maps/search/?api=1&query=43.6183642,-79.534526",
+      "google_maps_directions": "https://www.google.com/maps/dir/?api=1&destination=43.6183642,-79.534526"
+    },
+    "media": {
+      "images": []
+    },
+    "style": {
+      "style_id": "#icon-1899-7CB342-nodesc",
+      "icon_url": null,
+      "color_kml_hex": null
+    },
+    "custom_table_columns": {}
+  },
+  {
+    "id": "",
+    "name": "Elijah's Automatic Flame Broiled",
+    "layer": "Etobicoke",
+    "description": {
+      "raw_html": "",
+      "clean_text": ""
+    },
+    "location": {
+      "address": "",
+      "latitude": 43.6249034,
+      "longitude": -79.5079883,
+      "elevation": 0.0
+    },
+    "contact": {
+      "phone": "",
+      "website": ""
+    },
+    "links": {
+      "google_maps_search": "https://www.google.com/maps/search/?api=1&query=43.6249034,-79.5079883",
+      "google_maps_directions": "https://www.google.com/maps/dir/?api=1&destination=43.6249034,-79.5079883"
+    },
+    "media": {
+      "images": []
+    },
+    "style": {
+      "style_id": "#icon-1899-7CB342-nodesc",
+      "icon_url": null,
+      "color_kml_hex": null
+    },
+    "custom_table_columns": {}
+  },
+  {
+    "id": "",
+    "name": "Ragu Scratch Pasta",
+    "layer": "Etobicoke",
+    "description": {
+      "raw_html": "",
+      "clean_text": ""
+    },
+    "location": {
+      "address": "",
+      "latitude": 43.6244126,
+      "longitude": -79.5120614,
+      "elevation": 0.0
+    },
+    "contact": {
+      "phone": "",
+      "website": ""
+    },
+    "links": {
+      "google_maps_search": "https://www.google.com/maps/search/?api=1&query=43.6244126,-79.5120614",
+      "google_maps_directions": "https://www.google.com/maps/dir/?api=1&destination=43.6244126,-79.5120614"
+    },
+    "media": {
+      "images": []
+    },
+    "style": {
+      "style_id": "#icon-1899-7CB342-nodesc",
+      "icon_url": null,
+      "color_kml_hex": null
+    },
+    "custom_table_columns": {}
+  },
+  {
+    "id": "",
+    "name": "Allwyn's Jerk (Etobicoke)",
+    "layer": "Etobicoke",
+    "description": {
+      "raw_html": "",
+      "clean_text": ""
+    },
+    "location": {
+      "address": "",
+      "latitude": 43.6239968,
+      "longitude": -79.5141986,
+      "elevation": 0.0
+    },
+    "contact": {
+      "phone": "",
+      "website": ""
+    },
+    "links": {
+      "google_maps_search": "https://www.google.com/maps/search/?api=1&query=43.6239968,-79.5141986",
+      "google_maps_directions": "https://www.google.com/maps/dir/?api=1&destination=43.6239968,-79.5141986"
+    },
+    "media": {
+      "images": []
+    },
+    "style": {
+      "style_id": "#icon-1899-7CB342-nodesc",
+      "icon_url": null,
+      "color_kml_hex": null
+    },
+    "custom_table_columns": {}
+  },
+  {
+    "id": "",
+    "name": "Sanremo Bakery",
+    "layer": "Etobicoke",
+    "description": {
+      "raw_html": "",
+      "clean_text": ""
+    },
+    "location": {
+      "address": "",
+      "latitude": 43.6185665,
+      "longitude": -79.499547,
+      "elevation": 0.0
+    },
+    "contact": {
+      "phone": "",
+      "website": ""
+    },
+    "links": {
+      "google_maps_search": "https://www.google.com/maps/search/?api=1&query=43.6185665,-79.499547",
+      "google_maps_directions": "https://www.google.com/maps/dir/?api=1&destination=43.6185665,-79.499547"
+    },
+    "media": {
+      "images": []
+    },
+    "style": {
+      "style_id": "#icon-1899-7CB342-nodesc",
+      "icon_url": null,
+      "color_kml_hex": null
+    },
+    "custom_table_columns": {}
+  },
+  {
+    "id": "",
+    "name": "Tom's Dairy Freeze",
+    "layer": "Etobicoke",
+    "description": {
+      "raw_html": "",
+      "clean_text": ""
+    },
+    "location": {
+      "address": "",
+      "latitude": 43.6278836,
+      "longitude": -79.4965735,
+      "elevation": 0.0
+    },
+    "contact": {
+      "phone": "",
+      "website": ""
+    },
+    "links": {
+      "google_maps_search": "https://www.google.com/maps/search/?api=1&query=43.6278836,-79.4965735",
+      "google_maps_directions": "https://www.google.com/maps/dir/?api=1&destination=43.6278836,-79.4965735"
+    },
+    "media": {
+      "images": []
+    },
+    "style": {
+      "style_id": "#icon-1899-7CB342-nodesc",
+      "icon_url": null,
+      "color_kml_hex": null
+    },
+    "custom_table_columns": {}
+  },
+  {
+    "id": "",
+    "name": "Mamma Martino’s Restaurant",
+    "layer": "Etobicoke",
+    "description": {
+      "raw_html": "family run italian restaurant, amin's recommendation :) looks to be inexpensive and a popular local spot. also, right next to tom's dairy freeze for a post-lunch ice cream :D",
+      "clean_text": "family run italian restaurant, amin's recommendation :) looks to be inexpensive and a popular local spot. also, right next to tom's dairy freeze for a post-lunch ice cream :D"
+    },
+    "location": {
+      "address": "",
+      "latitude": 43.6279993,
+      "longitude": -79.4961281,
+      "elevation": 0.0
+    },
+    "contact": {
+      "phone": "",
+      "website": ""
+    },
+    "links": {
+      "google_maps_search": "https://www.google.com/maps/search/?api=1&query=43.6279993,-79.4961281",
+      "google_maps_directions": "https://www.google.com/maps/dir/?api=1&destination=43.6279993,-79.4961281"
+    },
+    "media": {
+      "images": []
+    },
+    "style": {
+      "style_id": "#icon-1899-7CB342",
+      "icon_url": null,
+      "color_kml_hex": null
+    },
+    "custom_table_columns": {}
+  },
+  {
+    "id": "",
+    "name": "Rancho Relaxo To Go Kipling",
+    "layer": "Etobicoke",
+    "description": {
+      "raw_html": "",
+      "clean_text": ""
+    },
+    "location": {
+      "address": "",
+      "latitude": 43.6267699,
+      "longitude": -79.5286872,
+      "elevation": 0.0
+    },
+    "contact": {
+      "phone": "",
+      "website": ""
+    },
+    "links": {
+      "google_maps_search": "https://www.google.com/maps/search/?api=1&query=43.6267699,-79.5286872",
+      "google_maps_directions": "https://www.google.com/maps/dir/?api=1&destination=43.6267699,-79.5286872"
+    },
+    "media": {
+      "images": []
+    },
+    "style": {
+      "style_id": "#icon-1899-7CB342-nodesc",
+      "icon_url": null,
+      "color_kml_hex": null
+    },
+    "custom_table_columns": {}
+  },
+  {
+    "id": "",
+    "name": "Dimpflmeier Bakery",
+    "layer": "Etobicoke",
+    "description": {
+      "raw_html": "",
+      "clean_text": ""
+    },
+    "location": {
+      "address": "",
+      "latitude": 43.6341948,
+      "longitude": -79.5295076,
+      "elevation": 0.0
+    },
+    "contact": {
+      "phone": "",
+      "website": ""
+    },
+    "links": {
+      "google_maps_search": "https://www.google.com/maps/search/?api=1&query=43.6341948,-79.5295076",
+      "google_maps_directions": "https://www.google.com/maps/dir/?api=1&destination=43.6341948,-79.5295076"
+    },
+    "media": {
+      "images": []
+    },
+    "style": {
+      "style_id": "#icon-1899-7CB342-nodesc",
+      "icon_url": null,
+      "color_kml_hex": null
+    },
+    "custom_table_columns": {}
+  },
+  {
+    "id": "",
+    "name": "Fairouz Restaurant and Lounge",
+    "layer": "Etobicoke",
+    "description": {
+      "raw_html": "",
+      "clean_text": ""
+    },
+    "location": {
+      "address": "",
+      "latitude": 43.6335646,
+      "longitude": -79.5314389,
+      "elevation": 0.0
+    },
+    "contact": {
+      "phone": "",
+      "website": ""
+    },
+    "links": {
+      "google_maps_search": "https://www.google.com/maps/search/?api=1&query=43.6335646,-79.5314389",
+      "google_maps_directions": "https://www.google.com/maps/dir/?api=1&destination=43.6335646,-79.5314389"
+    },
+    "media": {
+      "images": []
+    },
+    "style": {
+      "style_id": "#icon-1899-7CB342-nodesc",
+      "icon_url": null,
+      "color_kml_hex": null
+    },
+    "custom_table_columns": {}
+  },
+  {
+    "id": "",
+    "name": "Yellow Cup Cafe",
+    "layer": "Etobicoke",
+    "description": {
+      "raw_html": "",
+      "clean_text": ""
+    },
+    "location": {
+      "address": "",
+      "latitude": 43.6320429,
+      "longitude": -79.5518273,
+      "elevation": 0.0
+    },
+    "contact": {
+      "phone": "",
+      "website": ""
+    },
+    "links": {
+      "google_maps_search": "https://www.google.com/maps/search/?api=1&query=43.6320429,-79.5518273",
+      "google_maps_directions": "https://www.google.com/maps/dir/?api=1&destination=43.6320429,-79.5518273"
+    },
+    "media": {
+      "images": []
+    },
+    "style": {
+      "style_id": "#icon-1899-7CB342-nodesc",
+      "icon_url": null,
+      "color_kml_hex": null
+    },
+    "custom_table_columns": {}
+  },
+  {
+    "id": "",
+    "name": "Mr. Souvlaki",
+    "layer": "Etobicoke",
+    "description": {
+      "raw_html": "",
+      "clean_text": ""
+    },
+    "location": {
+      "address": "",
+      "latitude": 43.632409,
+      "longitude": -79.55648,
+      "elevation": 0.0
+    },
+    "contact": {
+      "phone": "",
+      "website": ""
+    },
+    "links": {
+      "google_maps_search": "https://www.google.com/maps/search/?api=1&query=43.632409,-79.55648",
+      "google_maps_directions": "https://www.google.com/maps/dir/?api=1&destination=43.632409,-79.55648"
+    },
+    "media": {
+      "images": []
+    },
+    "style": {
+      "style_id": "#icon-1899-7CB342-nodesc",
+      "icon_url": null,
+      "color_kml_hex": null
+    },
+    "custom_table_columns": {}
+  },
+  {
+    "id": "",
+    "name": "Thairoomgrand Etobicoke",
+    "layer": "Etobicoke",
+    "description": {
+      "raw_html": "",
+      "clean_text": ""
+    },
+    "location": {
+      "address": "",
+      "latitude": 43.6446269,
+      "longitude": -79.5328352,
+      "elevation": 0.0
+    },
+    "contact": {
+      "phone": "",
+      "website": ""
+    },
+    "links": {
+      "google_maps_search": "https://www.google.com/maps/search/?api=1&query=43.6446269,-79.5328352",
+      "google_maps_directions": "https://www.google.com/maps/dir/?api=1&destination=43.6446269,-79.5328352"
+    },
+    "media": {
+      "images": []
+    },
+    "style": {
+      "style_id": "#icon-1899-7CB342-nodesc",
+      "icon_url": null,
+      "color_kml_hex": null
+    },
+    "custom_table_columns": {}
+  },
+  {
+    "id": "",
+    "name": "Apache Burgers",
+    "layer": "Etobicoke",
+    "description": {
+      "raw_html": "",
+      "clean_text": ""
+    },
+    "location": {
+      "address": "",
+      "latitude": 43.6393184,
+      "longitude": -79.5377775,
+      "elevation": 0.0
+    },
+    "contact": {
+      "phone": "",
+      "website": ""
+    },
+    "links": {
+      "google_maps_search": "https://www.google.com/maps/search/?api=1&query=43.6393184,-79.5377775",
+      "google_maps_directions": "https://www.google.com/maps/dir/?api=1&destination=43.6393184,-79.5377775"
+    },
+    "media": {
+      "images": []
+    },
+    "style": {
+      "style_id": "#icon-1899-7CB342-nodesc",
+      "icon_url": null,
+      "color_kml_hex": null
+    },
+    "custom_table_columns": {}
+  },
+  {
+    "id": "",
+    "name": "Haroo Korean Restaurant 하루",
+    "layer": "Etobicoke",
+    "description": {
+      "raw_html": "",
+      "clean_text": ""
+    },
+    "location": {
+      "address": "",
+      "latitude": 43.6412616,
+      "longitude": -79.5392484,
+      "elevation": 0.0
+    },
+    "contact": {
+      "phone": "",
+      "website": ""
+    },
+    "links": {
+      "google_maps_search": "https://www.google.com/maps/search/?api=1&query=43.6412616,-79.5392484",
+      "google_maps_directions": "https://www.google.com/maps/dir/?api=1&destination=43.6412616,-79.5392484"
+    },
+    "media": {
+      "images": []
+    },
+    "style": {
+      "style_id": "#icon-1899-7CB342-nodesc",
+      "icon_url": null,
+      "color_kml_hex": null
+    },
+    "custom_table_columns": {}
+  },
+  {
+    "id": "",
+    "name": "Ikkoi Sushi & Ramen Japanese Cuisine",
+    "layer": "Etobicoke",
+    "description": {
+      "raw_html": "",
+      "clean_text": ""
+    },
+    "location": {
+      "address": "",
+      "latitude": 43.6452615,
+      "longitude": -79.5324815,
+      "elevation": 0.0
+    },
+    "contact": {
+      "phone": "",
+      "website": ""
+    },
+    "links": {
+      "google_maps_search": "https://www.google.com/maps/search/?api=1&query=43.6452615,-79.5324815",
+      "google_maps_directions": "https://www.google.com/maps/dir/?api=1&destination=43.6452615,-79.5324815"
+    },
+    "media": {
+      "images": []
+    },
+    "style": {
+      "style_id": "#icon-1899-7CB342-nodesc",
+      "icon_url": null,
+      "color_kml_hex": null
+    },
+    "custom_table_columns": {}
+  },
+  {
+    "id": "",
+    "name": "Blooming Batter (Formerly Stacks Toronto)",
+    "layer": "Etobicoke",
+    "description": {
+      "raw_html": "",
+      "clean_text": ""
+    },
+    "location": {
+      "address": "",
+      "latitude": 43.6343785,
+      "longitude": -79.5414481,
+      "elevation": 0.0
+    },
+    "contact": {
+      "phone": "",
+      "website": ""
+    },
+    "links": {
+      "google_maps_search": "https://www.google.com/maps/search/?api=1&query=43.6343785,-79.5414481",
+      "google_maps_directions": "https://www.google.com/maps/dir/?api=1&destination=43.6343785,-79.5414481"
+    },
+    "media": {
+      "images": []
+    },
+    "style": {
+      "style_id": "#icon-1899-7CB342-nodesc",
+      "icon_url": null,
+      "color_kml_hex": null
+    },
+    "custom_table_columns": {}
+  },
+  {
+    "id": "",
+    "name": "Curry and Chutney By Gopal's",
+    "layer": "Etobicoke",
+    "description": {
+      "raw_html": "",
+      "clean_text": ""
+    },
+    "location": {
+      "address": "",
+      "latitude": 43.6489427,
+      "longitude": -79.5493662,
+      "elevation": 0.0
+    },
+    "contact": {
+      "phone": "",
+      "website": ""
+    },
+    "links": {
+      "google_maps_search": "https://www.google.com/maps/search/?api=1&query=43.6489427,-79.5493662",
+      "google_maps_directions": "https://www.google.com/maps/dir/?api=1&destination=43.6489427,-79.5493662"
+    },
+    "media": {
+      "images": []
+    },
+    "style": {
+      "style_id": "#icon-1899-7CB342-nodesc",
+      "icon_url": null,
+      "color_kml_hex": null
+    },
+    "custom_table_columns": {}
+  },
+  {
+    "id": "",
+    "name": "Tropical South by the Cuban Thing",
+    "layer": "Etobicoke",
+    "description": {
+      "raw_html": "",
+      "clean_text": ""
+    },
+    "location": {
+      "address": "",
+      "latitude": 43.6475529,
+      "longitude": -79.555524,
+      "elevation": 0.0
+    },
+    "contact": {
+      "phone": "",
+      "website": ""
+    },
+    "links": {
+      "google_maps_search": "https://www.google.com/maps/search/?api=1&query=43.6475529,-79.555524",
+      "google_maps_directions": "https://www.google.com/maps/dir/?api=1&destination=43.6475529,-79.555524"
+    },
+    "media": {
+      "images": []
+    },
+    "style": {
+      "style_id": "#icon-1899-7CB342-nodesc",
+      "icon_url": null,
+      "color_kml_hex": null
+    },
+    "custom_table_columns": {}
+  },
+  {
+    "id": "",
+    "name": "McNie's Fish & Chips",
+    "layer": "Etobicoke",
+    "description": {
+      "raw_html": "",
+      "clean_text": ""
+    },
+    "location": {
+      "address": "",
+      "latitude": 43.6490007,
+      "longitude": -79.5493296,
+      "elevation": 0.0
+    },
+    "contact": {
+      "phone": "",
+      "website": ""
+    },
+    "links": {
+      "google_maps_search": "https://www.google.com/maps/search/?api=1&query=43.6490007,-79.5493296",
+      "google_maps_directions": "https://www.google.com/maps/dir/?api=1&destination=43.6490007,-79.5493296"
+    },
+    "media": {
+      "images": []
+    },
+    "style": {
+      "style_id": "#icon-1899-7CB342-nodesc",
+      "icon_url": null,
+      "color_kml_hex": null
+    },
+    "custom_table_columns": {}
+  },
+  {
+    "id": "",
+    "name": "Lezzet Shawarma Falafel House",
+    "layer": "Etobicoke",
+    "description": {
+      "raw_html": "",
+      "clean_text": ""
+    },
+    "location": {
+      "address": "",
+      "latitude": 43.6243957,
+      "longitude": -79.6068048,
+      "elevation": 0.0
+    },
+    "contact": {
+      "phone": "",
+      "website": ""
+    },
+    "links": {
+      "google_maps_search": "https://www.google.com/maps/search/?api=1&query=43.6243957,-79.6068048",
+      "google_maps_directions": "https://www.google.com/maps/dir/?api=1&destination=43.6243957,-79.6068048"
+    },
+    "media": {
+      "images": []
+    },
+    "style": {
+      "style_id": "#icon-1899-7CB342-nodesc",
+      "icon_url": null,
+      "color_kml_hex": null
+    },
+    "custom_table_columns": {}
+  },
+  {
+    "id": "",
+    "name": "Bravo Bistro",
+    "layer": "Etobicoke",
+    "description": {
+      "raw_html": "",
+      "clean_text": ""
+    },
+    "location": {
+      "address": "",
+      "latitude": 43.6594946,
+      "longitude": -79.6035247,
+      "elevation": 0.0
+    },
+    "contact": {
+      "phone": "",
+      "website": ""
+    },
+    "links": {
+      "google_maps_search": "https://www.google.com/maps/search/?api=1&query=43.6594946,-79.6035247",
+      "google_maps_directions": "https://www.google.com/maps/dir/?api=1&destination=43.6594946,-79.6035247"
+    },
+    "media": {
+      "images": []
+    },
+    "style": {
+      "style_id": "#icon-1899-7CB342-nodesc",
+      "icon_url": null,
+      "color_kml_hex": null
+    },
+    "custom_table_columns": {}
+  },
+  {
+    "id": "",
+    "name": "North of Brooklyn Pizzeria",
+    "layer": "Etobicoke",
+    "description": {
+      "raw_html": "",
+      "clean_text": ""
+    },
+    "location": {
+      "address": "",
+      "latitude": 43.6223393,
+      "longitude": -79.5219645,
+      "elevation": 0.0
+    },
+    "contact": {
+      "phone": "",
+      "website": ""
+    },
+    "links": {
+      "google_maps_search": "https://www.google.com/maps/search/?api=1&query=43.6223393,-79.5219645",
+      "google_maps_directions": "https://www.google.com/maps/dir/?api=1&destination=43.6223393,-79.5219645"
+    },
+    "media": {
+      "images": []
+    },
+    "style": {
+      "style_id": "#icon-1899-7CB342-nodesc",
+      "icon_url": null,
+      "color_kml_hex": null
+    },
+    "custom_table_columns": {}
+  },
+  {
+    "id": "",
+    "name": "Banh Mi Ba Le",
+    "layer": "Etobicoke",
+    "description": {
+      "raw_html": "",
+      "clean_text": ""
+    },
+    "location": {
+      "address": "",
+      "latitude": 43.6041065,
+      "longitude": -79.5908893,
+      "elevation": 0.0
+    },
+    "contact": {
+      "phone": "",
+      "website": ""
+    },
+    "links": {
+      "google_maps_search": "https://www.google.com/maps/search/?api=1&query=43.6041065,-79.5908893",
+      "google_maps_directions": "https://www.google.com/maps/dir/?api=1&destination=43.6041065,-79.5908893"
+    },
+    "media": {
+      "images": []
+    },
+    "style": {
+      "style_id": "#icon-1899-7CB342-nodesc",
+      "icon_url": null,
+      "color_kml_hex": null
+    },
+    "custom_table_columns": {}
+  },
+  {
+    "id": "",
+    "name": "Adonis",
+    "layer": "Etobicoke",
+    "description": {
+      "raw_html": "",
+      "clean_text": ""
+    },
+    "location": {
+      "address": "",
+      "latitude": 43.6028558,
+      "longitude": -79.5880161,
+      "elevation": 0.0
+    },
+    "contact": {
+      "phone": "",
+      "website": ""
+    },
+    "links": {
+      "google_maps_search": "https://www.google.com/maps/search/?api=1&query=43.6028558,-79.5880161",
+      "google_maps_directions": "https://www.google.com/maps/dir/?api=1&destination=43.6028558,-79.5880161"
+    },
+    "media": {
+      "images": []
+    },
+    "style": {
+      "style_id": "#icon-1899-7CB342-nodesc",
+      "icon_url": null,
+      "color_kml_hex": null
+    },
+    "custom_table_columns": {}
+  },
+  {
+    "id": "",
+    "name": "Chit Chaat",
+    "layer": "Etobicoke",
+    "description": {
+      "raw_html": "",
+      "clean_text": ""
+    },
+    "location": {
+      "address": "",
+      "latitude": 43.6034522,
+      "longitude": -79.539051,
+      "elevation": 0.0
+    },
+    "contact": {
+      "phone": "",
+      "website": ""
+    },
+    "links": {
+      "google_maps_search": "https://www.google.com/maps/search/?api=1&query=43.6034522,-79.539051",
+      "google_maps_directions": "https://www.google.com/maps/dir/?api=1&destination=43.6034522,-79.539051"
+    },
+    "media": {
+      "images": []
+    },
+    "style": {
+      "style_id": "#icon-1899-7CB342-nodesc",
+      "icon_url": null,
+      "color_kml_hex": null
+    },
+    "custom_table_columns": {}
+  },
+  {
+    "id": "",
+    "name": "The Elmwood",
+    "layer": "Etobicoke",
+    "description": {
+      "raw_html": "",
+      "clean_text": ""
+    },
+    "location": {
+      "address": "",
+      "latitude": 43.6259194,
+      "longitude": -79.5035489,
+      "elevation": 0.0
+    },
+    "contact": {
+      "phone": "",
+      "website": ""
+    },
+    "links": {
+      "google_maps_search": "https://www.google.com/maps/search/?api=1&query=43.6259194,-79.5035489",
+      "google_maps_directions": "https://www.google.com/maps/dir/?api=1&destination=43.6259194,-79.5035489"
+    },
+    "media": {
+      "images": []
+    },
+    "style": {
+      "style_id": "#icon-1899-7CB342-nodesc",
+      "icon_url": null,
+      "color_kml_hex": null
+    },
+    "custom_table_columns": {}
+  },
+  {
+    "id": "",
+    "name": "NAAN KABOB",
+    "layer": "Etobicoke",
+    "description": {
+      "raw_html": "",
+      "clean_text": ""
+    },
+    "location": {
+      "address": "",
+      "latitude": 43.6511434,
+      "longitude": -79.604747,
+      "elevation": 0.0
+    },
+    "contact": {
+      "phone": "",
+      "website": ""
+    },
+    "links": {
+      "google_maps_search": "https://www.google.com/maps/search/?api=1&query=43.6511434,-79.604747",
+      "google_maps_directions": "https://www.google.com/maps/dir/?api=1&destination=43.6511434,-79.604747"
+    },
+    "media": {
+      "images": []
+    },
+    "style": {
+      "style_id": "#icon-1899-7CB342-nodesc",
+      "icon_url": null,
+      "color_kml_hex": null
+    },
+    "custom_table_columns": {}
+  },
+  {
+    "id": "",
+    "name": "RUDY",
+    "layer": "Etobicoke",
+    "description": {
+      "raw_html": "",
+      "clean_text": ""
+    },
+    "location": {
+      "address": "",
+      "latitude": 43.6195672,
+      "longitude": -79.5345491,
+      "elevation": 0.0
+    },
+    "contact": {
+      "phone": "",
+      "website": ""
+    },
+    "links": {
+      "google_maps_search": "https://www.google.com/maps/search/?api=1&query=43.6195672,-79.5345491",
+      "google_maps_directions": "https://www.google.com/maps/dir/?api=1&destination=43.6195672,-79.5345491"
+    },
+    "media": {
+      "images": []
+    },
+    "style": {
+      "style_id": "#icon-1899-7CB342-nodesc",
+      "icon_url": null,
+      "color_kml_hex": null
+    },
+    "custom_table_columns": {}
+  },
+  {
+    "id": "",
+    "name": "P Jay's Jamaican Take-Out",
+    "layer": "Scarborough",
+    "description": {
+      "raw_html": "",
+      "clean_text": ""
+    },
+    "location": {
+      "address": "",
+      "latitude": 43.7963617,
+      "longitude": -79.2929548,
+      "elevation": 0.0
+    },
+    "contact": {
+      "phone": "",
+      "website": ""
+    },
+    "links": {
+      "google_maps_search": "https://www.google.com/maps/search/?api=1&query=43.7963617,-79.2929548",
+      "google_maps_directions": "https://www.google.com/maps/dir/?api=1&destination=43.7963617,-79.2929548"
+    },
+    "media": {
+      "images": []
+    },
+    "style": {
+      "style_id": "#icon-1899-9C27B0-nodesc",
+      "icon_url": null,
+      "color_kml_hex": null
+    },
+    "custom_table_columns": {}
+  },
+  {
+    "id": "",
+    "name": "Great Fountain Fast Food",
+    "layer": "Scarborough",
+    "description": {
+      "raw_html": "",
+      "clean_text": ""
+    },
+    "location": {
+      "address": "",
+      "latitude": 43.786839,
+      "longitude": -79.2772498,
+      "elevation": 0.0
+    },
+    "contact": {
+      "phone": "",
+      "website": ""
+    },
+    "links": {
+      "google_maps_search": "https://www.google.com/maps/search/?api=1&query=43.786839,-79.2772498",
+      "google_maps_directions": "https://www.google.com/maps/dir/?api=1&destination=43.786839,-79.2772498"
+    },
+    "media": {
+      "images": []
+    },
+    "style": {
+      "style_id": "#icon-1899-9C27B0-nodesc",
+      "icon_url": null,
+      "color_kml_hex": null
+    },
+    "custom_table_columns": {}
+  },
+  {
+    "id": "",
+    "name": "One2Snacks",
+    "layer": "Scarborough",
+    "description": {
+      "raw_html": "",
+      "clean_text": ""
+    },
+    "location": {
+      "address": "",
+      "latitude": 43.787206,
+      "longitude": -79.2765954,
+      "elevation": 0.0
+    },
+    "contact": {
+      "phone": "",
+      "website": ""
+    },
+    "links": {
+      "google_maps_search": "https://www.google.com/maps/search/?api=1&query=43.787206,-79.2765954",
+      "google_maps_directions": "https://www.google.com/maps/dir/?api=1&destination=43.787206,-79.2765954"
+    },
+    "media": {
+      "images": []
+    },
+    "style": {
+      "style_id": "#icon-1899-9C27B0-nodesc",
+      "icon_url": null,
+      "color_kml_hex": null
+    },
+    "custom_table_columns": {}
+  },
+  {
+    "id": "",
+    "name": "Floga Estiatorio and Event Space",
+    "layer": "Scarborough",
+    "description": {
+      "raw_html": "",
+      "clean_text": ""
+    },
+    "location": {
+      "address": "",
+      "latitude": 43.7686864,
+      "longitude": -79.2814253,
+      "elevation": 0.0
+    },
+    "contact": {
+      "phone": "",
+      "website": ""
+    },
+    "links": {
+      "google_maps_search": "https://www.google.com/maps/search/?api=1&query=43.7686864,-79.2814253",
+      "google_maps_directions": "https://www.google.com/maps/dir/?api=1&destination=43.7686864,-79.2814253"
+    },
+    "media": {
+      "images": []
+    },
+    "style": {
+      "style_id": "#icon-1899-9C27B0-nodesc",
+      "icon_url": null,
+      "color_kml_hex": null
+    },
+    "custom_table_columns": {}
+  },
+  {
+    "id": "",
+    "name": "ACR Hot Roti & Doubles",
+    "layer": "Scarborough",
+    "description": {
+      "raw_html": "",
+      "clean_text": ""
+    },
+    "location": {
+      "address": "",
+      "latitude": 43.7523371,
+      "longitude": -79.2622083,
+      "elevation": 0.0
+    },
+    "contact": {
+      "phone": "",
+      "website": ""
+    },
+    "links": {
+      "google_maps_search": "https://www.google.com/maps/search/?api=1&query=43.7523371,-79.2622083",
+      "google_maps_directions": "https://www.google.com/maps/dir/?api=1&destination=43.7523371,-79.2622083"
+    },
+    "media": {
+      "images": []
+    },
+    "style": {
+      "style_id": "#icon-1899-9C27B0-nodesc",
+      "icon_url": null,
+      "color_kml_hex": null
+    },
+    "custom_table_columns": {}
+  },
+  {
+    "id": "",
+    "name": "Patty Time",
+    "layer": "Scarborough",
+    "description": {
+      "raw_html": "",
+      "clean_text": ""
+    },
+    "location": {
+      "address": "",
+      "latitude": 43.7538282,
+      "longitude": -79.2520062,
+      "elevation": 0.0
+    },
+    "contact": {
+      "phone": "",
+      "website": ""
+    },
+    "links": {
+      "google_maps_search": "https://www.google.com/maps/search/?api=1&query=43.7538282,-79.2520062",
+      "google_maps_directions": "https://www.google.com/maps/dir/?api=1&destination=43.7538282,-79.2520062"
+    },
+    "media": {
+      "images": []
+    },
+    "style": {
+      "style_id": "#icon-1899-9C27B0-nodesc",
+      "icon_url": null,
+      "color_kml_hex": null
+    },
+    "custom_table_columns": {}
+  },
+  {
+    "id": "",
+    "name": "St. Andrews Fish & Chips",
+    "layer": "Scarborough",
+    "description": {
+      "raw_html": "",
+      "clean_text": ""
+    },
+    "location": {
+      "address": "",
+      "latitude": 43.7715381,
+      "longitude": -79.2526799,
+      "elevation": 0.0
+    },
+    "contact": {
+      "phone": "",
+      "website": ""
+    },
+    "links": {
+      "google_maps_search": "https://www.google.com/maps/search/?api=1&query=43.7715381,-79.2526799",
+      "google_maps_directions": "https://www.google.com/maps/dir/?api=1&destination=43.7715381,-79.2526799"
+    },
+    "media": {
+      "images": []
+    },
+    "style": {
+      "style_id": "#icon-1899-9C27B0-nodesc",
+      "icon_url": null,
+      "color_kml_hex": null
+    },
+    "custom_table_columns": {}
+  },
+  {
+    "id": "",
+    "name": "Federick Restaurant",
+    "layer": "Scarborough",
+    "description": {
+      "raw_html": "",
+      "clean_text": ""
+    },
+    "location": {
+      "address": "",
+      "latitude": 43.774958,
+      "longitude": -79.2409474,
+      "elevation": 0.0
+    },
+    "contact": {
+      "phone": "",
+      "website": ""
+    },
+    "links": {
+      "google_maps_search": "https://www.google.com/maps/search/?api=1&query=43.774958,-79.2409474",
+      "google_maps_directions": "https://www.google.com/maps/dir/?api=1&destination=43.774958,-79.2409474"
+    },
+    "media": {
+      "images": []
+    },
+    "style": {
+      "style_id": "#icon-1899-9C27B0-nodesc",
+      "icon_url": null,
+      "color_kml_hex": null
+    },
+    "custom_table_columns": {}
+  },
+  {
+    "id": "",
+    "name": "Canbe Foods Inc",
+    "layer": "Scarborough",
+    "description": {
+      "raw_html": "",
+      "clean_text": ""
+    },
+    "location": {
+      "address": "",
+      "latitude": 43.7738823,
+      "longitude": -79.2462132,
+      "elevation": 0.0
+    },
+    "contact": {
+      "phone": "",
+      "website": ""
+    },
+    "links": {
+      "google_maps_search": "https://www.google.com/maps/search/?api=1&query=43.7738823,-79.2462132",
+      "google_maps_directions": "https://www.google.com/maps/dir/?api=1&destination=43.7738823,-79.2462132"
+    },
+    "media": {
+      "images": []
+    },
+    "style": {
+      "style_id": "#icon-1899-9C27B0-nodesc",
+      "icon_url": null,
+      "color_kml_hex": null
+    },
+    "custom_table_columns": {}
+  },
+  {
+    "id": "",
+    "name": "The Roti Hut",
+    "layer": "Scarborough",
+    "description": {
+      "raw_html": "",
+      "clean_text": ""
+    },
+    "location": {
+      "address": "",
+      "latitude": 43.7868557,
+      "longitude": -79.2586158,
+      "elevation": 0.0
+    },
+    "contact": {
+      "phone": "",
+      "website": ""
+    },
+    "links": {
+      "google_maps_search": "https://www.google.com/maps/search/?api=1&query=43.7868557,-79.2586158",
+      "google_maps_directions": "https://www.google.com/maps/dir/?api=1&destination=43.7868557,-79.2586158"
+    },
+    "media": {
+      "images": []
+    },
+    "style": {
+      "style_id": "#icon-1899-9C27B0-nodesc",
+      "icon_url": null,
+      "color_kml_hex": null
+    },
+    "custom_table_columns": {}
+  },
+  {
+    "id": "",
+    "name": "Francesca Italian Bakery & Delicatessen",
+    "layer": "Scarborough",
+    "description": {
+      "raw_html": "",
+      "clean_text": ""
+    },
+    "location": {
+      "address": "",
+      "latitude": 43.7877317,
+      "longitude": -79.2569177,
+      "elevation": 0.0
+    },
+    "contact": {
+      "phone": "",
+      "website": ""
+    },
+    "links": {
+      "google_maps_search": "https://www.google.com/maps/search/?api=1&query=43.7877317,-79.2569177",
+      "google_maps_directions": "https://www.google.com/maps/dir/?api=1&destination=43.7877317,-79.2569177"
+    },
+    "media": {
+      "images": []
+    },
+    "style": {
+      "style_id": "#icon-1899-9C27B0-nodesc",
+      "icon_url": null,
+      "color_kml_hex": null
+    },
+    "custom_table_columns": {}
+  },
+  {
+    "id": "",
+    "name": "Mona's Roti",
+    "layer": "Scarborough",
+    "description": {
+      "raw_html": "",
+      "clean_text": ""
+    },
+    "location": {
+      "address": "",
+      "latitude": 43.7916485,
+      "longitude": -79.2508672,
+      "elevation": 0.0
+    },
+    "contact": {
+      "phone": "",
+      "website": ""
+    },
+    "links": {
+      "google_maps_search": "https://www.google.com/maps/search/?api=1&query=43.7916485,-79.2508672",
+      "google_maps_directions": "https://www.google.com/maps/dir/?api=1&destination=43.7916485,-79.2508672"
+    },
+    "media": {
+      "images": []
+    },
+    "style": {
+      "style_id": "#icon-1899-9C27B0-nodesc",
+      "icon_url": null,
+      "color_kml_hex": null
+    },
+    "custom_table_columns": {}
+  },
+  {
+    "id": "",
+    "name": "Babu Takeout And Catering",
+    "layer": "Scarborough",
+    "description": {
+      "raw_html": "",
+      "clean_text": ""
+    },
+    "location": {
+      "address": "",
+      "latitude": 43.7920155,
+      "longitude": -79.2510289,
+      "elevation": 0.0
+    },
+    "contact": {
+      "phone": "",
+      "website": ""
+    },
+    "links": {
+      "google_maps_search": "https://www.google.com/maps/search/?api=1&query=43.7920155,-79.2510289",
+      "google_maps_directions": "https://www.google.com/maps/dir/?api=1&destination=43.7920155,-79.2510289"
+    },
+    "media": {
+      "images": []
+    },
+    "style": {
+      "style_id": "#icon-1899-9C27B0-nodesc",
+      "icon_url": null,
+      "color_kml_hex": null
+    },
+    "custom_table_columns": {}
+  },
+  {
+    "id": "",
+    "name": "THG's Hot Chicken",
+    "layer": "Scarborough",
+    "description": {
+      "raw_html": "",
+      "clean_text": ""
+    },
+    "location": {
+      "address": "",
+      "latitude": 43.7924155,
+      "longitude": -79.2498284,
+      "elevation": 0.0
+    },
+    "contact": {
+      "phone": "",
+      "website": ""
+    },
+    "links": {
+      "google_maps_search": "https://www.google.com/maps/search/?api=1&query=43.7924155,-79.2498284",
+      "google_maps_directions": "https://www.google.com/maps/dir/?api=1&destination=43.7924155,-79.2498284"
+    },
+    "media": {
+      "images": []
+    },
+    "style": {
+      "style_id": "#icon-1899-9C27B0-nodesc",
+      "icon_url": null,
+      "color_kml_hex": null
+    },
+    "custom_table_columns": {}
+  },
+  {
+    "id": "",
+    "name": "Lucky Chinese Restaurant",
+    "layer": "Scarborough",
+    "description": {
+      "raw_html": "",
+      "clean_text": ""
+    },
+    "location": {
+      "address": "",
+      "latitude": 43.7527026,
+      "longitude": -79.264976,
+      "elevation": 0.0
+    },
+    "contact": {
+      "phone": "",
+      "website": ""
+    },
+    "links": {
+      "google_maps_search": "https://www.google.com/maps/search/?api=1&query=43.7527026,-79.264976",
+      "google_maps_directions": "https://www.google.com/maps/dir/?api=1&destination=43.7527026,-79.264976"
+    },
+    "media": {
+      "images": []
+    },
+    "style": {
+      "style_id": "#icon-1899-9C27B0-nodesc",
+      "icon_url": null,
+      "color_kml_hex": null
+    },
+    "custom_table_columns": {}
+  },
+  {
+    "id": "",
+    "name": "Thairoomgrand York Mills",
+    "layer": "North York",
+    "description": {
+      "raw_html": "",
+      "clean_text": ""
+    },
+    "location": {
+      "address": "",
+      "latitude": 43.7544152,
+      "longitude": -79.3511697,
+      "elevation": 0.0
+    },
+    "contact": {
+      "phone": "",
+      "website": ""
+    },
+    "links": {
+      "google_maps_search": "https://www.google.com/maps/search/?api=1&query=43.7544152,-79.3511697",
+      "google_maps_directions": "https://www.google.com/maps/dir/?api=1&destination=43.7544152,-79.3511697"
+    },
+    "media": {
+      "images": []
+    },
+    "style": {
+      "style_id": "#icon-1899-C2185B-nodesc",
+      "icon_url": null,
+      "color_kml_hex": null
+    },
+    "custom_table_columns": {}
+  },
+  {
+    "id": "",
+    "name": "Darband Restaurant",
+    "layer": "North York",
+    "description": {
+      "raw_html": "",
+      "clean_text": ""
+    },
+    "location": {
+      "address": "",
+      "latitude": 43.7551708,
+      "longitude": -79.3483093,
+      "elevation": 0.0
+    },
+    "contact": {
+      "phone": "",
+      "website": ""
+    },
+    "links": {
+      "google_maps_search": "https://www.google.com/maps/search/?api=1&query=43.7551708,-79.3483093",
+      "google_maps_directions": "https://www.google.com/maps/dir/?api=1&destination=43.7551708,-79.3483093"
+    },
+    "media": {
+      "images": []
+    },
+    "style": {
+      "style_id": "#icon-1899-C2185B-nodesc",
+      "icon_url": null,
+      "color_kml_hex": null
+    },
+    "custom_table_columns": {}
+  },
+  {
+    "id": "",
+    "name": "Chiang Mai York Mills",
+    "layer": "North York",
+    "description": {
+      "raw_html": "",
+      "clean_text": ""
+    },
+    "location": {
+      "address": "",
+      "latitude": 43.7551311,
+      "longitude": -79.352003,
+      "elevation": 0.0
+    },
+    "contact": {
+      "phone": "",
+      "website": ""
+    },
+    "links": {
+      "google_maps_search": "https://www.google.com/maps/search/?api=1&query=43.7551311,-79.352003",
+      "google_maps_directions": "https://www.google.com/maps/dir/?api=1&destination=43.7551311,-79.352003"
+    },
+    "media": {
+      "images": []
+    },
+    "style": {
+      "style_id": "#icon-1899-C2185B-nodesc",
+      "icon_url": null,
+      "color_kml_hex": null
+    },
+    "custom_table_columns": {}
+  },
+  {
+    "id": "",
+    "name": "IKEA North York",
+    "layer": "North York",
+    "description": {
+      "raw_html": "",
+      "clean_text": ""
+    },
+    "location": {
+      "address": "",
+      "latitude": 43.7676,
+      "longitude": -79.3693,
+      "elevation": 0.0
+    },
+    "contact": {
+      "phone": "",
+      "website": ""
+    },
+    "links": {
+      "google_maps_search": "https://www.google.com/maps/search/?api=1&query=43.7676,-79.3693",
+      "google_maps_directions": "https://www.google.com/maps/dir/?api=1&destination=43.7676,-79.3693"
+    },
+    "media": {
+      "images": []
+    },
+    "style": {
+      "style_id": "#icon-1899-C2185B-nodesc",
+      "icon_url": null,
+      "color_kml_hex": null
+    },
+    "custom_table_columns": {}
+  },
+  {
+    "id": "",
+    "name": "Som Tum Jinda - Fairview Mall",
+    "layer": "North York",
+    "description": {
+      "raw_html": "",
+      "clean_text": ""
+    },
+    "location": {
+      "address": "",
+      "latitude": 43.7768056,
+      "longitude": -79.3466198,
+      "elevation": 0.0
+    },
+    "contact": {
+      "phone": "",
+      "website": ""
+    },
+    "links": {
+      "google_maps_search": "https://www.google.com/maps/search/?api=1&query=43.7768056,-79.3466198",
+      "google_maps_directions": "https://www.google.com/maps/dir/?api=1&destination=43.7768056,-79.3466198"
+    },
+    "media": {
+      "images": []
+    },
+    "style": {
+      "style_id": "#icon-1899-C2185B-nodesc",
+      "icon_url": null,
+      "color_kml_hex": null
+    },
+    "custom_table_columns": {}
+  },
+  {
+    "id": "",
+    "name": "Bingz Crispy Burger Fairview Mall",
+    "layer": "North York",
+    "description": {
+      "raw_html": "",
+      "clean_text": ""
+    },
+    "location": {
+      "address": "",
+      "latitude": 43.7767356,
+      "longitude": -79.3465467,
+      "elevation": 0.0
+    },
+    "contact": {
+      "phone": "",
+      "website": ""
+    },
+    "links": {
+      "google_maps_search": "https://www.google.com/maps/search/?api=1&query=43.7767356,-79.3465467",
+      "google_maps_directions": "https://www.google.com/maps/dir/?api=1&destination=43.7767356,-79.3465467"
+    },
+    "media": {
+      "images": []
+    },
+    "style": {
+      "style_id": "#icon-1899-C2185B-nodesc",
+      "icon_url": null,
+      "color_kml_hex": null
+    },
+    "custom_table_columns": {}
+  },
+  {
+    "id": "",
+    "name": "Good Catch Cafe (Fairview Mall)",
+    "layer": "North York",
+    "description": {
+      "raw_html": "",
+      "clean_text": ""
+    },
+    "location": {
+      "address": "",
+      "latitude": 43.7768691,
+      "longitude": -79.3466092,
+      "elevation": 0.0
+    },
+    "contact": {
+      "phone": "",
+      "website": ""
+    },
+    "links": {
+      "google_maps_search": "https://www.google.com/maps/search/?api=1&query=43.7768691,-79.3466092",
+      "google_maps_directions": "https://www.google.com/maps/dir/?api=1&destination=43.7768691,-79.3466092"
+    },
+    "media": {
+      "images": []
+    },
+    "style": {
+      "style_id": "#icon-1899-C2185B-nodesc",
+      "icon_url": null,
+      "color_kml_hex": null
+    },
+    "custom_table_columns": {}
+  },
+  {
+    "id": "",
+    "name": "Molly Tea (CF Fairview Mall)",
+    "layer": "North York",
+    "description": {
+      "raw_html": "",
+      "clean_text": ""
+    },
+    "location": {
+      "address": "",
+      "latitude": 43.7772759,
+      "longitude": -79.3464009,
+      "elevation": 0.0
+    },
+    "contact": {
+      "phone": "",
+      "website": ""
+    },
+    "links": {
+      "google_maps_search": "https://www.google.com/maps/search/?api=1&query=43.7772759,-79.3464009",
+      "google_maps_directions": "https://www.google.com/maps/dir/?api=1&destination=43.7772759,-79.3464009"
+    },
+    "media": {
+      "images": []
+    },
+    "style": {
+      "style_id": "#icon-1899-C2185B-nodesc",
+      "icon_url": null,
+      "color_kml_hex": null
+    },
+    "custom_table_columns": {}
+  },
+  {
+    "id": "",
+    "name": "ON HING BBQ",
+    "layer": "North York",
+    "description": {
+      "raw_html": "",
+      "clean_text": ""
+    },
+    "location": {
+      "address": "",
+      "latitude": 43.7857182,
+      "longitude": -79.352364,
+      "elevation": 0.0
+    },
+    "contact": {
+      "phone": "",
+      "website": ""
+    },
+    "links": {
+      "google_maps_search": "https://www.google.com/maps/search/?api=1&query=43.7857182,-79.352364",
+      "google_maps_directions": "https://www.google.com/maps/dir/?api=1&destination=43.7857182,-79.352364"
+    },
+    "media": {
+      "images": []
+    },
+    "style": {
+      "style_id": "#icon-1899-C2185B-nodesc",
+      "icon_url": null,
+      "color_kml_hex": null
+    },
+    "custom_table_columns": {}
+  },
+  {
+    "id": "",
+    "name": "Allan’s Pastry Shop",
+    "layer": "North York",
+    "description": {
+      "raw_html": "",
+      "clean_text": ""
+    },
+    "location": {
+      "address": "",
+      "latitude": 43.7857448,
+      "longitude": -79.3523088,
+      "elevation": 0.0
+    },
+    "contact": {
+      "phone": "",
+      "website": ""
+    },
+    "links": {
+      "google_maps_search": "https://www.google.com/maps/search/?api=1&query=43.7857448,-79.3523088",
+      "google_maps_directions": "https://www.google.com/maps/dir/?api=1&destination=43.7857448,-79.3523088"
+    },
+    "media": {
+      "images": []
+    },
+    "style": {
+      "style_id": "#icon-1899-C2185B-nodesc",
+      "icon_url": null,
+      "color_kml_hex": null
+    },
+    "custom_table_columns": {}
+  },
+  {
+    "id": "",
+    "name": "Saigon Express Restaurant",
+    "layer": "North York",
+    "description": {
+      "raw_html": "",
+      "clean_text": ""
+    },
+    "location": {
+      "address": "",
+      "latitude": 43.7856711,
+      "longitude": -79.3520537,
+      "elevation": 0.0
+    },
+    "contact": {
+      "phone": "",
+      "website": ""
+    },
+    "links": {
+      "google_maps_search": "https://www.google.com/maps/search/?api=1&query=43.7856711,-79.3520537",
+      "google_maps_directions": "https://www.google.com/maps/dir/?api=1&destination=43.7856711,-79.3520537"
+    },
+    "media": {
+      "images": []
+    },
+    "style": {
+      "style_id": "#icon-1899-C2185B-nodesc",
+      "icon_url": null,
+      "color_kml_hex": null
+    },
+    "custom_table_columns": {}
+  },
+  {
+    "id": "",
+    "name": "Shi MiaoDao (Ten Seconds) Yunnan Rice Noodle (NorthYork) 十秒到云南过桥米线",
+    "layer": "North York",
+    "description": {
+      "raw_html": "",
+      "clean_text": ""
+    },
+    "location": {
+      "address": "",
+      "latitude": 43.79114,
+      "longitude": -79.36689,
+      "elevation": 0.0
+    },
+    "contact": {
+      "phone": "",
+      "website": ""
+    },
+    "links": {
+      "google_maps_search": "https://www.google.com/maps/search/?api=1&query=43.79114,-79.36689",
+      "google_maps_directions": "https://www.google.com/maps/dir/?api=1&destination=43.79114,-79.36689"
+    },
+    "media": {
+      "images": []
+    },
+    "style": {
+      "style_id": "#icon-1899-C2185B-nodesc",
+      "icon_url": null,
+      "color_kml_hex": null
+    },
+    "custom_table_columns": {}
+  },
+  {
+    "id": "",
+    "name": "Congee Wong",
+    "layer": "North York",
+    "description": {
+      "raw_html": "",
+      "clean_text": ""
+    },
+    "location": {
+      "address": "",
+      "latitude": 43.790631,
+      "longitude": -79.3657333,
+      "elevation": 0.0
+    },
+    "contact": {
+      "phone": "",
+      "website": ""
+    },
+    "links": {
+      "google_maps_search": "https://www.google.com/maps/search/?api=1&query=43.790631,-79.3657333",
+      "google_maps_directions": "https://www.google.com/maps/dir/?api=1&destination=43.790631,-79.3657333"
+    },
+    "media": {
+      "images": []
+    },
+    "style": {
+      "style_id": "#icon-1899-C2185B-nodesc",
+      "icon_url": null,
+      "color_kml_hex": null
+    },
+    "custom_table_columns": {}
+  },
+  {
+    "id": "",
+    "name": "Lavash Authentic Armenian Restaurant",
+    "layer": "North York",
+    "description": {
+      "raw_html": "",
+      "clean_text": ""
+    },
+    "location": {
+      "address": "",
+      "latitude": 43.7865061,
+      "longitude": -79.3287266,
+      "elevation": 0.0
+    },
+    "contact": {
+      "phone": "",
+      "website": ""
+    },
+    "links": {
+      "google_maps_search": "https://www.google.com/maps/search/?api=1&query=43.7865061,-79.3287266",
+      "google_maps_directions": "https://www.google.com/maps/dir/?api=1&destination=43.7865061,-79.3287266"
+    },
+    "media": {
+      "images": []
+    },
+    "style": {
+      "style_id": "#icon-1899-C2185B-nodesc",
+      "icon_url": null,
+      "color_kml_hex": null
+    },
+    "custom_table_columns": {}
+  },
+  {
+    "id": "",
+    "name": "John Anderson's Hamburgers",
+    "layer": "North York",
+    "description": {
+      "raw_html": "",
+      "clean_text": ""
+    },
+    "location": {
+      "address": "",
+      "latitude": 43.7886606,
+      "longitude": -79.3307811,
+      "elevation": 0.0
+    },
+    "contact": {
+      "phone": "",
+      "website": ""
+    },
+    "links": {
+      "google_maps_search": "https://www.google.com/maps/search/?api=1&query=43.7886606,-79.3307811",
+      "google_maps_directions": "https://www.google.com/maps/dir/?api=1&destination=43.7886606,-79.3307811"
+    },
+    "media": {
+      "images": []
+    },
+    "style": {
+      "style_id": "#icon-1899-C2185B-nodesc",
+      "icon_url": null,
+      "color_kml_hex": null
+    },
+    "custom_table_columns": {}
+  },
+  {
+    "id": "",
+    "name": "P Jay's Jamaican Take-Out",
+    "layer": "North York",
+    "description": {
+      "raw_html": "",
+      "clean_text": ""
+    },
+    "location": {
+      "address": "",
+      "latitude": 43.7963617,
+      "longitude": -79.2929548,
+      "elevation": 0.0
+    },
+    "contact": {
+      "phone": "",
+      "website": ""
+    },
+    "links": {
+      "google_maps_search": "https://www.google.com/maps/search/?api=1&query=43.7963617,-79.2929548",
+      "google_maps_directions": "https://www.google.com/maps/dir/?api=1&destination=43.7963617,-79.2929548"
+    },
+    "media": {
+      "images": []
+    },
+    "style": {
+      "style_id": "#icon-1899-C2185B-nodesc",
+      "icon_url": null,
+      "color_kml_hex": null
+    },
+    "custom_table_columns": {}
+  },
+  {
+    "id": "",
+    "name": "Restaurant Boustan",
+    "layer": "North York",
+    "description": {
+      "raw_html": "",
+      "clean_text": ""
+    },
+    "location": {
+      "address": "",
+      "latitude": 43.7545337,
+      "longitude": -79.3577751,
+      "elevation": 0.0
+    },
+    "contact": {
+      "phone": "",
+      "website": ""
+    },
+    "links": {
+      "google_maps_search": "https://www.google.com/maps/search/?api=1&query=43.7545337,-79.3577751",
+      "google_maps_directions": "https://www.google.com/maps/dir/?api=1&destination=43.7545337,-79.3577751"
+    },
+    "media": {
+      "images": []
+    },
+    "style": {
+      "style_id": "#icon-1899-C2185B-nodesc",
+      "icon_url": null,
+      "color_kml_hex": null
+    },
+    "custom_table_columns": {}
+  }
+]
