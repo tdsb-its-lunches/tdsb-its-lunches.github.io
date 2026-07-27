@@ -21,7 +21,7 @@ def fetch_intersections_in_batch(places_needing_address):
     # Build multi-location Overpass QL query
     around_queries = []
     for p in places_needing_address:
-        around_queries.append(f'way(around:500,{p["latitude"]},{p["longitude"]})["highway"~"primary|secondary|trunk"]["name"];')
+        around_queries.append(f'way(around:2000,{p["latitude"]},{p["longitude"]})["highway"~"primary|secondary|trunk"]["name"];')
     
     combined_around = "\n".join(around_queries)
     overpass_ql = f"""
@@ -63,7 +63,7 @@ def fetch_intersections_in_batch(places_needing_address):
                 if len(nearby_roads) >= 2:
                     intersections[(plat, plng)] = f"{nearby_roads[0]} & {nearby_roads[1]}"
                 elif len(nearby_roads) == 1:
-                    intersections[(plat, plng)] = f"Near {nearby_roads[0]}"
+                    intersections[(plat, plng)] = f"{nearby_roads[0]}"
 
     except Exception as e:
         print(f"Batch Overpass lookup failed: {e}")
@@ -144,9 +144,8 @@ def fetch_and_convert():
         lat, lng = p['latitude'], p['longitude']
         name = p['name']
 
-        # Fill missing address from batch result
-        if not address and (lat, lng) in intersections:
-            address = intersections[(lat, lng)]
+        if (lat, lng) in intersections:
+            intersection = intersections[(lat, lng)]
 
         # Navigation & Search URLs
         google_maps_url = ""
@@ -169,6 +168,7 @@ def fetch_and_convert():
             'layer': p['layer'],
             'description': p['description'],
             'address': address,
+            'intersection': intersection,
             'latitude': lat,
             'longitude': lng,
             'google_maps_url': google_maps_url,
