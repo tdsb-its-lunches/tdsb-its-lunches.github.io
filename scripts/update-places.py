@@ -11,77 +11,60 @@ OUTPUT_FILE = 'places.json'
 def fetch_intersections_in_batch(places_needing_address):
     """
     Queries OpenStreetMap Overpass API for ALL coordinates in a single request.
-    Searches strictly for major arterial roads (primary, secondary, trunk) up to 10km radius.
-    Strips suburbs and returns only clean road names (e.g., 'Yonge St & Dundas St W').
+    Returns a dictionary mapping (lat, lng) -> "Road A & Road B".
     """
     if not places_needing_address:
         return {}
 
+    # Build multi-location Overpass QL query
+    around_queries = []
+    for p in places_needing_address:
+        around_queries.append(f'way(around:150,{p["latitude"]},{p["longitude"]})["highway"~"primary|secondary|tertiary|trunk"]["name"];')
+    
+    combined_around = "\n".join(around_queries)
+    overpass_ql = f"""
+    [out:json][timeout:20];
+    (
+      {combined_around}
+    );
+    out tags center;
+    """
+
+    url = "https://overpass-api.de/api/interpreter"
+    data = urllib.parse.urlencode({'data': overpass_ql}).encode('utf-8')
+    req = urllib.request.Request(url, data=data, headers={'User-Agent': 'FastMapExporterScript/1.0'})
+
     intersections = {}
-    unresolved_places = list(places_needing_address)
-    radii = [500, 1500, 3000]  # Progressive radius expansion up to 10km
 
-    for radius in radii:
-        if not unresolved_places:
-            break
+    try:
+        print("Batch looking up intersections on OpenStreetMap...")
+        with urllib.request.urlopen(req, timeout=15) as response:
+            result = json.loads(response.read().decode('utf-8'))
+            elements = result.get('elements', [])
 
-        # Query major arterial roads ONLY (primary, secondary, trunk)
-        around_queries = []
-        for p in unresolved_places:
-            around_queries.append(
-                f'way(around:{radius},{p["latitude"]},{p["longitude"]})["highway"~"primary|secondary|trunk"]["name"];'
-            )
-        
-        combined_around = "\n".join(around_queries)
-        overpass_ql = f"""
-        [out:json][timeout:30];
-        (
-          {combined_around}
-        );
-        out tags center;
-        """
+            # Match returned ways back to each location by distance
+            for p in places_needing_address:
+                plat, plng = p['latitude'], p['longitude']
+                nearby_roads = []
 
-        url = "https://overpass-api.de/api/interpreter"
-        data = urllib.parse.urlencode({'data': overpass_ql}).encode('utf-8')
-        req = urllib.request.Request(url, data=data, headers={'User-Agent': 'FastMapExporterScript/1.0'})
+                for el in elements:
+                    road_name = el.get('tags', {}).get('name')
+                    center = el.get('center', {})
+                    clat, clng = center.get('lat'), center.get('lon')
 
-        try:
-            print(f"Searching major roads within {radius}m for {len(unresolved_places)} places...")
-            with urllib.request.urlopen(req, timeout=25) as response:
-                result = json.loads(response.read().decode('utf-8'))
-                elements = result.get('elements', [])
+                    if road_name and clat and clng:
+                        # Simple Euclidean distance check (~150m boundary)
+                        dist = ((plat - clat)**2 + (plng - clng)**2) ** 0.5
+                        if dist < 0.002 and road_name not in nearby_roads:
+                            nearby_roads.append(road_name)
 
-                still_missing = []
-                for p in unresolved_places:
-                    plat, plng = p['latitude'], p['longitude']
-                    nearby_roads = []
+                if len(nearby_roads) >= 2:
+                    intersections[(plat, plng)] = f"{nearby_roads[0]} & {nearby_roads[1]}"
+                elif len(nearby_roads) == 1:
+                    intersections[(plat, plng)] = f"Near {nearby_roads[0]}"
 
-                    for el in elements:
-                        road_name = el.get('tags', {}).get('name')
-                        center = el.get('center', {})
-                        clat, clng = center.get('lat'), center.get('lon')
-
-                        if road_name and clat and clng:
-                            # Calculate distance offset
-                            dist = ((plat - clat)**2 + (plng - clng)**2) ** 0.5
-                            
-                            # Standard scale: 1 degree approx 111km
-                            max_deg = (radius / 1000.0) / 111.0
-                            if dist <= max_deg and road_name not in nearby_roads:
-                                nearby_roads.append(road_name)
-
-                    if len(nearby_roads) >= 2:
-                        intersections[(plat, plng)] = f"{nearby_roads[0]} & {nearby_roads[1]}"
-                    elif len(nearby_roads) == 1:
-                        intersections[(plat, plng)] = f"Near {nearby_roads[0]}"
-                    else:
-                        still_missing.append(p)
-
-                unresolved_places = still_missing
-
-        except Exception as e:
-            print(f"Batch lookup failed at {radius}m: {e}")
-            break
+    except Exception as e:
+        print(f"Batch Overpass lookup failed: {e}")
 
     return intersections
 
@@ -96,7 +79,7 @@ def fetch_and_convert():
     ns = {'kml': 'http://www.opengis.net/kml/2.2'}
     raw_places = []
 
-    # Iterate through Folders (Layers in Google My Maps)
+    # Iterate through Folders (Layers)
     folders = root.findall('.//kml:Folder', ns)
     search_containers = folders if folders else [root]
 
@@ -107,16 +90,16 @@ def fetch_and_convert():
         for placemark in container.findall('.//kml:Placemark', ns):
             placemark_id = placemark.get('id') or ''
             
-            # --- Name ---
+            # Name
             name_el = placemark.find('kml:name', ns)
             name = name_el.text.strip() if name_el is not None and name_el.text else 'Unnamed Location'
 
-            # --- Description ---
+            # Description
             desc_el = placemark.find('kml:description', ns)
             raw_description = desc_el.text.strip() if desc_el is not None and desc_el.text else ''
             clean_description = ' '.join(re.sub(r'<[^>]+>', ' ', raw_description).split())
 
-            # --- Coordinates ---
+            # Coordinates
             coord_el = placemark.find('.//kml:coordinates', ns)
             lat, lng = None, None
             if coord_el is not None and coord_el.text:
@@ -125,7 +108,7 @@ def fetch_and_convert():
                     lng = float(coords[0])
                     lat = float(coords[1])
 
-            # --- Explicit Google Address ---
+            # Explicit Address from Google
             address = ''
             for data in placemark.findall('.//kml:Data', ns):
                 if data.get('name') in ['address', 'Address', 'location']:
@@ -147,10 +130,10 @@ def fetch_and_convert():
                 'longitude': lng
             })
 
-    # Collect items needing major road lookup
+    # Collect items that need address lookup
     needing_lookup = [p for p in raw_places if not p['address'] and p['latitude'] and p['longitude']]
     
-    # Run batch lookup for all locations
+    # Run 1 single batch lookup for all locations
     intersections = fetch_intersections_in_batch(needing_lookup)
 
     places = []
@@ -163,7 +146,7 @@ def fetch_and_convert():
         if not address and (lat, lng) in intersections:
             address = intersections[(lat, lng)]
 
-        # --- Navigation & Search URLs ---
+        # Navigation & Search URLs
         google_maps_url = ""
         google_maps_dir_url = ""
 
