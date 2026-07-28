@@ -116,10 +116,12 @@ function renderList(filterRegion, searchQuery = "") {
        </a>`
                 : "";
 
-            // Clean leading "description:" and trailing "fav: true/false" flags from note text
+            // --- Robust Cleaning ---
+            // Removes all occurrences of "description:", "fav: true", "fav: false" anywhere in the note string
             let displayNote = (place.note || "")
-                .replace(/^description:\s*/i, "")
-                .replace(/\s*fav:\s*(true|false)$/i, "")
+                .replace(/description:\s*/gi, "")
+                .replace(/fav:\s*(true|false)/gi, "")
+                .replace(/\s+/g, " ")
                 .trim();
 
             htmlContent += `
