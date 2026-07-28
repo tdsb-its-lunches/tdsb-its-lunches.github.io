@@ -47,6 +47,23 @@ def fetch_and_convert():
                     lng = float(coords[0])
                     lat = float(coords[1])
 
+            # --- Favorite Flag ---
+            is_fav = False
+            
+            # 1. Check ExtendedData tags (where My Maps exports table columns)
+            for data_el in placemark.findall('.//kml:ExtendedData//kml:Data', ns) + placemark.findall('.//kml:ExtendedData//kml:SimpleData', ns):
+                attr_name = data_el.attrib.get('name', '').lower()
+                if attr_name == 'fav':
+                    val_el = data_el.find('kml:value', ns)
+                    val_text = val_el.text.strip() if val_el is not None and val_el.text else (data_el.text or '')
+                    if val_text.lower() in ['true', '1', 'yes']:
+                        is_fav = True
+                        break
+
+            # 2. Fallback: Parse description string if custom column was merged into description text
+            if not is_fav and 'fav: true' in raw_description.lower():
+                is_fav = True
+
             # --- Navigation & Search URLs ---
             google_maps_url = ""
             google_maps_dir_url = ""
@@ -62,6 +79,7 @@ def fetch_and_convert():
                 'name': name,
                 'layer': layer_name,
                 'description': clean_description,
+                'fav': is_fav,
                 'latitude': lat,
                 'longitude': lng,
                 'google_maps_url': google_maps_url,
