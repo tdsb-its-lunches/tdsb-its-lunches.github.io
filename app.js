@@ -43,9 +43,8 @@ function processPlacesData(data) {
             region = "NORTH YORK";
         }
 
-        // Determine if it's a Favourite (checks boolean `fav` field from JSON, with string fallbacks)
+        // Determine if it's a Favourite
         const isFavourite =
-            item.fav === true ||
             layerUpper.includes("FAV") ||
             descUpper.includes("FAV") ||
             layerUpper.includes("KEVIN") ||
