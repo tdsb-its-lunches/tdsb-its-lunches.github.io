@@ -680,6 +680,16 @@
     "google_maps_directions_url": "https://www.google.com/maps/dir/?api=1&destination=43.7545584,-79.267799"
   },
   {
+    "name": "Congee Queen",
+    "layer": "Scarborough",
+    "description": "description: fav:",
+    "fav": false,
+    "latitude": 43.7839922,
+    "longitude": -79.2923378,
+    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Congee%20Queen%4043.7839922%2C-79.2923378",
+    "google_maps_directions_url": "https://www.google.com/maps/dir/?api=1&destination=43.7839922,-79.2923378"
+  },
+  {
     "name": "Thairoomgrand York Mills",
     "layer": "North York",
     "description": "description: another thai spot at york mills and don mills, this place has a lunch special while chiang mai (which seems to be better liked) does not. seems like good value! fav:",
