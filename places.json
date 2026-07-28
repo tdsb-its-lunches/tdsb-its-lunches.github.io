@@ -2,7 +2,7 @@
   {
     "name": "Sikgaek Korean Restaurant and Bar",
     "layer": "Etobicoke",
-    "description": "typical korean fare, west side in mississauga (ETOBICOKE)",
+    "description": "description: typical korean fare, west side in mississauga fav:",
     "latitude": 43.5967634,
     "longitude": -79.5967456,
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Sikgaek%20Korean%20Restaurant%20and%20Bar%4043.5967634%2C-79.5967456",
@@ -11,7 +11,7 @@
   {
     "name": "شاورما حطب و نار Charc Shawarma",
     "layer": "Etobicoke",
-    "description": "shawarma that comes recommended by many of the west FS folk (ETOBICOKE)",
+    "description": "description: shawarma that comes recommended by many of the west FS folk fav:",
     "latitude": 43.6139648,
     "longitude": -79.6112419,
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=%D8%B4%D8%A7%D9%88%D8%B1%D9%85%D8%A7%20%D8%AD%D8%B7%D8%A8%20%D9%88%20%D9%86%D8%A7%D8%B1%20Charc%20Shawarma%4043.6139648%2C-79.6112419",
@@ -20,7 +20,7 @@
   {
     "name": "Yaseen’s Shawarma",
     "layer": "Etobicoke",
-    "description": "iraqi style shawarma with the pink sauce. i thought it was pretty good! chicken is slightly on the drier side and imo could do with some more vegetables, but still a great option (ETOBICOKE)",
+    "description": "description: iraqi style shawarma with the pink sauce. i thought it was pretty good! chicken is slightly on the drier side and imo could do with some more vegetables, but still a great option fav:",
     "latitude": 43.6294982,
     "longitude": -79.6282119,
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Yaseen%E2%80%99s%20Shawarma%4043.6294982%2C-79.6282119",
@@ -29,7 +29,7 @@
   {
     "name": "Brandt Meat Manufacturing Plant & European Food Market Factory Outlet",
     "layer": "Etobicoke",
-    "description": "this was one of my favourite places to come when i was at civic. little european grocery/butcher that has a hot table with sausages, schnitzel, cabbage rolls, etc. probably not the best if you are more than 3-4 people but i have always enjoyed lunch + some shopping. some nice items to take a look at that might be difficult to get at other grocery stores like weisswurst :) (ETOBICOKE)",
+    "description": "description: this was one of my favourite places to come when i was at civic. little european grocery/butcher that has a hot table with sausages, schnitzel, cabbage rolls, etc. probably not the best if you are more than 3-4 people but i have always enjoyed lunch + some shopping. some nice items to take a look at that might be difficult to get at other grocery stores like weisswurst :) fav: true",
     "latitude": 43.6168678,
     "longitude": -79.5692721,
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Brandt%20Meat%20Manufacturing%20Plant%20%26%20European%20Food%20Market%20Factory%20Outlet%4043.6168678%2C-79.5692721",
@@ -38,7 +38,7 @@
   {
     "name": "Orda Uyghur Kebab",
     "layer": "Etobicoke",
-    "description": "uyghur food, noodles, meat, etc. (ETOBICOKE)",
+    "description": "description: uyghur food, noodles, meat, etc. fav:",
     "latitude": 43.618967,
     "longitude": -79.572711,
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Orda%20Uyghur%20Kebab%4043.618967%2C-79.572711",
@@ -47,7 +47,7 @@
   {
     "name": "Starsky Fine Foods",
     "layer": "Etobicoke",
-    "description": "i have not been but i hear starsky is a great grocery store. unsure of how good their hot table is but i'd like to give it a go sometime (ETOBICOKE)",
+    "description": "description: i have not been but i hear starsky is a great grocery store. unsure of how good their hot table is but i'd like to give it a go sometime fav:",
     "latitude": 43.6222335,
     "longitude": -79.5680487,
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Starsky%20Fine%20Foods%4043.6222335%2C-79.5680487",
@@ -56,7 +56,7 @@
   {
     "name": "Blue Danube Sausage House Ltd.",
     "layer": "Etobicoke",
-    "description": "tiny little butcher with a hot table that serves schnitzel and a rotating weekly menu. have not tried, but the sausages they make here are supposed to be really good as well (ETOBICOKE)",
+    "description": "description: tiny little butcher with a hot table that serves schnitzel and a rotating weekly menu. have not tried, but the sausages they make here are supposed to be really good as well fav:",
     "latitude": 43.6218182,
     "longitude": -79.5751447,
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Blue%20Danube%20Sausage%20House%20Ltd.%4043.6218182%2C-79.5751447",
@@ -65,7 +65,7 @@
   {
     "name": "Pho Ngoc Yen Restaurant - Mississauga",
     "layer": "Etobicoke",
-    "description": "one of two pho ngoc yen's in the area. both are roughly the same distance from the two TDSB ITS west buildings and probably about as good. while i thought it was good but not outstanding, it might be your best bet on this side of the city. a plus is that portions are very large (ETOBICOKE)",
+    "description": "description: one of two pho ngoc yen's in the area. both are roughly the same distance from the two TDSB ITS west buildings and probably about as good. while i thought it was good but not outstanding, it might be your best bet on this side of the city. a plus is that portions are very large fav:",
     "latitude": 43.6387365,
     "longitude": -79.6436581,
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Pho%20Ngoc%20Yen%20Restaurant%20-%20Mississauga%4043.6387365%2C-79.6436581",
@@ -74,7 +74,7 @@
   {
     "name": "Angara Indian and Hakka Cuisine",
     "layer": "Etobicoke",
-    "description": "indian and hakka",
+    "description": "description: indian and hakka fav:",
     "latitude": 43.6488904,
     "longitude": -79.6045535,
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Angara%20Indian%20and%20Hakka%20Cuisine%4043.6488904%2C-79.6045535",
@@ -83,7 +83,7 @@
   {
     "name": "Palmyra Mediterranean House",
     "layer": "Etobicoke",
-    "description": "family owned lebanese restaurant. shawarma, kebab, etc. would love to give this place a try sometime (ETOBICOKE)",
+    "description": "description: family owned lebanese restaurant. shawarma, kebab, etc. would love to give this place a try sometime fav:",
     "latitude": 43.6486296,
     "longitude": -79.6049209,
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Palmyra%20Mediterranean%20House%4043.6486296%2C-79.6049209",
@@ -92,7 +92,7 @@
   {
     "name": "Gus Tacos",
     "layer": "Etobicoke",
-    "description": "popular toronto tacos chain that also does burritos, tortas, and quesadillas. haven't been to this location, but others have always been pretty good! (ETOBICOKE)",
+    "description": "description: popular toronto tacos chain that also does burritos, tortas, and quesadillas. haven't been to this location, but others have always been pretty good! fav:",
     "latitude": 43.5987203,
     "longitude": -79.5441183,
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Gus%20Tacos%4043.5987203%2C-79.5441183",
@@ -101,7 +101,7 @@
   {
     "name": "OBQ Burgers",
     "layer": "Etobicoke",
-    "description": "another local burger spot (ETOBICOKE)",
+    "description": "description: another local burger spot fav:",
     "latitude": 43.6052089,
     "longitude": -79.5471835,
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=OBQ%20Burgers%4043.6052089%2C-79.5471835",
@@ -110,7 +110,7 @@
   {
     "name": "Congee Queen - Mississauga(Dundas&Hwy427)",
     "layer": "Etobicoke",
-    "description": "andy amin and gave this a visit as our first lunch outing as a group, i think our selections could have been a little better but congee places like this are always going to be consistent, and only gets better as the group scales!! (ETOBICOKE)",
+    "description": "description: andy amin and gave this a visit as our first lunch outing as a group, i think our selections could have been a little better but congee places like this are always going to be consistent, and only gets better as the group scales!! fav:",
     "latitude": 43.6209004,
     "longitude": -79.5725479,
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Congee%20Queen%20-%20Mississauga%28Dundas%26Hwy427%29%4043.6209004%2C-79.5725479",
@@ -119,7 +119,7 @@
   {
     "name": "Sanaa AlYemen Restaurant",
     "layer": "Etobicoke",
-    "description": "yemeni food, i have never tried before but the reviews look promising! (ETOBICOKE)",
+    "description": "description: yemeni food, i have never tried before but the reviews look promising! fav:",
     "latitude": 43.6252537,
     "longitude": -79.5679268,
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Sanaa%20AlYemen%20Restaurant%4043.6252537%2C-79.5679268",
@@ -128,7 +128,7 @@
   {
     "name": "FAT FORK",
     "layer": "Etobicoke",
-    "description": "huge portions of greek food. amin seems to really like this place, and i thought it was pretty good too. (ETOBICOKE)",
+    "description": "description: huge portions of greek food. amin seems to really like this place, and i thought it was pretty good too fav:",
     "latitude": 43.6258803,
     "longitude": -79.5654697,
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=FAT%20FORK%4043.6258803%2C-79.5654697",
@@ -137,7 +137,7 @@
   {
     "name": "PHO NGOC YEN 2 Etobicoke",
     "layer": "Etobicoke",
-    "description": "the other pho ngoc yen location in this area. good pho!!! (ETOBICOKE)",
+    "description": "description: the other pho ngoc yen location in this area. good pho!!! fav:",
     "latitude": 43.6177116,
     "longitude": -79.5428901,
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=PHO%20NGOC%20YEN%202%20Etobicoke%4043.6177116%2C-79.5428901",
@@ -146,7 +146,7 @@
   {
     "name": "IKEA Etobicoke",
     "layer": "Etobicoke",
-    "description": "the etobicoke ikea. look for a discount on lunch meals, can be a fantastic deal! (ETOBICOKE)",
+    "description": "description: the etobicoke ikea. look for a discount on lunch meals, can be a fantastic deal! fav:",
     "latitude": 43.6183642,
     "longitude": -79.534526,
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=IKEA%20Etobicoke%4043.6183642%2C-79.534526",
@@ -155,7 +155,7 @@
   {
     "name": "Elijah's Automatic Flame Broiled",
     "layer": "Etobicoke",
-    "description": "yet another burger spot to try :D (ETOBICOKE)",
+    "description": "description: yet another burger spot to try :D fav:",
     "latitude": 43.6249034,
     "longitude": -79.5079883,
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Elijah%27s%20Automatic%20Flame%20Broiled%4043.6249034%2C-79.5079883",
@@ -164,7 +164,7 @@
   {
     "name": "Ragu Scratch Pasta",
     "layer": "Etobicoke",
-    "description": "have not tried but but i have heard so many great things about this place. locally owned italian pasta made from scratch. takeout only, but looks like it would be amazing if you're in the mood for pasta. (ETOBICOKE)",
+    "description": "description: have not tried but but i have heard so many great things about this place. locally owned italian pasta made from scratch. takeout only, but looks like it would be amazing if you're in the mood for pasta fav:",
     "latitude": 43.6244126,
     "longitude": -79.5120614,
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Ragu%20Scratch%20Pasta%4043.6244126%2C-79.5120614",
@@ -173,7 +173,7 @@
   {
     "name": "Allwyn's Jerk (Etobicoke)",
     "layer": "Etobicoke",
-    "description": "allwyns is a staple across the GTA, but tbh i have actually never had any patties from any location. i suggested we give this spot a go next time we want a snack for the office (ETOBICOKE)",
+    "description": "description: allwyns is a staple across the GTA, but tbh i have actually never had any patties from any location. i suggested we give this spot a go next time we want a snack for the office fav:",
     "latitude": 43.6239968,
     "longitude": -79.5141986,
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Allwyn%27s%20Jerk%20%28Etobicoke%29%4043.6239968%2C-79.5141986",
@@ -182,7 +182,7 @@
   {
     "name": "Sanremo Bakery",
     "layer": "Etobicoke",
-    "description": "well known etobicoke italian bakery. i have never ever happened to be in the area for this, so i am primed and ready to go if anyone else wants to come with me. i've been warned that as they have a massive selection of items, not everything is going to be a hit (ETOBICOKE)",
+    "description": "description: well known etobicoke italian bakery. i have never ever happened to be in the area for this, so i am primed and ready to go if anyone else wants to come with me. i've been warned that as they have a massive selection of items, not everything is going to be a hit fav:",
     "latitude": 43.6185665,
     "longitude": -79.499547,
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Sanremo%20Bakery%4043.6185665%2C-79.499547",
@@ -191,7 +191,7 @@
   {
     "name": "Tom's Dairy Freeze",
     "layer": "Etobicoke",
-    "description": "classic nostalgia-filled spot for ice creams and other diner-type foods. imagine what ice cream from an ice cream truck SHOULD taste like. (ETOBICOKE)",
+    "description": "description: classic nostalgia-filled spot for ice creams and other diner-type foods. imagine what ice cream from an ice cream truck SHOULD taste like fav:",
     "latitude": 43.6278836,
     "longitude": -79.4965735,
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Tom%27s%20Dairy%20Freeze%4043.6278836%2C-79.4965735",
@@ -200,7 +200,7 @@
   {
     "name": "Mamma Martino’s Restaurant",
     "layer": "Etobicoke",
-    "description": "family run italian restaurant, amin's recommendation :) looks to be inexpensive and a popular local spot. also, right next to tom's dairy freeze for a post-lunch ice cream :D",
+    "description": "description: family run italian restaurant, amin's recommendation :) looks to be inexpensive and a popular local spot. also, right next to tom's dairy freeze for a post-lunch ice cream :D fav:",
     "latitude": 43.6279993,
     "longitude": -79.4961281,
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Mamma%20Martino%E2%80%99s%20Restaurant%4043.6279993%2C-79.4961281",
@@ -209,7 +209,7 @@
   {
     "name": "Rancho Relaxo To Go Kipling",
     "layer": "Etobicoke",
-    "description": "tacos, burritos, and quesadillas. this place sounds very nice, would like to give it a try sometime. they have vegan options as well as some weird options... not my cup of tea but maybe someone else's :p (ETOBICOKE)",
+    "description": "description: tacos, burritos, and quesadillas. this place sounds very nice, would like to give it a try sometime. they have vegan options as well as some weird options... not my cup of tea but maybe someone else's :p fav:",
     "latitude": 43.6267699,
     "longitude": -79.5286872,
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Rancho%20Relaxo%20To%20Go%20Kipling%4043.6267699%2C-79.5286872",
@@ -218,7 +218,7 @@
   {
     "name": "Dimpflmeier Bakery",
     "layer": "Etobicoke",
-    "description": "big bakery serving bread, pastries, and desserts. there's a nice coffee room to sit and eat in, if you're looking for something light, and to just chat over lunch",
+    "description": "description: big bakery serving bread, pastries, and desserts. there's a nice coffee room to sit and eat in, if you're looking for something light, and to just chat over lunch fav:",
     "latitude": 43.6341948,
     "longitude": -79.5295076,
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Dimpflmeier%20Bakery%4043.6341948%2C-79.5295076",
@@ -227,7 +227,7 @@
   {
     "name": "Fairouz Restaurant and Lounge",
     "layer": "Etobicoke",
-    "description": "lebanese style kabob and other dishes. this place looks pretty fancy, maybe better for a special occasion (ETOBICOKE)",
+    "description": "description: lebanese style kabob and other dishes. this place looks pretty fancy, maybe better for a special occasion fav:",
     "latitude": 43.6335646,
     "longitude": -79.5314389,
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Fairouz%20Restaurant%20and%20Lounge%4043.6335646%2C-79.5314389",
@@ -236,7 +236,7 @@
   {
     "name": "Yellow Cup Cafe",
     "layer": "Etobicoke",
-    "description": "cafe and other cafe-foods across cloverdale mall (ETOBICOKE)",
+    "description": "description: cafe and other cafe-foods across cloverdale mall fav:",
     "latitude": 43.6320429,
     "longitude": -79.5518273,
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Yellow%20Cup%20Cafe%4043.6320429%2C-79.5518273",
@@ -245,7 +245,7 @@
   {
     "name": "Mr. Souvlaki",
     "layer": "Etobicoke",
-    "description": "greek spot at cloverdale mall, not bad actually, reminded me of when the NS team would get jimmy the greek from STC, taste was extremely similar (ETOBICOKE)",
+    "description": "description: greek spot at cloverdale mall, not bad actually, reminded me of when the NS team would get jimmy the greek from STC, taste was extremely similar fav:",
     "latitude": 43.632409,
     "longitude": -79.55648,
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Mr.%20Souvlaki%4043.632409%2C-79.55648",
@@ -254,7 +254,7 @@
   {
     "name": "Thairoomgrand Etobicoke",
     "layer": "Etobicoke",
-    "description": "it doesn't look like this thairoomgrand location has a lunch special, and while i have not been here before, these chains are normally very consistent. menu looks inexpensive, so it may worth a go! (ETOBICOKE)",
+    "description": "description: it doesn't look like this thairoomgrand location has a lunch special, and while i have not been here before, these chains are normally very consistent. menu looks inexpensive, so it may worth a go! fav:",
     "latitude": 43.6446269,
     "longitude": -79.5328352,
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Thairoomgrand%20Etobicoke%4043.6446269%2C-79.5328352",
@@ -263,7 +263,7 @@
   {
     "name": "Apache Burgers",
     "layer": "Etobicoke",
-    "description": "OG burger spot with a special grape drink (ETOBICOKE)",
+    "description": "description: OG burger spot with a special grape drink fav:",
     "latitude": 43.6393184,
     "longitude": -79.5377775,
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Apache%20Burgers%4043.6393184%2C-79.5377775",
@@ -272,7 +272,7 @@
   {
     "name": "Haroo Korean Restaurant 하루",
     "layer": "Etobicoke",
-    "description": "i took greg, sham, and andy here. this is a new korean spot, seems family owned and very homey. idk what the other korean spots in the area are like, but i found it to be a little underwhelming compared to other places in korean hotspots (not that anything tasted bad, by any means!!) (ETOBICOKE)",
+    "description": "description: i took greg, sham, and andy here. this is a new korean spot, seems family owned and very homey. idk what the other korean spots in the area are like, but i found it to be a little underwhelming compared to other places in korean hotspots (not that anything tasted bad, by any means!!) fav:",
     "latitude": 43.6412616,
     "longitude": -79.5392484,
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Haroo%20Korean%20Restaurant%20%ED%95%98%EB%A3%A8%4043.6412616%2C-79.5392484",
@@ -281,7 +281,7 @@
   {
     "name": "Ikkoi Sushi & Ramen Japanese Cuisine",
     "layer": "Etobicoke",
-    "description": "recommended by kevin chau, he said that the group used to go from time to time for sushi, ramen, and other japanese items. (ETOBICOKE)",
+    "description": "description: recommended by kevin chau, he said that the group used to go from time to time for sushi, ramen, and other japanese items fav:",
     "latitude": 43.6452615,
     "longitude": -79.5324815,
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Ikkoi%20Sushi%20%26%20Ramen%20Japanese%20Cuisine%4043.6452615%2C-79.5324815",
@@ -290,7 +290,7 @@
   {
     "name": "Blooming Batter (Formerly Stacks Toronto)",
     "layer": "Etobicoke",
-    "description": "brunch food, if you're ever in the mood for that! bacon and eggs, sandwiches, pancakes, etc. (ETOBICOKE)",
+    "description": "description: brunch food, if you're ever in the mood for that! bacon and eggs, sandwiches, pancakes, etc. fav:",
     "latitude": 43.6343785,
     "longitude": -79.5414481,
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Blooming%20Batter%20%28Formerly%20Stacks%20Toronto%29%4043.6343785%2C-79.5414481",
@@ -299,7 +299,7 @@
   {
     "name": "Curry and Chutney By Gopal's",
     "layer": "Etobicoke",
-    "description": "local recommended spot for vada pav, masala dosa, pav bhaji, thali, etc. (ETOBICOKE)",
+    "description": "description: local recommended spot for vada pav, masala dosa, pav bhaji, thali, etc. fav:",
     "latitude": 43.6489427,
     "longitude": -79.5493662,
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Curry%20and%20Chutney%20By%20Gopal%27s%4043.6489427%2C-79.5493662",
@@ -308,7 +308,7 @@
   {
     "name": "Tropical South by the Cuban Thing",
     "layer": "Etobicoke",
-    "description": "idk if this place actually exists or not but apparently its a food truck serving cuban style food. it looks really good but it might not even be a thing (ETOBICOKE)",
+    "description": "description: idk if this place actually exists or not but apparently its a food truck serving cuban style food. it looks really good but it might not even be a thing fav:",
     "latitude": 43.6475529,
     "longitude": -79.555524,
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Tropical%20South%20by%20the%20Cuban%20Thing%4043.6475529%2C-79.555524",
@@ -317,7 +317,7 @@
   {
     "name": "McNie's Fish & Chips",
     "layer": "Etobicoke",
-    "description": "fish and chips by martingrove and burnhamthorpe. supposed to be not bad! apparently they even used to serve haggis, but no longer. they've got a cod and chips + drink lunch special as well. honestly fish and chips is a pretty terrible lunch food imo (food coma) but on the rare occasion there is a craving, there is a spot (ETOBICOKE)",
+    "description": "description: fish and chips by martingrove and burnhamthorpe. supposed to be not bad! apparently they even used to serve haggis, but no longer. they've got a cod and chips + drink lunch special as well. honestly fish and chips is a pretty terrible lunch food imo (food coma) but on the rare occasion there is a craving, there is a spot fav:",
     "latitude": 43.6490007,
     "longitude": -79.5493296,
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=McNie%27s%20Fish%20%26%20Chips%4043.6490007%2C-79.5493296",
@@ -326,7 +326,7 @@
   {
     "name": "Lezzet Shawarma Falafel House",
     "layer": "Etobicoke",
-    "description": "SO FAR my favourite shawarma spot in the west. huge portion, tender meat, and a reasonable amount of rice, salad, sauce (which is what makes or breaks these sorts of restaurants for me). would recommend to get here earlier than later, as sometimes there is a bit of a line (ETOBICOKE)",
+    "description": "description: SO FAR my favourite shawarma spot in the west. huge portion, tender meat, and a reasonable amount of rice, salad, sauce (which is what makes or breaks these sorts of restaurants for me). would recommend to get here earlier than later, as sometimes there is a bit of a line fav: true",
     "latitude": 43.6243957,
     "longitude": -79.6068048,
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Lezzet%20Shawarma%20Falafel%20House%4043.6243957%2C-79.6068048",
@@ -335,7 +335,7 @@
   {
     "name": "Bravo Bistro",
     "layer": "Etobicoke",
-    "description": "donny took us with ziggy and the others to this polish place. i liked it a lot! nofrills and the schnitzel seemed fresh",
+    "description": "description: donny took us with ziggy and the others to this polish place. i liked it a lot! nofrills and the schnitzel seemed fresh fav:",
     "latitude": 43.6594946,
     "longitude": -79.6035247,
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Bravo%20Bistro%4043.6594946%2C-79.6035247",
@@ -344,7 +344,7 @@
   {
     "name": "North of Brooklyn Pizzeria",
     "layer": "Etobicoke",
-    "description": "toronto pizza chain, really good thin pizzas. 14\" pizzas feed 2, 18' feeds 3. i really enjoy these sorts of \"slightly-upscale chains\" where the pricepoint is marginally higher than what you'd find at somewhere like pizza hut or pizza pizza, but the food i find is significantly higher quality. (ETOBICOKE)",
+    "description": "description: toronto pizza chain, really good thin pizzas. 14\" pizzas feed 2, 18' feeds 3. i really enjoy these sorts of \"slightly-upscale chains\" where the pricepoint is marginally higher than what you'd find at somewhere like pizza hut or pizza pizza, but the food i find is significantly higher quality fav:",
     "latitude": 43.6223393,
     "longitude": -79.5219645,
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=North%20of%20Brooklyn%20Pizzeria%4043.6223393%2C-79.5219645",
@@ -353,7 +353,7 @@
   {
     "name": "Banh Mi Ba Le",
     "layer": "Etobicoke",
-    "description": "banh mi, really inexpensive and pretty good taste, but it's a bit of a drive west into missisauga. they have a good sized menu with other options that might be harder to find elsewhere like banh bao, banh xeo, banh cuon. the people who work there are not the most polite though lol (ETOBICOKE)",
+    "description": "description: banh mi, really inexpensive and pretty good taste, but it's a bit of a drive west into missisauga. they have a good sized menu with other options that might be harder to find elsewhere like banh bao, banh xeo, banh cuon. the people who work there are not the most polite though lol fav:",
     "latitude": 43.6041065,
     "longitude": -79.5908893,
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Banh%20Mi%20Ba%20Le%4043.6041065%2C-79.5908893",
@@ -362,7 +362,7 @@
   {
     "name": "Adonis",
     "layer": "Etobicoke",
-    "description": "local middle eastern chain grocery store based out of quebec, there's a hot table with shawarma and other foods like that. i don't think it's the best food but if you want to also go to the grocery store, it's an option",
+    "description": "description: local middle eastern chain grocery store based out of quebec, there's a hot table with shawarma and other foods like that. i don't think it's the best food but if you want to also go to the grocery store, it's an option fav:",
     "latitude": 43.6028558,
     "longitude": -79.5880161,
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Adonis%4043.6028558%2C-79.5880161",
@@ -371,7 +371,7 @@
   {
     "name": "Chit Chaat",
     "layer": "Etobicoke",
-    "description": "punjabi food, looks popular! (ETOBICOKE)",
+    "description": "description: punjabi food, looks popular! fav:",
     "latitude": 43.6034522,
     "longitude": -79.539051,
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Chit%20Chaat%4043.6034522%2C-79.539051",
@@ -380,7 +380,7 @@
   {
     "name": "The Elmwood",
     "layer": "Etobicoke",
-    "description": "i think i'd have to be in a very specific mood for this, but this is a spot known for chicken wings. apparently they are some of the best on this side of the city. (ETOBICOKE)",
+    "description": "description: i think i'd have to be in a very specific mood for this, but this is a spot known for chicken wings. apparently they are some of the best on this side of the city fav:",
     "latitude": 43.6259194,
     "longitude": -79.5035489,
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=The%20Elmwood%4043.6259194%2C-79.5035489",
@@ -389,7 +389,7 @@
   {
     "name": "NAAN KABOB",
     "layer": "Etobicoke",
-    "description": "afghani style kabob, fast-food style place, but they cook everything fresh which is always nice (ETOBICOKE)",
+    "description": "description: afghani style kabob, fast-food style place, but they cook everything fresh which is always nice fav:",
     "latitude": 43.6511434,
     "longitude": -79.604747,
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=NAAN%20KABOB%4043.6511434%2C-79.604747",
@@ -398,7 +398,7 @@
   {
     "name": "RUDY",
     "layer": "Etobicoke",
-    "description": "great burger spot with many locations around. their specialty is smash burgers. have not tried this location before but im pretty sure it'll be good!! (ETOBICOKE)",
+    "description": "description: great burger spot with many locations around. their specialty is smash burgers. have not tried this location before but im pretty sure it'll be good!! fav:",
     "latitude": 43.6195672,
     "longitude": -79.5345491,
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=RUDY%4043.6195672%2C-79.5345491",
@@ -407,16 +407,61 @@
   {
     "name": "Revolver Pizza Co.",
     "layer": "Etobicoke",
-    "description": "some of the best pizza around! small chain",
+    "description": "description: some of the best pizza around! small chain fav:",
     "latitude": 43.6188645,
     "longitude": -79.499767,
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Revolver%20Pizza%20Co.%4043.6188645%2C-79.499767",
     "google_maps_directions_url": "https://www.google.com/maps/dir/?api=1&destination=43.6188645,-79.499767"
   },
   {
+    "name": "Xawaash",
+    "layer": "Etobicoke",
+    "description": "description: somali/mediterranean place that mohammed recommended, he likes the chicken mandi fav:",
+    "latitude": 43.715374,
+    "longitude": -79.592975,
+    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Xawaash%4043.715374%2C-79.592975",
+    "google_maps_directions_url": "https://www.google.com/maps/dir/?api=1&destination=43.715374,-79.592975"
+  },
+  {
+    "name": "Amma's Kitchen",
+    "layer": "Etobicoke",
+    "description": "description: little south indian shop right near BCI. henry said he used to go very frequently, i am a huge fan of this sort of food for breakfast, so i'd love to give it a try. unfortunately they only open at 10, which is a little late for breakfast on a workday fav:",
+    "latitude": 43.6468508,
+    "longitude": -79.5625722,
+    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Amma%27s%20Kitchen%4043.6468508%2C-79.5625722",
+    "google_maps_directions_url": "https://www.google.com/maps/dir/?api=1&destination=43.6468508,-79.5625722"
+  },
+  {
+    "name": "Old Mill Pastry & Deli",
+    "layer": "Etobicoke",
+    "description": "description: little balkan convenience store/cafe with some fresh food options. last time i tried a burek which was a tad bit too oily for my liking, but had a good taste. google reviews say they have a cevapi plate which is really good, but i did not see last time. would like to give it a try as it's right next door to civic fav:",
+    "latitude": 43.6421023,
+    "longitude": -79.5654559,
+    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Old%20Mill%20Pastry%20%26%20Deli%4043.6421023%2C-79.5654559",
+    "google_maps_directions_url": "https://www.google.com/maps/dir/?api=1&destination=43.6421023,-79.5654559"
+  },
+  {
+    "name": "KarachiXpress",
+    "layer": "Etobicoke",
+    "description": "description: pakistani kabob place across from sherway gardens. place looks to be a little more upscale than your typical takeout place. maybe nice for a group lunch. both the (many) kababs and biryani come highly recommended fav:",
+    "latitude": 43.6196958,
+    "longitude": -79.5620248,
+    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=KarachiXpress%4043.6196958%2C-79.5620248",
+    "google_maps_directions_url": "https://www.google.com/maps/dir/?api=1&destination=43.6196958,-79.5620248"
+  },
+  {
+    "name": "Dum Biryani",
+    "layer": "Etobicoke",
+    "description": "description: little takout-only dum biryani spot. no idea if this place is good or not but someone recommended it, and it looks very inexpensive fav:",
+    "latitude": 43.6286799,
+    "longitude": -79.5407838,
+    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Dum%20Biryani%4043.6286799%2C-79.5407838",
+    "google_maps_directions_url": "https://www.google.com/maps/dir/?api=1&destination=43.6286799,-79.5407838"
+  },
+  {
     "name": "P Jay's Jamaican Take-Out",
     "layer": "Scarborough",
-    "description": "great jamaican food and patties :) little shop without much seating, but it's a quaint little plaza that isn't too busy, so if its a nice day, sitting outside is an option. reasonably close to both 140 and woodbine. i like the jerk pork and plantain a lot, but patties are also great (NORTH YORK)",
+    "description": "description: great jamaican food and patties :) little shop without much seating, but it's a quaint little plaza that isn't too busy, so if its a nice day, sitting outside is an option. reasonably close to both 140 and woodbine. i like the jerk pork and plantain a lot, but patties are also great fav: true",
     "latitude": 43.7963617,
     "longitude": -79.2929548,
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=P%20Jay%27s%20Jamaican%20Take-Out%4043.7963617%2C-79.2929548",
@@ -425,7 +470,7 @@
   {
     "name": "Great Fountain Fast Food",
     "layer": "Scarborough",
-    "description": "hawker style chinese food in a little mall by sheppard and midland. crazy amount of options, but not all are great... but still amazing variety and inexpensive (SCARBOROUGH)",
+    "description": "description: hawker style chinese food in a little mall by sheppard and midland. crazy amount of options, but not all are great... but still amazing variety and inexpensive fav:",
     "latitude": 43.786839,
     "longitude": -79.2772498,
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Great%20Fountain%20Fast%20Food%4043.786839%2C-79.2772498",
@@ -434,7 +479,7 @@
   {
     "name": "One2Snacks",
     "layer": "Scarborough",
-    "description": "donny-approved malay shop. takeout only, with long wait times. good to order ahead of time via phone. char kway teow was good, laksa ok. ask donnie for what he thinks is best :D (SCARBOROUGH)",
+    "description": "description: donny-approved malay shop. takeout only, with long wait times. good to order ahead of time via phone. char kway teow was good, laksa ok. ask donnie for what he thinks is best :D fav:",
     "latitude": 43.787206,
     "longitude": -79.2765954,
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=One2Snacks%4043.787206%2C-79.2765954",
@@ -443,7 +488,7 @@
   {
     "name": "Floga Estiatorio and Event Space",
     "layer": "Scarborough",
-    "description": "fancier greek place, have not tried but environment, service, and food all look quite good :) (SCARBOROUGH)",
+    "description": "description: fancier greek place, have not tried but environment, service, and food all look quite good :) fav:",
     "latitude": 43.7686864,
     "longitude": -79.2814253,
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Floga%20Estiatorio%20and%20Event%20Space%4043.7686864%2C-79.2814253",
@@ -452,7 +497,7 @@
   {
     "name": "ACR Hot Roti & Doubles",
     "layer": "Scarborough",
-    "description": "trinidadian food and supposedly the best doubles in toronto!! (SCARBOROUGH)",
+    "description": "description: trinidadian food and supposedly the best doubles in toronto!! fav:",
     "latitude": 43.7523371,
     "longitude": -79.2622083,
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=ACR%20Hot%20Roti%20%26%20Doubles%4043.7523371%2C-79.2622083",
@@ -461,7 +506,7 @@
   {
     "name": "Patty Time",
     "layer": "Scarborough",
-    "description": "little patty shop south of thomson memorial park (SCARBOROUGH)",
+    "description": "description: little patty shop south of thomson memorial park fav:",
     "latitude": 43.7538282,
     "longitude": -79.2520062,
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Patty%20Time%4043.7538282%2C-79.2520062",
@@ -470,7 +515,7 @@
   {
     "name": "St. Andrews Fish & Chips",
     "layer": "Scarborough",
-    "description": "i might be getting baited but i have heard this place has some really good fish and chips. i feel like every fish and chips spot i've ever tried here has just been an oily mess (and this place probably is) but on the off chance this is actually good it might be worth a go (SCARBOROUGH)",
+    "description": "description: i might be getting baited but i have heard this place has some really good fish and chips. i feel like every fish and chips spot i've ever tried here has just been an oily mess (and this place probably is) but on the off chance this is actually good it might be worth a go fav:",
     "latitude": 43.7715381,
     "longitude": -79.2526799,
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=St.%20Andrews%20Fish%20%26%20Chips%4043.7715381%2C-79.2526799",
@@ -479,7 +524,7 @@
   {
     "name": "Federick Restaurant",
     "layer": "Scarborough",
-    "description": "long standing chinese hakka food. big portions, inexpensive pricetags, lots of oil. not good if you're dieting but sometimes you need a plate of chili chicken (SCARBOROUGH)",
+    "description": "description: long standing chinese hakka food. big portions, inexpensive pricetags, lots of oil. not good if you're dieting but sometimes you need a plate of chili chicken fav:",
     "latitude": 43.774958,
     "longitude": -79.2409474,
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Federick%20Restaurant%4043.774958%2C-79.2409474",
@@ -488,7 +533,7 @@
   {
     "name": "Canbe Foods Inc",
     "layer": "Scarborough",
-    "description": "recommended spot for samosas and other sri lankan/south indian snack (SCARBOROUGH)",
+    "description": "description: recommended spot for samosas and other sri lankan/south indian snack fav:",
     "latitude": 43.7738823,
     "longitude": -79.2462132,
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Canbe%20Foods%20Inc%4043.7738823%2C-79.2462132",
@@ -497,7 +542,7 @@
   {
     "name": "The Roti Hut",
     "layer": "Scarborough",
-    "description": "apparently this was a place that the telecom team enjoyed going to when they were out east. west indian roti, doubles, etc. mona's roti is also nearby, may be worth trying both out :) i have not been yet! (SCARBOROUGH)",
+    "description": "description: apparently this was a place that the telecom team enjoyed going to when they were out east. west indian roti, doubles, etc. mona's roti is also nearby, may be worth trying both out :) i have not been yet! fav:",
     "latitude": 43.7868557,
     "longitude": -79.2586158,
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=The%20Roti%20Hut%4043.7868557%2C-79.2586158",
@@ -506,7 +551,7 @@
   {
     "name": "Francesca Italian Bakery & Delicatessen",
     "layer": "Scarborough",
-    "description": "have not been here but there is an italian bakery/deli across from the roti hut. looks to be very popular. would like to give it a go (SCARBOROUGH)",
+    "description": "description: have not been here but there is an italian bakery/deli across from the roti hut. looks to be very popular. would like to give it a go fav:",
     "latitude": 43.7877317,
     "longitude": -79.2569177,
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Francesca%20Italian%20Bakery%20%26%20Delicatessen%4043.7877317%2C-79.2569177",
@@ -515,7 +560,7 @@
   {
     "name": "Mona's Roti",
     "layer": "Scarborough",
-    "description": "little bit east of mccowan and sheppard, another west indian roti and doubles spot. i had it once and everything was very good, but i recommend against ordering bone-in (so much bone, so little meat!) (SCARBOROUGH)",
+    "description": "description: little bit east of mccowan and sheppard, another west indian roti and doubles spot. i had it once and everything was very good, but i recommend against ordering bone-in (so much bone, so little meat!) fav:",
     "latitude": 43.7916485,
     "longitude": -79.2508672,
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Mona%27s%20Roti%4043.7916485%2C-79.2508672",
@@ -524,7 +569,7 @@
   {
     "name": "Babu Takeout And Catering",
     "layer": "Scarborough",
-    "description": "as a co-op student with the NS team, i frequently used to leave home early to grab breakfast (which i don't even normally eat!) from here. the breakfast combos are all great value and taste great, especially early in the morning when they are fresh. i especially love the medu vada (SCARBOROUGH)",
+    "description": "description: as a co-op student with the NS team, i frequently used to leave home early to grab breakfast (which i don't even normally eat!) from here. the breakfast combos are all great value and taste great, especially early in the morning when they are fresh. i especially love the medu vada fav: true",
     "latitude": 43.7920155,
     "longitude": -79.2510289,
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Babu%20Takeout%20And%20Catering%4043.7920155%2C-79.2510289",
@@ -533,7 +578,7 @@
   {
     "name": "THG's Hot Chicken",
     "layer": "Scarborough",
-    "description": "fried chicken, sliders, fries, mac, etc. have not been but have been told this place is really good. probably good on a day where you know the afternoon is going to be uneventful as you'll probably need a nap later (SCARBOROUGH)",
+    "description": "description: fried chicken, sliders, fries, mac, etc. have not been but have been told this place is really good. probably good on a day where you know the afternoon is going to be uneventful as you'll probably need a nap later fav:",
     "latitude": 43.7924155,
     "longitude": -79.2498284,
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=THG%27s%20Hot%20Chicken%4043.7924155%2C-79.2498284",
@@ -542,16 +587,34 @@
   {
     "name": "Lucky Chinese Restaurant",
     "layer": "Scarborough",
-    "description": "",
+    "description": "description: another hakka chinese spot fav:",
     "latitude": 43.7527026,
     "longitude": -79.264976,
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Lucky%20Chinese%20Restaurant%4043.7527026%2C-79.264976",
     "google_maps_directions_url": "https://www.google.com/maps/dir/?api=1&destination=43.7527026,-79.264976"
   },
   {
+    "name": "Silver Spoon Warden",
+    "layer": "Scarborough",
+    "description": "description: inexpensive and very popular pakistani spot for biryani, bbq, and other dishes fav:",
+    "latitude": 43.7635209,
+    "longitude": -79.3017614,
+    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Silver%20Spoon%20Warden%4043.7635209%2C-79.3017614",
+    "google_maps_directions_url": "https://www.google.com/maps/dir/?api=1&destination=43.7635209,-79.3017614"
+  },
+  {
+    "name": "Montmartre Bakery",
+    "layer": "Scarborough",
+    "description": "description: amazing little bakery for breads and pastries. super inexpensive but very tasty fav: true",
+    "latitude": 43.7545584,
+    "longitude": -79.267799,
+    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Montmartre%20Bakery%4043.7545584%2C-79.267799",
+    "google_maps_directions_url": "https://www.google.com/maps/dir/?api=1&destination=43.7545584,-79.267799"
+  },
+  {
     "name": "Thairoomgrand York Mills",
     "layer": "North York",
-    "description": "another thai spot at york mills and don mills, this place has a lunch special while chiang mai (which seems to be better liked) does not. seems like good value! (NORTH YORK)",
+    "description": "description: another thai spot at york mills and don mills, this place has a lunch special while chiang mai (which seems to be better liked) does not. seems like good value! fav:",
     "latitude": 43.7544152,
     "longitude": -79.3511697,
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Thairoomgrand%20York%20Mills%4043.7544152%2C-79.3511697",
@@ -560,7 +623,7 @@
   {
     "name": "Darband Restaurant",
     "layer": "North York",
-    "description": "amin recommended this spot, looks like they are well known for both their kaleh pacheh in addition to the other typical persian options (NORTH YORK)",
+    "description": "description: amin recommended this spot, looks like they are well known for both their kaleh pacheh in addition to the other typical persian options fav:",
     "latitude": 43.7551708,
     "longitude": -79.3483093,
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Darband%20Restaurant%4043.7551708%2C-79.3483093",
@@ -569,7 +632,7 @@
   {
     "name": "Chiang Mai York Mills",
     "layer": "North York",
-    "description": "thai, short drive south of peanut plaza. this place is a little more fancy and has a brunch menu, which is a little crazy to me lol (kind of a thai-western fusion, even more so than western thai food already is) (NORTH YORK)",
+    "description": "description: thai, short drive south of peanut plaza. this place is a little more fancy and has a brunch menu, which is a little crazy to me lol (kind of a thai-western fusion, even more so than western thai food already is) fav:",
     "latitude": 43.7551311,
     "longitude": -79.352003,
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Chiang%20Mai%20York%20Mills%4043.7551311%2C-79.352003",
@@ -578,7 +641,7 @@
   {
     "name": "IKEA North York",
     "layer": "North York",
-    "description": "ikea lunch :) they might have some discounts on some days, worth giving it a look (NORTH YORK)",
+    "description": "description: ikea lunch :) they might have some discounts on some days, worth giving it a look fav:",
     "latitude": 43.7676,
     "longitude": -79.3693,
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=IKEA%20North%20York%4043.7676%2C-79.3693",
@@ -587,7 +650,7 @@
   {
     "name": "Som Tum Jinda - Fairview Mall",
     "layer": "North York",
-    "description": "newer som tum jinda location in fairview mall; other locations come very highly reviewed. thai food (NORTH YORK)",
+    "description": "description: newer som tum jinda location in fairview mall; other locations come very highly reviewed. thai food fav:",
     "latitude": 43.7768056,
     "longitude": -79.3466198,
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Som%20Tum%20Jinda%20-%20Fairview%20Mall%4043.7768056%2C-79.3466198",
@@ -596,7 +659,7 @@
   {
     "name": "Bingz Crispy Burger Fairview Mall",
     "layer": "North York",
-    "description": "this place has opened up a lot of locations recently, little crispy chinese \"crepes\" with meat filling + other small dishes. i don't mind this sort of food but it can be a little one-dimensional (NORTH YORK)",
+    "description": "description: this place has opened up a lot of locations recently, little crispy chinese \"crepes\" with meat filling + other small dishes. i don't mind this sort of food but it can be a little one-dimensional fav:",
     "latitude": 43.7767356,
     "longitude": -79.3465467,
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Bingz%20Crispy%20Burger%20Fairview%20Mall%4043.7767356%2C-79.3465467",
@@ -605,7 +668,7 @@
   {
     "name": "Good Catch Cafe (Fairview Mall)",
     "layer": "North York",
-    "description": "hong kong cafe specialties like cantonese baked casseroles, tea, and other small dishes. this place opened pretty recently in fairview mall and while the reviews don't look especially promising, i think it's worth a try :) (NORTH YORK)",
+    "description": "description: hong kong cafe specialties like cantonese baked casseroles, tea, and other small dishes. this place opened pretty recently in fairview mall and while the reviews don't look especially promising, i think it's worth a try :) fav:",
     "latitude": 43.7768691,
     "longitude": -79.3466092,
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Good%20Catch%20Cafe%20%28Fairview%20Mall%29%4043.7768691%2C-79.3466092",
@@ -614,7 +677,7 @@
   {
     "name": "Molly Tea (CF Fairview Mall)",
     "layer": "North York",
-    "description": "popular premium chinese tea shop, 3rd toronto location opened up in fairview mall. expect a line, but if you're already nearby, might be worth a try :)",
+    "description": "description: popular premium chinese tea shop, 3rd toronto location opened up in fairview mall. expect a line, but if you're already nearby, might be worth a try :) fav:",
     "latitude": 43.7772759,
     "longitude": -79.3464009,
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Molly%20Tea%20%28CF%20Fairview%20Mall%29%4043.7772759%2C-79.3464009",
@@ -623,7 +686,7 @@
   {
     "name": "ON HING BBQ",
     "layer": "North York",
-    "description": "andy and i gave this place in peanut plaza a try, i thought it was above average compared to other cantonese bbq spots, and was very inexpensive (NORTH YORK)",
+    "description": "description: andy and i gave this place in peanut plaza a try, i thought it was above average compared to other cantonese bbq spots, and was very inexpensive fav:",
     "latitude": 43.7857182,
     "longitude": -79.352364,
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=ON%20HING%20BBQ%4043.7857182%2C-79.352364",
@@ -632,7 +695,7 @@
   {
     "name": "Allan’s Pastry Shop",
     "layer": "North York",
-    "description": "authorized reseller of allan's jamaican pastries located right in peanut plaza, have not tried yet but would be a very easy way to get some snacks for the team (NORTH YORK)",
+    "description": "description: authorized reseller of allan's jamaican pastries located right in peanut plaza, have not tried yet but would be a very easy way to get some snacks for the team fav:",
     "latitude": 43.7857448,
     "longitude": -79.3523088,
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Allan%E2%80%99s%20Pastry%20Shop%4043.7857448%2C-79.3523088",
@@ -641,7 +704,7 @@
   {
     "name": "Saigon Express Restaurant",
     "layer": "North York",
-    "description": "little viet/chinese/thai place inside the peanut plaza mall, i found the pho to be ok but a little too oily for my liking. other options look good and is inexpensive (NORTH YORK)",
+    "description": "description: little viet/chinese/thai place inside the peanut plaza mall, i found the pho to be ok but a little too oily for my liking. other options look good and is inexpensive fav:",
     "latitude": 43.7856711,
     "longitude": -79.3520537,
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Saigon%20Express%20Restaurant%4043.7856711%2C-79.3520537",
@@ -650,7 +713,7 @@
   {
     "name": "Shi MiaoDao (Ten Seconds) Yunnan Rice Noodle (NorthYork) 十秒到云南过桥米线",
     "layer": "North York",
-    "description": "yunnan style rice noodles, looks like plenty of options, quick service (NORTH YORK)",
+    "description": "description: yunnan style rice noodles, looks like plenty of options, quick service fav:",
     "latitude": 43.79114,
     "longitude": -79.36689,
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Shi%20MiaoDao%20%28Ten%20Seconds%29%20Yunnan%20Rice%20Noodle%20%28NorthYork%29%20%E5%8D%81%E7%A7%92%E5%88%B0%E4%BA%91%E5%8D%97%E8%BF%87%E6%A1%A5%E7%B1%B3%E7%BA%BF%4043.79114%2C-79.36689",
@@ -659,7 +722,7 @@
   {
     "name": "Congee Wong",
     "layer": "North York",
-    "description": "congee, cantonese dishes, and a big menu at finch and leslie. i have not been to this location but congee places like this are always pretty consistent and good (NORTH YORK)",
+    "description": "description: congee, cantonese dishes, and a big menu at finch and leslie. i have not been to this location but congee places like this are always pretty consistent and good fav:",
     "latitude": 43.790631,
     "longitude": -79.3657333,
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Congee%20Wong%4043.790631%2C-79.3657333",
@@ -668,7 +731,7 @@
   {
     "name": "Lavash Authentic Armenian Restaurant",
     "layer": "North York",
-    "description": "seems like a place you'd only come to if you had a little extra time. armenian/middle eastern food; not a lot of places serving some of these dishes, so worth a go if there is a day you're wanting a \"long lunch\" at (NORTH YORK)",
+    "description": "description: seems like a place you'd only come to if you had a little extra time. armenian/middle eastern food; not a lot of places serving some of these dishes, so worth a go if there is a day you're wanting a \"long lunch\" at fav:",
     "latitude": 43.7865061,
     "longitude": -79.3287266,
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Lavash%20Authentic%20Armenian%20Restaurant%4043.7865061%2C-79.3287266",
@@ -677,7 +740,7 @@
   {
     "name": "John Anderson's Hamburgers",
     "layer": "North York",
-    "description": "burger shop at victoria park and finch, no seating inside but probably nice to eat on a \"reasonable weather\" day outside (NORTH YORK)",
+    "description": "description: burger shop at victoria park and finch, no seating inside but probably nice to eat on a \"reasonable weather\" day outside fav:",
     "latitude": 43.7886606,
     "longitude": -79.3307811,
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=John%20Anderson%27s%20Hamburgers%4043.7886606%2C-79.3307811",
@@ -686,7 +749,7 @@
   {
     "name": "P Jay's Jamaican Take-Out",
     "layer": "North York",
-    "description": "great jamaican food and patties :) little shop without much seating, but it's a quaint little plaza that isn't too busy, so if its a nice day, sitting outside is an option. reasonably close to both 140 and woodbine. i like the jerk pork and plantain a lot, but patties are also great (NORTH YORK)",
+    "description": "description: great jamaican food and patties :) little shop without much seating, but it's a quaint little plaza that isn't too busy, so if its a nice day, sitting outside is an option. reasonably close to both 140 and woodbine. i like the jerk pork and plantain a lot, but patties are also great fav: true",
     "latitude": 43.7963617,
     "longitude": -79.2929548,
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=P%20Jay%27s%20Jamaican%20Take-Out%4043.7963617%2C-79.2929548",
@@ -695,7 +758,7 @@
   {
     "name": "Restaurant Boustan",
     "layer": "North York",
-    "description": "the famous montreal shawarma in the GTA. i have not been to this location, but i have been wanting to give it a go (just not had a good opportunity) (NORTH YORK)",
+    "description": "description: the famous montreal shawarma in the GTA. i have not been to this location, but i have been wanting to give it a go (just not had a good opportunity) fav:",
     "latitude": 43.7545337,
     "longitude": -79.3577751,
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurant%20Boustan%4043.7545337%2C-79.3577751",
@@ -704,7 +767,7 @@
   {
     "name": "T&T Supermarket Fairview Mall Store",
     "layer": "North York",
-    "description": "fairview mall t&t location. good spot for grocery, snacks, bakery, and hot table",
+    "description": "description: fairview mall t&t location. good spot for grocery, snacks, bakery, and hot table fav:",
     "latitude": 43.7771291,
     "longitude": -79.3460659,
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=T%26T%20Supermarket%20Fairview%20Mall%20Store%4043.7771291%2C-79.3460659",
