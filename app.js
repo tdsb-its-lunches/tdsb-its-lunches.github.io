@@ -32,6 +32,7 @@ function processPlacesData(data) {
     allPlaces = data.map((item) => {
         const layerUpper = (item.layer || "").toUpperCase();
         const descUpper = (item.description || "").toUpperCase();
+        const isFavourite = (item.fav || "");
 
         // Determine Region from Layer Name (or Description)
         let region = "UNKNOWN";
@@ -44,11 +45,11 @@ function processPlacesData(data) {
         }
 
         // Determine if it's a Favourite
-        const isFavourite =
-            layerUpper.includes("FAV") ||
-            descUpper.includes("FAV") ||
-            layerUpper.includes("KEVIN") ||
-            descUpper.includes("KEVIN");
+        // const isFavourite =
+        //     layerUpper.includes("FAV") ||
+        //     descUpper.includes("FAV") ||
+        //     layerUpper.includes("KEVIN") ||
+        //     descUpper.includes("KEVIN");
 
         return {
             title: item.name || "Unnamed Location",
@@ -115,6 +116,12 @@ function renderList(filterRegion, searchQuery = "") {
        </a>`
                 : "";
 
+            // Clean leading "description:" and trailing "fav: true/false" flags from note text
+            let displayNote = (place.note || "")
+                .replace(/^description:\s*/i, "")
+                .replace(/\s*fav:\s*(true|false)$/i, "")
+                .trim();
+
             htmlContent += `
                 <div class="place-card">
                     <div class="place-card-tags">
@@ -127,7 +134,7 @@ function renderList(filterRegion, searchQuery = "") {
                     </div>
                     <div class="note-text" style="margin-top: 5px; display: flex; align-items: center; gap: 4px;">
                         <img src="img/note.png" alt="Note icon" style="width: 16px; height: 16px; object-fit: contain;" />
-                        <span>${place.note || "-"}</span>
+                        <span>${displayNote || "-"}</span>
                     </div>
                 </div>
             `;
