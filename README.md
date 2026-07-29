@@ -1,7 +1,7 @@
 # TDSB ITS Lunch Spots
 This site is managed by Kevin Mao. I wanted a way to more easily pick and sort through lunch options are the office, as everyone has their own preferences.
 
-The full map is located here: https://www.google.com/maps/d/u/1/edit?mid=1O0RXbcC3VxTbI9mXsxr8RoI8eD-aaBM&usp=sharing.
+The full map is located here: https://www.google.com/maps/d/u/1/edit?mid=1O0RXbcC3VxTbI9mXsxr8RoI8eD-aaBM&usp=sharing.<br>
 The site is hosted here: https://tdsb-its-lunches.github.io/.
 
 The site is fairly simple, but it is split into three areas:
