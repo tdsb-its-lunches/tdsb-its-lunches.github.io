@@ -1,9 +1,11 @@
-name: Update Map Data
+name: Update My Maps JSON
 
 on:
     schedule:
-        # runs automatically every night at 00:00 UTC
-        - cron: "0 0 * * *"
+        # Runs at 04:17 UTC (~12:17 AM EDT / 11:17 PM EST)
+        # Using minute 17 bypasses top-of-the-hour congestion delays
+        # - cron: "17 4 * * *"
+        - cron: "5 17 * * *"    
     workflow_dispatch:
 
 permissions:
