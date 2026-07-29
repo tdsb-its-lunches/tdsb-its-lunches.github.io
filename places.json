@@ -462,7 +462,7 @@
   {
     "name": "Xawaash",
     "layer": "Etobicoke",
-    "description": "description: somali/mediterranean place that mohammed recommended, he likes the chicken mandi fav:",
+    "description": "description: somali/mediterranean place that mohammed recommended, he said he likes the chicken mandi fav:",
     "fav": false,
     "latitude": 43.715374,
     "longitude": -79.592975,
@@ -838,16 +838,6 @@
     "longitude": -79.3307811,
     "google_maps_url": "https://www.google.com/maps/search/?api=1&query=John%20Anderson%27s%20Hamburgers%4043.7886606%2C-79.3307811",
     "google_maps_directions_url": "https://www.google.com/maps/dir/?api=1&destination=43.7886606,-79.3307811"
-  },
-  {
-    "name": "P Jay's Jamaican Take-Out",
-    "layer": "North York",
-    "description": "description: great jamaican food and patties :) little shop without much seating, but it's a quaint little plaza that isn't too busy, so if its a nice day, sitting outside is an option. reasonably close to both 140 and woodbine. i like the jerk pork and plantain a lot, but patties are also great fav: true",
-    "fav": true,
-    "latitude": 43.7963617,
-    "longitude": -79.2929548,
-    "google_maps_url": "https://www.google.com/maps/search/?api=1&query=P%20Jay%27s%20Jamaican%20Take-Out%4043.7963617%2C-79.2929548",
-    "google_maps_directions_url": "https://www.google.com/maps/dir/?api=1&destination=43.7963617,-79.2929548"
   },
   {
     "name": "Restaurant Boustan",
