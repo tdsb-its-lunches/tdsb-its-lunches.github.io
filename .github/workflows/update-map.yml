@@ -2,10 +2,8 @@ name: Update My Maps JSON
 
 on:
     schedule:
-        # Runs at 04:17 UTC (~12:17 AM EDT / 11:17 PM EST)
-        # Using minute 17 bypasses top-of-the-hour congestion delays
-        # - cron: "17 4 * * *"
-        - cron: "5 17 * * *"    
+        # Runs at 02:22 UTC (10:22pm or 11:22pm EST)
+        - cron: "22 2 * * *" 
     workflow_dispatch:
 
 permissions:
