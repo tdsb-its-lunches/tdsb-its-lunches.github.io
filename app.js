@@ -120,14 +120,6 @@ function renderList(filterRegion, searchQuery = "") {
        </a>`
                 : "";
 
-            // --- Clean Note Text ---
-            // Strips "description:", any "fav:" instance (and trailing true/false/words), then cleans extra spaces
-            let displayNote = (place.note || "")
-                .replace(/description:\s*/gi, "")
-                .replace(/fav:\s*\w*/gi, "")
-                .replace(/\s+/g, " ")
-                .trim();
-
             htmlContent += `
                 <div class="place-card">
                     <div class="place-card-tags">
