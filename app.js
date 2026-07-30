@@ -132,7 +132,7 @@ function renderList(filterRegion, searchQuery = "") {
                     </div>
                     <div class="note-text" style="margin-top: 5px; display: flex; align-items: center; gap: 4px;">
                         <img src="img/note.png" alt="Note icon" style="width: 16px; height: 16px; object-fit: contain;" />
-                        <span>${displayNote || "-"}</span>
+                        <span>${place.note || "-"}</span>
                     </div>
                 </div>
             `;
