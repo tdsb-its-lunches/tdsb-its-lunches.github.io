@@ -34,7 +34,7 @@ function processPlacesData(data) {
     if (lastUpdatedEl && data.last_updated) {
         // Formats to user's local date/time (e.g., "7/30/2026, 2:22:00 AM")
         const formattedDate = new Date(data.last_updated).toLocaleString();
-        lastUpdatedEl.textContent = `Last updated: ${formattedDate}`;
+        lastUpdatedEl.textContent = `${formattedDate}`;
     }
 
     // --- 2. Extract Places Array ---

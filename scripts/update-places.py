@@ -36,7 +36,15 @@ def fetch_and_convert():
             # --- Description ---
             desc_el = placemark.find('kml:description', ns)
             raw_description = desc_el.text.strip() if desc_el is not None and desc_el.text else ''
-            clean_description = ' '.join(re.sub(r'<[^>]+>', ' ', raw_description).split())
+            
+            # 1. Remove HTML tags
+            clean_description = re.sub(r'<[^>]+>', ' ', raw_description)
+            
+            # 2. Strip leading "description:" label (case-insensitive)
+            clean_description = re.sub(r'^description:\s*', '', clean_description, flags=re.IGNORECASE)
+            
+            # 3. Clean up leftover whitespace
+            clean_description = ' '.join(clean_description.split())
 
             # --- Coordinates ---
             coord_el = placemark.find('.//kml:coordinates', ns)
