@@ -40,10 +40,13 @@ def fetch_and_convert():
             # 1. Remove HTML tags
             clean_description = re.sub(r'<[^>]+>', ' ', raw_description)
             
-            # 2. Strip leading "description:" label (case-insensitive)
+            # 2. Strip leading "description:" label
             clean_description = re.sub(r'^description:\s*', '', clean_description, flags=re.IGNORECASE)
             
-            # 3. Clean up leftover whitespace
+            # 3. Strip trailing "fav:" tag and anything following it (e.g., "fav:", "fav: true", "fav: false")
+            clean_description = re.sub(r'\bfav:\s*\w*$', '', clean_description, flags=re.IGNORECASE)
+            
+            # 4. Clean up leftover whitespace
             clean_description = ' '.join(clean_description.split())
 
             # --- Coordinates ---
