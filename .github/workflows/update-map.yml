@@ -1,27 +1,34 @@
 name: Update My Maps JSON
 
 on:
-    schedule:
-        # Runs at 02:22 UTC (10:22pm or 11:22pm EST)
-        - cron: "22 2 * * *" 
-    workflow_dispatch:
+  schedule:
+    - cron: "22 2 * * *" 
+  workflow_dispatch:
 
 permissions:
-    contents: write
+  contents: write
 
 jobs:
-    update-data:
-        runs-on: ubuntu-latest
-        steps:
-            - name: Checkout repository
-              uses: actions/checkout@v4
+  update-data:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-            - name: Run Python conversion script
-              run: python3 scripts/update-places.py
+      - name: Run Python conversion script
+        run: python3 scripts/update-places.py
 
-            - name: Commit and push changes
-              run: |
-                  git config --global user.name "github-actions[bot]"
-                  git config --global user.email "github-actions[bot]@users.noreply.github.com"
-                  git add .
-                  git diff --quiet && git diff --staged --quiet || (git commit -m "chore: auto-update map places [skip ci]" && git push)
+      - name: Update README timestamp
+        run: |
+          # Capture current formatted date
+          NOW=$(date -u +"%B %d, %Y at %H:%M UTC")
+          
+          # Replace content between <!-- TIMESTAMP_START --> and <!-- TIMESTAMP_END -->
+          sed -i -E "s|(<!-- TIMESTAMP_START -->).*(<!-- TIMESTAMP_END -->)|\1Last updated: $NOW\2|g" README.md
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add .
+          git diff --quiet && git diff --staged --quiet || (git commit -m "chore: update places and timestamp [skip ci]" && git push)

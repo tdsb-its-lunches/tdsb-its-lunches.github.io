@@ -86,11 +86,21 @@ def fetch_and_convert():
                 'google_maps_directions_url': google_maps_dir_url
             })
 
+    # --- Build top-level payload with ISO timestamp ---
+    from datetime import datetime, timezone
+    
+    output_payload = {
+        'last_updated': datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'),
+        'count': len(places),
+        'places': places
+    }
+
     # Save to JSON in root
     with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
-        json.dump(places, f, indent=2, ensure_ascii=False)
+        json.dump(output_payload, f, indent=2, ensure_ascii=False)
 
     print(f"Successfully saved {len(places)} locations to {OUTPUT_FILE}")
 
 if __name__ == '__main__':
     fetch_and_convert()
+

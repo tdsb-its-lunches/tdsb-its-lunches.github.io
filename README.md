@@ -12,3 +12,6 @@ The site is fairly simple, but it is split into three areas:
 Otherwise, you can search for places via their name or the description I've written for the places, and I've also included tags on some spots that are my personal favourites. The list is pulled from the map nightly.
 
 Please let me know if anything is broken or if you have suggestions for additional features to add, thanks!
+
+## Last Updated:
+<!-- TIMESTAMP_START -->Pending...<!-- TIMESTAMP_END -->

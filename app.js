@@ -29,7 +29,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // main logic to process then display JSON data
 function processPlacesData(data) {
-    allPlaces = data.map((item) => {
+    // --- 1. Display Timestamp ---
+    const lastUpdatedEl = document.getElementById("lastUpdated");
+    if (lastUpdatedEl && data.last_updated) {
+        // Formats to user's local date/time (e.g., "7/30/2026, 2:22:00 AM")
+        const formattedDate = new Date(data.last_updated).toLocaleString();
+        lastUpdatedEl.textContent = `Last updated: ${formattedDate}`;
+    }
+
+    // --- 2. Extract Places Array ---
+    const rawPlaces = data.places || [];
+
+    allPlaces = rawPlaces.map((item) => {
         const layerUpper = (item.layer || "").toUpperCase();
         const descUpper = (item.description || "").toUpperCase();
         const isFavourite = (item.fav || "");
@@ -43,13 +54,6 @@ function processPlacesData(data) {
         } else if (layerUpper.includes("NORTH YORK") || descUpper.includes("NORTH YORK")) {
             region = "NORTH YORK";
         }
-
-        // Determine if it's a Favourite
-        // const isFavourite =
-        //     layerUpper.includes("FAV") ||
-        //     descUpper.includes("FAV") ||
-        //     layerUpper.includes("KEVIN") ||
-        //     descUpper.includes("KEVIN");
 
         return {
             title: item.name || "Unnamed Location",
