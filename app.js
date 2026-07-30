@@ -157,7 +157,14 @@ function filterPlaces(region) {
 
 // search bar functionality
 function handleSearch() {
-    const currentSearch = document.getElementById("searchInput").value;
+    const searchInput = document.getElementById("searchInput");
+    const clearBtn = document.getElementById("clearSearchBtn");
+    const currentSearch = searchInput.value;
+
+    // Toggle clear button visibility based on input content
+    if (clearBtn) {
+        clearBtn.style.display = currentSearch.trim() ? "block" : "none";
+    }
 
     const activeBtn = document.querySelector(".filter-buttons .btn.active");
 
@@ -169,6 +176,23 @@ function handleSearch() {
     }
 
     renderList(currentRegion, currentSearch);
+}
+
+// clear search input and re-render
+function clearSearch() {
+    const searchInput = document.getElementById("searchInput");
+    const clearBtn = document.getElementById("clearSearchBtn");
+
+    searchInput.value = "";
+    if (clearBtn) {
+        clearBtn.style.display = "none";
+    }
+    
+    // Re-focus the input after clearing
+    searchInput.focus();
+
+    // Trigger list update
+    handleSearch();
 }
 
 // display button when user scrolls down 200px from top

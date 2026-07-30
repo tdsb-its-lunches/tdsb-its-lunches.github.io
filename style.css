@@ -102,10 +102,37 @@ body {
 }
 
 .search-container {
-    margin: 0;
+    position: relative;
+    display: inline-block;
+    width: 100%; /* Or set to your desired search bar width */
+    max-width: 400px;
+}
+
+.search-container input {
     width: 100%;
-    max-width: 300px;
-    padding: 0;
+    padding-right: 35px; /* Extra right padding so text doesn't overlap the X */
+    box-sizing: border-box;
+}
+
+.clear-search-btn {
+    display: none; /* Hidden by default until user types */
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    font-size: 18px;
+    color: #888;
+    cursor: pointer;
+    line-height: 1;
+    padding: 2px 6px;
+    border-radius: 50%;
+}
+
+.clear-search-btn:hover {
+    color: #333;
+    background-color: #f0f0f0;
 }
 
 #searchInput {

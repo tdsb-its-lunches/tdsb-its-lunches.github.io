@@ -42,7 +42,9 @@
                 <button class="btn btn-north-york" onclick="filterPlaces('NORTH YORK')">North York</button>
             </div>
             <div class="search-container">
-                <input type="text" id="searchInput" placeholder="Search name or notes..." oninput="handleSearch()">
+                <input type="text" id="searchInput" placeholder="Search places..." oninput="handleSearch()" />
+                <button type="button" id="clearSearchBtn" class="clear-search-btn" onclick="clearSearch()"
+                    title="Clear search" aria-label="Clear search">&times;</button>
             </div>
 
         </div>
