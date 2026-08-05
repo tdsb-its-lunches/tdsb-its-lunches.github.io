@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-08-04T11:12:05Z",
-  "count": 86,
+  "last_updated": "2026-08-05T11:08:19Z",
+  "count": 88,
   "places": [
     {
       "name": "Sikgaek Korean Restaurant and Bar",
@@ -861,6 +861,26 @@
       "longitude": -79.3460659,
       "google_maps_url": "https://www.google.com/maps/search/?api=1&query=T%26T%20Supermarket%20Fairview%20Mall%20Store%4043.7771291%2C-79.3460659",
       "google_maps_directions_url": "https://www.google.com/maps/dir/?api=1&destination=43.7771291,-79.3460659"
+    },
+    {
+      "name": "Mangal Kebab House",
+      "layer": "North York",
+      "description": "",
+      "fav": false,
+      "latitude": 43.7664667,
+      "longitude": -79.3015628,
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Mangal%20Kebab%20House%4043.7664667%2C-79.3015628",
+      "google_maps_directions_url": "https://www.google.com/maps/dir/?api=1&destination=43.7664667,-79.3015628"
+    },
+    {
+      "name": "Johnny's Hamburgers",
+      "layer": "North York",
+      "description": "",
+      "fav": false,
+      "latitude": 43.7748785,
+      "longitude": -79.3222755,
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Johnny%27s%20Hamburgers%4043.7748785%2C-79.3222755",
+      "google_maps_directions_url": "https://www.google.com/maps/dir/?api=1&destination=43.7748785,-79.3222755"
     }
   ]
 }
