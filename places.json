@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-09-08T07:18:10Z",
-  "count": 88,
+  "last_updated": "2026-09-09T07:26:53Z",
+  "count": 87,
   "places": [
     {
       "name": "Sikgaek Korean Restaurant and Bar",
@@ -591,16 +591,6 @@
       "longitude": -79.2409474,
       "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Federick%20Restaurant%4043.774958%2C-79.2409474",
       "google_maps_directions_url": "https://www.google.com/maps/dir/?api=1&destination=43.774958,-79.2409474"
-    },
-    {
-      "name": "Canbe Foods Inc",
-      "layer": "Scarborough",
-      "description": "recommended spot for samosas and other sri lankan/south indian snack",
-      "fav": false,
-      "latitude": 43.7738823,
-      "longitude": -79.2462132,
-      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Canbe%20Foods%20Inc%4043.7738823%2C-79.2462132",
-      "google_maps_directions_url": "https://www.google.com/maps/dir/?api=1&destination=43.7738823,-79.2462132"
     },
     {
       "name": "The Roti Hut",
