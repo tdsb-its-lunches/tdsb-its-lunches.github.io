@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-10-23T07:41:41Z",
-  "count": 87,
+  "last_updated": "2026-10-24T07:24:40Z",
+  "count": 88,
   "places": [
     {
       "name": "Sikgaek Korean Restaurant and Bar",
@@ -511,6 +511,16 @@
       "longitude": -79.5407838,
       "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Dum%20Biryani%4043.6286799%2C-79.5407838",
       "google_maps_directions_url": "https://www.google.com/maps/dir/?api=1&destination=43.6286799,-79.5407838"
+    },
+    {
+      "name": "Crudo Pizza & Panuozzo (Etobicoke)",
+      "layer": "Etobicoke",
+      "description": "",
+      "fav": false,
+      "latitude": 43.6868477,
+      "longitude": -79.5279834,
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Crudo%20Pizza%20%26%20Panuozzo%20%28Etobicoke%29%4043.6868477%2C-79.5279834",
+      "google_maps_directions_url": "https://www.google.com/maps/dir/?api=1&destination=43.6868477,-79.5279834"
     },
     {
       "name": "P Jay's Jamaican Take-Out",
