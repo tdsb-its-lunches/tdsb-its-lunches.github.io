@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-10-26T07:54:51Z",
-  "count": 91,
+  "last_updated": "2026-10-27T08:01:26Z",
+  "count": 93,
   "places": [
     {
       "name": "Sikgaek Korean Restaurant and Bar",
@@ -691,6 +691,26 @@
       "longitude": -79.2923378,
       "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Congee%20Queen%4043.7839922%2C-79.2923378",
       "google_maps_directions_url": "https://www.google.com/maps/dir/?api=1&destination=43.7839922,-79.2923378"
+    },
+    {
+      "name": "Kathy's Grill",
+      "layer": "Scarborough",
+      "description": "",
+      "fav": false,
+      "latitude": 43.7527316,
+      "longitude": -79.276512,
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Kathy%27s%20Grill%4043.7527316%2C-79.276512",
+      "google_maps_directions_url": "https://www.google.com/maps/dir/?api=1&destination=43.7527316,-79.276512"
+    },
+    {
+      "name": "Harry's Drive-In",
+      "layer": "Scarborough",
+      "description": "",
+      "fav": false,
+      "latitude": 43.74937,
+      "longitude": -79.277253,
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Harry%27s%20Drive-In%4043.74937%2C-79.277253",
+      "google_maps_directions_url": "https://www.google.com/maps/dir/?api=1&destination=43.74937,-79.277253"
     },
     {
       "name": "Thairoomgrand York Mills",
