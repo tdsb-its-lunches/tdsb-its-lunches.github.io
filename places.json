@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-10-28T08:43:36Z",
-  "count": 93,
+  "last_updated": "2026-10-29T08:39:15Z",
+  "count": 97,
   "places": [
     {
       "name": "Sikgaek Korean Restaurant and Bar",
@@ -521,6 +521,46 @@
       "longitude": -79.5279834,
       "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Crudo%20Pizza%20%26%20Panuozzo%20%28Etobicoke%29%4043.6868477%2C-79.5279834",
       "google_maps_directions_url": "https://www.google.com/maps/dir/?api=1&destination=43.6868477,-79.5279834"
+    },
+    {
+      "name": "Sarajevo Grill & Meat",
+      "layer": "Etobicoke",
+      "description": "",
+      "fav": false,
+      "latitude": 43.6324138,
+      "longitude": -79.5524054,
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Sarajevo%20Grill%20%26%20Meat%4043.6324138%2C-79.5524054",
+      "google_maps_directions_url": "https://www.google.com/maps/dir/?api=1&destination=43.6324138,-79.5524054"
+    },
+    {
+      "name": "Chuck's Roadhouse Bar and Grill",
+      "layer": "Etobicoke",
+      "description": "",
+      "fav": false,
+      "latitude": 43.6500954,
+      "longitude": -79.6040777,
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Chuck%27s%20Roadhouse%20Bar%20and%20Grill%4043.6500954%2C-79.6040777",
+      "google_maps_directions_url": "https://www.google.com/maps/dir/?api=1&destination=43.6500954,-79.6040777"
+    },
+    {
+      "name": "The Red Cardinal Tavern",
+      "layer": "Etobicoke",
+      "description": "",
+      "fav": false,
+      "latitude": 43.644925,
+      "longitude": -79.5677055,
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=The%20Red%20Cardinal%20Tavern%4043.644925%2C-79.5677055",
+      "google_maps_directions_url": "https://www.google.com/maps/dir/?api=1&destination=43.644925,-79.5677055"
+    },
+    {
+      "name": "Matt's Burger Lab Etobicoke",
+      "layer": "Etobicoke",
+      "description": "",
+      "fav": false,
+      "latitude": 43.6350444,
+      "longitude": -79.5626637,
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Matt%27s%20Burger%20Lab%20Etobicoke%4043.6350444%2C-79.5626637",
+      "google_maps_directions_url": "https://www.google.com/maps/dir/?api=1&destination=43.6350444,-79.5626637"
     },
     {
       "name": "P Jay's Jamaican Take-Out",
