@@ -1,60 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TDSB ITS Lunches Map</title>
-    <link 
-      rel="stylesheet" 
-      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" 
-      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" 
-      crossorigin=""
-    />
-    <link rel="stylesheet" href="style.css">
-  </head>
 
-  <body>
-    <div class="app-container">
-      
-      <!-- sidebar -->
-      <aside class="sidebar">
-        <header class="sidebar-header">
-          <h1>Local Eats</h1>
-          <p>Explore restaurants near you</p>
-        </header>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TDSB ITS Lunch Spots</title>
+  <link rel="icon" type="image/png" href="img/favicon.png">
+  <link 
+    rel="stylesheet" 
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" 
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" 
+    crossorigin=""
+  />
+  <link rel="stylesheet" href="style.css">
+</head>
 
-        <!-- section where visible restaurants will list -->
-        <div class="restaurant-list" id="restaurantList">
-          <p class="placeholder-text">Loading locations...</p>
-        </div>
-      </aside>
+<body>
+  <div class="app-container">
+    
+    <!-- sidebar -->
+    <aside class="sidebar">
+      <header class="sidebar-header">
+        <h1>Local Eats</h1>
+        <p>Explore restaurants near you</p>
+      </header>
 
-      <!-- map container -->
-      <main id="map"></main>
-    </div>
-
-    <!-- detail modal/drawer (hidden by default) -->
-    <div id="detailModal" class="modal hidden">
-      <div class="modal-content">
-        <button id="closeModalBtn" class="close-btn">&times;</button>
-        <div id="modalBody"></div>
+      <!-- section where visible restaurants will list -->
+      <div class="restaurant-list" id="restaurantList">
+        <p class="placeholder-text">Loading locations...</p>
       </div>
+    </aside>
+
+    <!-- map container -->
+    <main id="map"></main>
+  </div>
+
+  <!-- detail modal/drawer (hidden by default) -->
+  <div id="detailModal" class="modal hidden">
+    <div class="modal-content">
+      <button id="closeModalBtn" class="close-btn">&times;</button>
+      <div id="modalBody"></div>
     </div>
+  </div>
 
-    <!-- Leaflet JS -->
-    <script 
-      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" 
-      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" 
-      crossorigin="">
-    </script>
+  <!-- Leaflet JS -->
+  <script 
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" 
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" 
+    crossorigin="">
+  </script>
 
-    <!-- PapaParse JS for CSV parsing -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+  <!-- PapaParse JS for CSV parsing -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
 
-    <!-- Load configuration first -->
-    <script src="config.js"></script>
+  <!-- Load configuration first -->
+  <script src="config.js"></script>
 
-    <!-- Load main application script -->
-    <script src="app.js"></script>
-  </body>
+  <!-- Load main application script -->
+  <script src="app.js"></script>
+</body>
+
 </html>
