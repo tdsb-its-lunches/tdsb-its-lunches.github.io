@@ -4,12 +4,12 @@ const DEFAULT_ZOOM = 12;
 
 const map = L.map('map').setView(DEFAULT_CENTER, DEFAULT_ZOOM);
 
-// Clean Mapbox Style ID (username/style_id format)
-//const MAPBOX_STYLE = 'kevinmao1999/cmvv2pgms008n01s2a9jgctrx';
-const MAPBOX_STYLE = 'mapbox/streets-v12';
+// Clean Mapbox Style ID (Ensures 'mapbox://styles/' is stripped if present)
+const RAW_STYLE = 'kevinmao1999/cmvv2pgms008n01s2a9jgctrx';
+const MAPBOX_STYLE = RAW_STYLE.replace(/^mapbox:\/\/styles\//, '');
 
 // Safely retrieve MAPBOX_ACCESS_TOKEN injected from config.js or environment
-const accessToken = (typeof MAPBOX_ACCESS_TOKEN !== 'undefined') ? MAPBOX_ACCESS_TOKEN : '';
+const accessToken = (typeof MAPBOX_ACCESS_TOKEN !== 'undefined' && MAPBOX_ACCESS_TOKEN) ? MAPBOX_ACCESS_TOKEN : '';
 
 // Check if a Mapbox token is present; fallback to free OpenStreetMap tiles if empty
 if (accessToken && accessToken.trim() !== '') {

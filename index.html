@@ -54,7 +54,12 @@
   <!-- PapaParse JS for CSV parsing -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
 
-  <!-- Load configuration first -->
+  <!-- Initialize token variable in global scope to avoid missing variable errors -->
+  <script>
+    var MAPBOX_ACCESS_TOKEN = '';
+  </script>
+
+  <!-- Load configuration script (overrides MAPBOX_ACCESS_TOKEN if present) -->
   <script src="config.js"></script>
 
   <!-- Load main application script -->
