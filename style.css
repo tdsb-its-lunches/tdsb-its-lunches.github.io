@@ -135,3 +135,43 @@ body, html {
 .close-btn:hover {
   color: #000;
 }
+
+/* Fix circular pin distortion and skewing during map zoom/pan */
+.leaflet-marker-icon {
+  /* Prevent browser 3D transform distortion */
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+
+  /* Force clean sub-pixel anti-aliasing and image scaling */
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: high-quality;
+  
+  /* Ensure transparent corners don't bleed or create edge borders */
+  outline: none;
+  border: none;
+}
+
+/* Sidebar hover highlight state */
+.restaurant-card.highlighted {
+  background-color: #e8f4fe !important;
+  border-left: 4px solid #007bff !important;
+  transform: translateX(4px);
+  transition: all 0.15s ease-in-out;
+}
+
+/* Leaflet tooltip custom styling */
+.custom-tooltip {
+  background: rgba(0, 0, 0, 0.85);
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+.custom-tooltip::before {
+  border-top-color: rgba(0, 0, 0, 0.85); /* Matches tooltip arrow color */
+}

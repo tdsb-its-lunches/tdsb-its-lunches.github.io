@@ -24,7 +24,7 @@ if (accessToken && accessToken.trim() !== '') {
 let allRestaurants = [];
 const markersGroup = L.layerGroup().addTo(map);
 
-// 2. Fetch and Parse CSV Data
+// fetch and parse CSV data
 function fetchSheetData() {
   Papa.parse(CSV_URL, {
     download: true,
@@ -36,8 +36,16 @@ function fetchSheetData() {
     },
     complete: function(results) {
       allRestaurants = results.data;
-      console.log('Loaded CSV rows:', allRestaurants);
-      renderApp(allRestaurants);
+      
+      // 1. Render all map pins once
+      renderMarkers(allRestaurants);
+      
+      // 2. Initial sidebar populate based on starting map view
+      updateVisibleSidebar();
+
+      // 3. Listen for map pans/zooms to dynamically update the sidebar
+      map.off('moveend', updateVisibleSidebar); // Prevent duplicate listeners on refetch
+      map.on('moveend', updateVisibleSidebar);
     },
     error: function(err) {
       console.error('Error fetching CSV:', err);
@@ -47,55 +55,11 @@ function fetchSheetData() {
   });
 }
 
-// Define custom pin icons (no shadows)
-const pinBlue = L.icon({
-  iconUrl: 'img/pin_blue.png',
-  iconSize: [20, 20],
-  iconAnchor: [10, 10],
-  popupAnchor: [0, -10]
-});
-
-const pinRed = L.icon({
-  iconUrl: 'img/pin_red.png',
-  iconSize: [20, 20],
-  iconAnchor: [10, 10],
-  popupAnchor: [0, -10]
-});
-
-const pinGreen = L.icon({
-  iconUrl: 'img/pin_green.png',
-  iconSize: [20, 20],
-  iconAnchor: [10, 10],
-  popupAnchor: [0, -10]
-});
-
-const pinHeart = L.icon({
-  iconUrl: 'img/pin_heart.png',
-  iconSize: [20, 20],
-  iconAnchor: [10, 10],
-  popupAnchor: [0, -10]
-});
-
-// Helper function to safely read column values regardless of minor spacing or case differences
-function getProp(obj, keyName) {
-  if (!obj) return undefined;
-  const target = keyName.toLowerCase().trim();
-  const foundKey = Object.keys(obj).find(k => k.toLowerCase().trim() === target);
-  return foundKey ? obj[foundKey] : undefined;
-}
-
-// 3. Render Markers and Sidebar
-function renderApp(locations) {
+function renderMarkers(locations) {
   markersGroup.clearLayers();
-  const listContainer = document.getElementById('restaurantList');
-  listContainer.innerHTML = '';
 
-  let loadedCount = 0;
-
-  locations.forEach((place) => {
-    const name = getProp(place, 'Name');
+  locations.forEach((place, index) => {
     const latLngStr = getProp(place, 'Lat, Lng') || getProp(place, 'Lat/Lng') || getProp(place, 'LatLng');
-    
     if (!latLngStr || typeof latLngStr !== 'string') return;
 
     const coords = latLngStr.split(',').map(c => parseFloat(c.trim()));
@@ -104,43 +68,97 @@ function renderApp(locations) {
 
     if (isNaN(lat) || isNaN(lng)) return;
 
-    // Increment counter so the placeholder logic knows rows were loaded
-    loadedCount++;
-
+    const name = getProp(place, 'Name') || 'Unnamed Spot';
     const region = getProp(place, 'Region');
     const type = getProp(place, 'Type');
-    const cuisine = getProp(place, 'Cuisine');
-    const favourite = getProp(place, 'Favourite?');
-
-    // Select pin based on Type (for ITS) or Region
-    let selectedIcon = pinBlue; // Default fallback pin
 
     const cleanType = type ? type.toString().trim().toUpperCase() : '';
     const cleanRegion = region ? region.toString().trim().toUpperCase() : '';
 
+    let selectedIcon = pinBlue;
+    let selectedHoverIcon = pinHoverBlue;
+
     if (cleanType === 'ITS' || cleanRegion === 'ITS') {
       selectedIcon = pinHeart;
+      selectedHoverIcon = pinHoverHeart;
     } else if (cleanRegion === 'ETOBICOKE') {
       selectedIcon = pinRed;
+      selectedHoverIcon = pinHoverRed;
     } else if (cleanRegion === 'SCARBOROUGH') {
       selectedIcon = pinGreen;
+      selectedHoverIcon = pinHoverGreen;
     } else if (cleanRegion === 'NORTH YORK') {
       selectedIcon = pinBlue;
+      selectedHoverIcon = pinHoverBlue;
     }
 
-    // Create Map Pin with selected custom icon
     const marker = L.marker([lat, lng], { icon: selectedIcon }).addTo(markersGroup);
+
+    // 1. Attach name tooltip near cursor
+    marker.bindTooltip(name, {
+      direction: 'top',
+      offset: [0, -12],
+      className: 'custom-tooltip'
+    });
+
+    // Determine matching sidebar card ID
+    const cardId = `card-${name.replace(/\s+/g, '-').toLowerCase()}`;
+
+    // 2. Mouseover event: Swap icon & highlight sidebar card
+    marker.on('mouseover', () => {
+      marker.setIcon(selectedHoverIcon);
+
+      const targetCard = document.querySelector(`[data-card-id="${cardId}"]`);
+      if (targetCard) {
+        targetCard.classList.add('highlighted');
+        targetCard.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+    });
+
+    // 3. Mouseout event: Restore icon & remove sidebar highlight
+    marker.on('mouseout', () => {
+      marker.setIcon(selectedIcon);
+
+      const targetCard = document.querySelector(`[data-card-id="${cardId}"]`);
+      if (targetCard) {
+        targetCard.classList.remove('highlighted');
+      }
+    });
+
+    // Click handler
+    marker.on('click', () => {
+      openDetailModal(place);
+    });
+  });
+}
+
+function renderSidebar(visibleLocations) {
+  const listContainer = document.getElementById('restaurantList');
+  listContainer.innerHTML = '';
+
+  if (visibleLocations.length === 0) {
+    listContainer.innerHTML = '<p class="placeholder-text">No restaurants in this map view.</p>';
+    return;
+  }
+
+  visibleLocations.forEach((place, index) => {
+    const name = getProp(place, 'Name');
+    const region = getProp(place, 'Region');
+    const cuisine = getProp(place, 'Cuisine');
+    const favourite = getProp(place, 'Favourite?');
+
+    const latLngStr = getProp(place, 'Lat, Lng') || getProp(place, 'Lat/Lng') || getProp(place, 'LatLng');
+    const coords = latLngStr ? latLngStr.split(',').map(c => parseFloat(c.trim())) : [0, 0];
 
     const isFav = favourite && favourite.toLowerCase().trim() === 'yes';
     const favBadge = isFav ? ' ⭐' : '';
 
-    marker.on('click', () => {
-      openDetailModal(place);
-    });
+    // Generate a unique ID string per spot based on name or array position
+    const cardId = `card-${name ? name.replace(/\s+/g, '-').toLowerCase() : index}`;
 
-    // Create Sidebar Item Card
     const card = document.createElement('div');
     card.className = 'restaurant-card';
+    card.setAttribute('data-card-id', cardId); // Set matching ID attribute
     card.innerHTML = `
       <h3>${name || 'Unnamed Spot'}${favBadge}</h3>
       <p><strong>${cuisine || 'Food'}</strong> ${region ? '• ' + region : ''}</p>
@@ -148,16 +166,30 @@ function renderApp(locations) {
     `;
 
     card.addEventListener('click', () => {
-      map.flyTo([lat, lng], 16);
+      map.flyTo([coords[0], coords[1]], 16);
       openDetailModal(place);
     });
 
     listContainer.appendChild(card);
   });
+}
 
-  if (loadedCount === 0) {
-    listContainer.innerHTML = '<p class="placeholder-text">No valid locations found in CSV.</p>';
-  }
+// Update Sidebar based on current Map Viewport (excluding "ITS" types)
+function updateVisibleSidebar() {
+  const bounds = map.getBounds();
+  
+  const visibleRestaurants = allRestaurants.filter(place => {
+    // 1. Exclude if Type is "ITS"
+    const type = getProp(place, 'Type');
+    if (type && type.toString().trim().toUpperCase() === 'ITS') {
+      return false;
+    }
+
+    // 2. Check if within current map viewport
+    return isRestaurantVisible(place, bounds);
+  });
+
+  renderSidebar(visibleRestaurants);
 }
 
 // 4. Detailed Modal View
@@ -211,6 +243,29 @@ function openDetailModal(place) {
   modal.classList.remove('hidden');
 }
 
+// helper function to read column values safely
+function getProp(obj, keyName) {
+  if (!obj) return undefined;
+  const target = keyName.toLowerCase().trim();
+  const foundKey = Object.keys(obj).find(k => k.toLowerCase().trim() === target);
+  return foundKey ? obj[foundKey] : undefined;
+}
+
+// Check if restaurant coordinates fall within visible map bounds
+function isRestaurantVisible(place, bounds) {
+  const latLngStr = getProp(place, 'Lat, Lng') || getProp(place, 'Lat/Lng') || getProp(place, 'LatLng');
+  if (!latLngStr || typeof latLngStr !== 'string') return false;
+
+  const coords = latLngStr.split(',').map(c => parseFloat(c.trim()));
+  const lat = coords[0];
+  const lng = coords[1];
+
+  if (isNaN(lat) || isNaN(lng)) return false;
+
+  // Leaflet bounds check
+  return bounds.contains([lat, lng]);
+}
+
 // Close Modal Event Handlers
 document.getElementById('closeModalBtn').addEventListener('click', () => {
   document.getElementById('detailModal').classList.add('hidden');
@@ -224,3 +279,53 @@ document.getElementById('detailModal').addEventListener('click', (e) => {
 
 // Run fetch on load
 fetchSheetData();
+
+// pins
+const pinBlue = L.icon({
+  iconUrl: 'img/pin_blue.png',
+  iconSize: [16, 16],
+  iconAnchor: [8, 8],
+  popupAnchor: [0, -8]
+});
+const pinHoverBlue = L.icon({
+  iconUrl: 'img/pinhover_blue.png',
+  iconSize: [18, 18],
+  iconAnchor: [9, 9],
+  popupAnchor: [0, -9]
+});
+const pinRed = L.icon({
+  iconUrl: 'img/pin_red.png',
+  iconSize: [16, 16],
+  iconAnchor: [8, 8],
+  popupAnchor: [0, -8]
+});
+const pinHoverRed = L.icon({
+  iconUrl: 'img/pinhover_red.png',
+  iconSize: [18, 18],
+  iconAnchor: [9, 9],
+  popupAnchor: [0, -9]
+});
+const pinGreen = L.icon({
+  iconUrl: 'img/pin_green.png',
+  iconSize: [16, 16],
+  iconAnchor: [8, 8],
+  popupAnchor: [0, -8]
+});
+const pinHoverGreen = L.icon({
+  iconUrl: 'img/pinhover_green.png',
+  iconSize: [18, 18],
+  iconAnchor: [9, 9],
+  popupAnchor: [0, -9]
+});
+const pinHeart = L.icon({
+  iconUrl: 'img/pin_heart.png',
+  iconSize: [16, 16],
+  iconAnchor: [8, 8],
+  popupAnchor: [0, -8]
+});
+const pinHoverHeart = L.icon({
+  iconUrl: 'img/pinhover_heart.png',
+  iconSize: [18, 18],
+  iconAnchor: [9, 9],
+  popupAnchor: [0, -9]
+});
