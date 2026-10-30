@@ -1,68 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Local Restaurant Map</title>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TDSB ITS Lunches Map</title>
+    <link 
+      rel="stylesheet" 
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" 
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" 
+      crossorigin=""
+    />
+    <link rel="stylesheet" href="style.css">
+  </head>
 
-  <!-- Leaflet CSS -->
-  <link 
-    rel="stylesheet" 
-    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" 
-    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" 
-    crossorigin=""
-  />
+  <body>
+    <div class="app-container">
+      
+      <!-- sidebar -->
+      <aside class="sidebar">
+        <header class="sidebar-header">
+          <h1>Local Eats</h1>
+          <p>Explore restaurants near you</p>
+        </header>
 
-  <!-- App Custom Styles -->
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+        <!-- section where visible restaurants will list -->
+        <div class="restaurant-list" id="restaurantList">
+          <p class="placeholder-text">Loading locations...</p>
+        </div>
+      </aside>
 
-  <div class="app-container">
-    <!-- Sidebar -->
-    <aside class="sidebar">
-      <header class="sidebar-header">
-        <h1>Local Eats</h1>
-        <p>Explore restaurants near you</p>
-      </header>
-
-      <!-- Section where visible restaurants will list -->
-      <div class="restaurant-list" id="restaurantList">
-        <p class="placeholder-text">Loading locations...</p>
-      </div>
-    </aside>
-
-    <!-- Map Container -->
-    <main id="map"></main>
-  </div>
-
-  <!-- Detail Modal/Drawer (Hidden by default) -->
-  <div id="detailModal" class="modal hidden">
-    <div class="modal-content">
-      <button id="closeModalBtn" class="close-btn">&times;</button>
-      <div id="modalBody"></div>
+      <!-- map container -->
+      <main id="map"></main>
     </div>
-  </div>
 
-  <!-- Leaflet JS -->
-  <script 
-    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" 
-    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" 
-    crossorigin="">
-  </script>
+    <!-- detail modal/drawer (hidden by default) -->
+    <div id="detailModal" class="modal hidden">
+      <div class="modal-content">
+        <button id="closeModalBtn" class="close-btn">&times;</button>
+        <div id="modalBody"></div>
+      </div>
+    </div>
 
-  <!-- PapaParse JS for CSV parsing -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+    <!-- Leaflet JS -->
+    <script 
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" 
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" 
+      crossorigin="">
+    </script>
 
-  <!-- Initialize token variable in global scope to avoid missing variable errors -->
-  <script>
-    var MAPBOX_ACCESS_TOKEN = '';
-  </script>
+    <!-- PapaParse JS for CSV parsing -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
 
-  <!-- Load configuration script (overrides MAPBOX_ACCESS_TOKEN if present) -->
-  <script src="config.js"></script>
+    <!-- Load configuration first -->
+    <script src="config.js"></script>
 
-  <!-- Load main application script -->
-  <script src="app.js"></script>
-</body>
+    <!-- Load main application script -->
+    <script src="app.js"></script>
+  </body>
 </html>

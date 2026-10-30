@@ -1,36 +1,25 @@
-// 1. Map Initialization
-const DEFAULT_CENTER = [43.6923, -79.43071]; // Toronto default center
+// initialize
+const DEFAULT_CENTER = [43.6923, -79.43071];
 const DEFAULT_ZOOM = 12;
-
 const map = L.map('map').setView(DEFAULT_CENTER, DEFAULT_ZOOM);
 
-// Clean Mapbox Style ID (Ensures 'mapbox://styles/' is stripped if present)
-const RAW_STYLE = 'kevinmao1999/cmvv2pgms008n01s2a9jgctrx';
-const MAPBOX_STYLE = RAW_STYLE.replace(/^mapbox:\/\/styles\//, '');
+const MAPBOX_STYLE = 'kevinmao1999/cmvv2pgms008n01s2a9jgctrx';
+const accessToken = MAPBOX_ACCESS_TOKEN;
 
-// Safely retrieve MAPBOX_ACCESS_TOKEN injected from config.js or environment
-const accessToken = (typeof MAPBOX_ACCESS_TOKEN !== 'undefined' && MAPBOX_ACCESS_TOKEN) ? MAPBOX_ACCESS_TOKEN : '';
+const CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTmdqwmsBGqKFd6BcAalcgXSxlwoJhFv8j-D9sPoqyBsKRSbwMTD5JXQBYYqmk1Qj2irHycVrzQC3ID/pub?gid=0&single=true&output=csv';
 
-// Check if a Mapbox token is present; fallback to free OpenStreetMap tiles if empty
+// load Mapbox tiles onto Leaflet map
 if (accessToken && accessToken.trim() !== '') {
   L.tileLayer(
     `https://api.mapbox.com/styles/v1/${MAPBOX_STYLE}/tiles/512/{z}/{x}/{y}@2x?access_token=${accessToken}`,
     {
       tileSize: 512,
       zoomOffset: -1,
-      maxZoom: 19,
+      maxZoom: 18,
       attribution: '&copy; <a href="https://www.mapbox.com/about/maps/">Mapbox</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     }
   ).addTo(map);
-} else {
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 19,
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-  }).addTo(map);
 }
-
-// Google Sheets Published CSV Link
-const CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTmdqwmsBGqKFd6BcAalcgXSxlwoJhFv8j-D9sPoqyBsKRSbwMTD5JXQBYYqmk1Qj2irHycVrzQC3ID/pub?gid=0&single=true&output=csv';
 
 let allRestaurants = [];
 const markersGroup = L.layerGroup().addTo(map);
