@@ -1,214 +1,232 @@
-// global array to store all parsed data
-let allPlaces = [];
+// 1. Map Initialization
+const DEFAULT_CENTER = [43.6923, -79.43071]; // Toronto default center
+const DEFAULT_ZOOM = 12;
 
-// force browser to start at the top on reload/refresh
-if ("scrollRestoration" in history) {
-    history.scrollRestoration = "manual";
+const map = L.map('map').setView(DEFAULT_CENTER, DEFAULT_ZOOM);
+
+const MAPBOX_STYLE = 'mapbox://styles/kevinmao1999/cmvv2pgms008n01s2a9jgctrx';
+
+// Check if a Mapbox token is present; fallback to free OpenStreetMap tiles if empty
+if (MAPBOX_ACCESS_TOKEN && MAPBOX_ACCESS_TOKEN.trim() !== '') {
+  L.tileLayer(
+    `https://api.mapbox.com/styles/v1/${MAPBOX_STYLE}/tiles/{z}/{x}/{y}?access_token=${MAPBOX_ACCESS_TOKEN}`,
+    {
+      tileSize: 512,
+      zoomOffset: -1,
+      maxZoom: 19,
+      attribution: '&copy; <a href="https://www.mapbox.com/about/maps/">Mapbox</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }
+  ).addTo(map);
+} else {
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+  }).addTo(map);
 }
 
-window.addEventListener("beforeunload", () => {
-    window.scrollTo(0, 0);
+// Google Sheets Published CSV Link
+const CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTmdqwmsBGqKFd6BcAalcgXSxlwoJhFv8j-D9sPoqyBsKRSbwMTD5JXQBYYqmk1Qj2irHycVrzQC3ID/pub?gid=0&single=true&output=csv';
+
+let allRestaurants = [];
+const markersGroup = L.layerGroup().addTo(map);
+
+// 2. Fetch and Parse CSV Data
+function fetchSheetData() {
+  Papa.parse(CSV_URL, {
+    download: true,
+    header: true,
+    skipEmptyLines: true,
+    transformHeader: function(header) {
+      // Clean hidden spaces or extra quotes around header names
+      return header.trim().replace(/^["']|["']$/g, '');
+    },
+    complete: function(results) {
+      allRestaurants = results.data;
+      console.log('Loaded CSV rows:', allRestaurants);
+      renderApp(allRestaurants);
+    },
+    error: function(err) {
+      console.error('Error fetching CSV:', err);
+      document.getElementById('restaurantList').innerHTML = 
+        '<p class="placeholder-text">Unable to load restaurant data.</p>';
+    }
+  });
+}
+
+// Define custom 32x32 pin icons (no shadows)
+const pinBlue = L.icon({
+  iconUrl: 'img/pin_blue.png',
+  iconSize: [20, 20],
+  iconAnchor: [10, 10],
+  popupAnchor: [0, -10]
 });
 
-// on initial page load, fetch data from places.json, then process and render
-document.addEventListener("DOMContentLoaded", () => {
-    fetch("places.json")
-        .then((response) => {
-            if (!response.ok) {
-                throw new Error("There was an issue finding places.json.");
-            }
-            return response.json();
-        })
-        .then((data) => {
-            processPlacesData(data);
-        })
-        .catch((error) => {
-            document.getElementById("output").textContent = `Error: ${error.message}`;
-        });
+const pinRed = L.icon({
+  iconUrl: 'img/pin_red.png',
+  iconSize: [20, 20],
+  iconAnchor: [10, 10],
+  popupAnchor: [0, -10]
 });
 
-// main logic to process then display JSON data
-function processPlacesData(data) {
-    // --- 1. Display Timestamp ---
-    const lastUpdatedEl = document.getElementById("lastUpdated");
-    if (lastUpdatedEl && data.last_updated) {
-        // Formats to user's local date/time (e.g., "7/30/2026, 2:22:00 AM")
-        const formattedDate = new Date(data.last_updated).toLocaleString();
-        lastUpdatedEl.textContent = `${formattedDate}`;
-    }
+const pinGreen = L.icon({
+  iconUrl: 'img/pin_green.png',
+  iconSize: [20, 20],
+  iconAnchor: [10, 10],
+  popupAnchor: [0, -10]
+});
 
-    // --- 2. Extract Places Array ---
-    const rawPlaces = data.places || [];
+const pinHeart = L.icon({
+  iconUrl: 'img/pin_heart.png',
+  iconSize: [20, 20],
+  iconAnchor: [10, 10],
+  popupAnchor: [0, -10]
+});
 
-    allPlaces = rawPlaces.map((item) => {
-        const layerUpper = (item.layer || "").toUpperCase();
-        const descUpper = (item.description || "").toUpperCase();
-        const isFavourite = (item.fav || "");
-
-        // Determine Region from Layer Name (or Description)
-        let region = "UNKNOWN";
-        if (layerUpper.includes("ETOBICOKE") || descUpper.includes("ETOBICOKE")) {
-            region = "ETOBICOKE";
-        } else if (layerUpper.includes("SCARBOROUGH") || descUpper.includes("SCARBOROUGH")) {
-            region = "SCARBOROUGH";
-        } else if (layerUpper.includes("NORTH YORK") || descUpper.includes("NORTH YORK")) {
-            region = "NORTH YORK";
-        }
-
-        return {
-            title: item.name || "Unnamed Location",
-            note: item.description || "",
-            url: item.google_maps_url || "",
-            region: region,
-            isFavourite: isFavourite,
-        };
-    });
-
-    // Shuffle list
-    for (let i = allPlaces.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        const temp = allPlaces[i];
-        allPlaces[i] = allPlaces[j];
-        allPlaces[j] = temp;
-    }
-
-    // render global list, initially with ALL filter
-    renderList("ALL");
+// Helper function to safely read column values regardless of minor spacing or case differences
+function getProp(obj, keyName) {
+  if (!obj) return undefined;
+  const target = keyName.toLowerCase().trim();
+  const foundKey = Object.keys(obj).find(k => k.toLowerCase().trim() === target);
+  return foundKey ? obj[foundKey] : undefined;
 }
 
-function renderList(filterRegion, searchQuery = "") {
-    let htmlContent = "";
-    const cleanQuery = searchQuery.toLowerCase().trim();
+// 3. Render Markers and Sidebar
+function renderApp(locations) {
+  markersGroup.clearLayers();
+  const listContainer = document.getElementById('restaurantList');
+  listContainer.innerHTML = '';
 
-    // Filter our records based on BOTH active region selection AND search term
-    const filtered = allPlaces.filter((place) => {
-        // 1. Match region button filter first
-        const matchesRegion = filterRegion === "ALL" || place.region === filterRegion;
+  let loadedCount = 0;
 
-        // 2. Check if the user is typing search terms related to "favourites"
-        const isSearchingFavourite =
-            place.isFavourite &&
-            ["favourites", "favorites", "favs", "kevin"].some((keyword) =>
-                keyword.includes(cleanQuery),
-            );
-
-        // 3. Match text query (checks title, note, region name, or favorite keywords)
-        const matchesSearch =
-            !cleanQuery ||
-            place.title.toLowerCase().includes(cleanQuery) ||
-            place.note.toLowerCase().includes(cleanQuery) ||
-            place.region.toLowerCase().includes(cleanQuery) ||
-            isSearchingFavourite;
-
-        return matchesRegion && matchesSearch;
-    });
-
-    if (filtered.length === 0) {
-        htmlContent += `<p style="color: #777; text-align: center; margin-top: 20px;">No locations match your search criteria.</p>`;
-    } else {
-        filtered.forEach((place) => {
-            const tagClass = `tag-${place.region.toLowerCase().replace(" ", "-")}`;
-
-            // Build the favorite tag if the boolean is true
-            const favoriteTagMarkup = place.isFavourite
-                ? `<span class="tag tag-favourite">❤️ Kevin's Favourites</span>`
-                : "";
-
-            const linkMarkup = place.url
-                ? `<a href="${place.url}" target="_blank" rel="noopener noreferrer" style="margin-left: 4px; display: inline-flex; align-items: center;" title="Google Maps">
-        <img src="img/location.png" alt="Location icon" style="width: 20px; height: 20px; object-fit: contain;" />
-       </a>`
-                : "";
-
-            htmlContent += `
-                <div class="place-card">
-                    <div class="place-card-tags">
-                        <span class="tag ${tagClass}">${place.region}</span>
-                        ${favoriteTagMarkup}
-                    </div>
-                    <div style="font-weight: bold; font-size: 1.1em; display: flex; align-items: center;">
-                        <span>${place.title}</span>
-                        ${linkMarkup}
-                    </div>
-                    <div class="note-text" style="margin-top: 5px; display: flex; align-items: center; gap: 4px;">
-                        <img src="img/note.png" alt="Note icon" style="width: 16px; height: 16px; object-fit: contain;" />
-                        <span>${place.note || "-"}</span>
-                    </div>
-                </div>
-            `;
-        });
-    }
-
-    document.getElementById("output").innerHTML = htmlContent;
-}
-
-// filter places via both region and search bar
-function filterPlaces(region) {
-    const buttons = document.querySelectorAll(".filter-buttons .btn");
-    buttons.forEach((btn) => btn.classList.remove("active"));
-
-    if (event && event.target) {
-        event.target.classList.add("active");
-    }
-
-    const currentSearch = document.getElementById("searchInput").value;
-    renderList(region, currentSearch);
-}
-
-// search bar functionality
-function handleSearch() {
-    const searchInput = document.getElementById("searchInput");
-    const clearBtn = document.getElementById("clearSearchBtn");
-    const currentSearch = searchInput.value;
-
-    // Toggle clear button visibility based on input content
-    if (clearBtn) {
-        clearBtn.style.display = currentSearch.trim() ? "block" : "none";
-    }
-
-    const activeBtn = document.querySelector(".filter-buttons .btn.active");
-
-    let currentRegion = "ALL";
-    if (activeBtn) {
-        if (activeBtn.textContent.includes("Etobicoke")) currentRegion = "ETOBICOKE";
-        else if (activeBtn.textContent.includes("Scarborough")) currentRegion = "SCARBOROUGH";
-        else if (activeBtn.textContent.includes("North York")) currentRegion = "NORTH YORK";
-    }
-
-    renderList(currentRegion, currentSearch);
-}
-
-// clear search input and re-render
-function clearSearch() {
-    const searchInput = document.getElementById("searchInput");
-    const clearBtn = document.getElementById("clearSearchBtn");
-
-    searchInput.value = "";
-    if (clearBtn) {
-        clearBtn.style.display = "none";
-    }
+  locations.forEach((place) => {
+    const name = getProp(place, 'Name');
+    const latLngStr = getProp(place, 'Lat, Lng') || getProp(place, 'Lat/Lng') || getProp(place, 'LatLng');
     
-    // Re-focus the input after clearing
-    searchInput.focus();
+    if (!latLngStr || typeof latLngStr !== 'string') return;
 
-    // Trigger list update
-    handleSearch();
-}
+    const coords = latLngStr.split(',').map(c => parseFloat(c.trim()));
+    const lat = coords[0];
+    const lng = coords[1];
 
-// display button when user scrolls down 200px from top
-window.onscroll = function () {
-    const btn = document.getElementById("backToTopBtn");
-    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-        btn.classList.add("show");
-    } else {
-        btn.classList.remove("show");
+    if (isNaN(lat) || isNaN(lng)) return;
+
+    // Increment counter so the placeholder logic knows rows were loaded
+    loadedCount++;
+
+    const region = getProp(place, 'Region');
+    const type = getProp(place, 'Type');
+    const cuisine = getProp(place, 'Cuisine');
+    const favourite = getProp(place, 'Favourite?');
+
+    // Select pin based on Type (for ITS) or Region
+    let selectedIcon = pinBlue; // Default fallback pin
+
+    const cleanType = type ? type.toString().trim().toUpperCase() : '';
+    const cleanRegion = region ? region.toString().trim().toUpperCase() : '';
+
+    if (cleanType === 'ITS' || cleanRegion === 'ITS') {
+      selectedIcon = pinHeart;
+    } else if (cleanRegion === 'ETOBICOKE') {
+      selectedIcon = pinRed;
+    } else if (cleanRegion === 'SCARBOROUGH') {
+      selectedIcon = pinGreen;
+    } else if (cleanRegion === 'NORTH YORK') {
+      selectedIcon = pinBlue;
     }
-};
 
-// scroll back to top
-function scrollToTop() {
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth",
+    // Create Map Pin with selected custom icon
+    const marker = L.marker([lat, lng], { icon: selectedIcon }).addTo(markersGroup);
+
+    const isFav = favourite && favourite.toLowerCase().trim() === 'yes';
+    const favBadge = isFav ? ' ⭐' : '';
+
+    marker.on('click', () => {
+      openDetailModal(place);
     });
+
+    // Create Sidebar Item Card
+    const card = document.createElement('div');
+    card.className = 'restaurant-card';
+    card.innerHTML = `
+      <h3>${name || 'Unnamed Spot'}${favBadge}</h3>
+      <p><strong>${cuisine || 'Food'}</strong> ${region ? '• ' + region : ''}</p>
+      <p style="color: #888; font-size: 0.8rem; margin-top: 2px;">${getProp(place, 'Address') || ''}</p>
+    `;
+
+    card.addEventListener('click', () => {
+      map.flyTo([lat, lng], 16);
+      openDetailModal(place);
+    });
+
+    listContainer.appendChild(card);
+  });
+
+  if (loadedCount === 0) {
+    listContainer.innerHTML = '<p class="placeholder-text">No valid locations found in CSV.</p>';
+  }
 }
+
+// 4. Detailed Modal View
+function openDetailModal(place) {
+  const modal = document.getElementById('detailModal');
+  const modalBody = document.getElementById('modalBody');
+
+  const name = getProp(place, 'Name');
+  const cuisine = getProp(place, 'Cuisine');
+  const type = getProp(place, 'Type');
+  const region = getProp(place, 'Region');
+  const description = getProp(place, 'Description');
+  const address = getProp(place, 'Address');
+  const menuHighlights = getProp(place, 'Menu Highlights');
+  const favourite = getProp(place, 'Favourite?');
+
+  const isFav = favourite && favourite.toLowerCase().trim() === 'yes';
+
+  // Helper to format clean outgoing social & web links
+  const createLink = (url, label) => {
+    if (!url || url.trim() === '') return '';
+    const formattedUrl = url.trim().startsWith('http') ? url.trim() : `https://${url.trim()}`;
+    return `<a href="${formattedUrl}" target="_blank" rel="noopener noreferrer" style="margin-right: 10px; text-decoration: none; color: #2c3e50; font-weight: bold;">${label} ↗</a>`;
+  };
+
+  modalBody.innerHTML = `
+    <h2 style="margin-bottom: 4px;">${name || ''} ${isFav ? '⭐' : ''}</h2>
+    <p style="color: #666; margin-bottom: 12px;">
+      <strong>${cuisine || ''}</strong> 
+      ${type ? '• ' + type : ''} 
+      ${region ? '• ' + region : ''}
+    </p>
+    
+    ${description ? `<p style="margin-bottom: 12px;">${description}</p>` : ''}
+    ${address ? `<p style="margin-bottom: 12px;"><strong>📍 Address:</strong> ${address}</p>` : ''}
+    ${menuHighlights ? `<p style="margin-bottom: 12px;"><strong>🍽️ Menu Highlights:</strong> ${menuHighlights}</p>` : ''}
+    
+    <hr style="border: 0; border-top: 1px solid #eee; margin: 16px 0;" />
+    
+    <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+      ${createLink(getProp(place, 'Google Maps'), 'Google Maps')}
+      ${createLink(getProp(place, 'Website'), 'Website')}
+      ${createLink(getProp(place, 'Instagram'), 'Instagram')}
+      ${createLink(getProp(place, 'Facebook'), 'Facebook')}
+      ${createLink(getProp(place, 'TikTok'), 'TikTok')}
+      ${createLink(getProp(place, 'YouTube'), 'YouTube')}
+      ${createLink(getProp(place, 'Twitter'), 'Twitter')}
+    </div>
+  `;
+
+  modal.classList.remove('hidden');
+}
+
+// Close Modal Event Handlers
+document.getElementById('closeModalBtn').addEventListener('click', () => {
+  document.getElementById('detailModal').classList.add('hidden');
+});
+
+document.getElementById('detailModal').addEventListener('click', (e) => {
+  if (e.target.id === 'detailModal') {
+    document.getElementById('detailModal').classList.add('hidden');
+  }
+});
+
+// Run fetch on load
+fetchSheetData();

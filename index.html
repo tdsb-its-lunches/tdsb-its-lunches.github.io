@@ -1,62 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TDSB ITS Lunch Spots</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="img/favicon.png" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Local Restaurant Map</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
+  <!-- Leaflet CSS -->
+  <link 
+    rel="stylesheet" 
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" 
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" 
+    crossorigin=""
+  />
+
+  <!-- App Custom Styles -->
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-    <div class="card">
-        <div class="title-header">
-            <span>TDSB ITS Lunch Spots Directory</span>
-        </div>
+  <div class="app-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <header class="sidebar-header">
+        <h1>Local Eats</h1>
+        <p>Explore restaurants near you</p>
+      </header>
 
-        <p>Food spots near 1 Civic/BCI, Woodbine MS, and 140 Borough; some are takeout spots, some are sit-down
-            restaurants, and some may be just for taking some snacks into the office! 😊 A work in progress. Right now
-            everything seems to be working well, but I am currently trying to get addresses and even potentially closest
-            intersections printed on each card. I am having some trouble getting addresses automatically, but once I
-            have that I should also be able to fix the URLs for spots with multiple locations of same name.
-            <br>
-            Link to saved list <a href="https://maps.app.goo.gl/Zzo9NZz2Sqi6sb3SA" target="_blank"
-                rel="noopener noreferrer" title="Open Map" class="map-link">here!</a> Managed by Kevin Mao 🙋‍♂️
-        </p>
-        <!-- Example header/footer container -->
-        <p id="lastUpdated" class="last-updated-text"></p>
+      <!-- Section where visible restaurants will list -->
+      <div class="restaurant-list" id="restaurantList">
+        <p class="placeholder-text">Loading locations...</p>
+      </div>
+    </aside>
 
-        <div class="control-panel">
+    <!-- Map Container -->
+    <main id="map"></main>
+  </div>
 
-            <div class="filter-buttons">
-                <button class="btn active" onclick="filterPlaces('ALL')">All Regions</button>
-                <button class="btn btn-etobicoke" onclick="filterPlaces('ETOBICOKE')">Etobicoke</button>
-                <button class="btn btn-scarborough" onclick="filterPlaces('SCARBOROUGH')">Scarborough</button>
-                <button class="btn btn-north-york" onclick="filterPlaces('NORTH YORK')">North York</button>
-            </div>
-            <div class="search-container">
-                <input type="text" id="searchInput" placeholder="Search places..." oninput="handleSearch()" />
-                <button type="button" id="clearSearchBtn" class="clear-search-btn" onclick="clearSearch()"
-                    title="Clear search" aria-label="Clear search">&times;</button>
-            </div>
-
-        </div>
-
-        <div id="output">Loading CSV data...</div>
+  <!-- Detail Modal/Drawer (Hidden by default) -->
+  <div id="detailModal" class="modal hidden">
+    <div class="modal-content">
+      <button id="closeModalBtn" class="close-btn">&times;</button>
+      <div id="modalBody"></div>
     </div>
+  </div>
 
-    <script src="app.js"></script>
+  <!-- Leaflet JS -->
+  <script 
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" 
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" 
+    crossorigin="">
+  </script>
 
-    <button id="backToTopBtn" onclick="scrollToTop()" title="Go to top">
-        <img src="img/up.png" alt="Back to top" />
-    </button>
+  <!-- PapaParse JS for CSV parsing -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+
+  <!-- Load configuration first -->
+  <script src="config.js"></script>
+
+  <!-- Load main application script -->
+  <script src="app.js"></script>
 </body>
-
 </html>
