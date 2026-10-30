@@ -1,7 +1,14 @@
 // initialize
+// initialize
 const DEFAULT_CENTER = [43.6923, -79.43071];
 const DEFAULT_ZOOM = 12;
-const map = L.map('map').setView(DEFAULT_CENTER, DEFAULT_ZOOM);
+
+const map = L.map('map', {
+  zoomSnap: 0.25,           // Enables fractional zoom levels (quarter steps)
+  zoomDelta: 0.25,          // Smaller zoom jump per button click
+  wheelPxPerZoomLevel: 75, // Higher number = slower, more gradual mouse wheel scroll
+  markerZoomAnimation: true
+}).setView(DEFAULT_CENTER, DEFAULT_ZOOM);
 
 const MAPBOX_STYLE = 'kevinmao1999/cmvv2pgms008n01s2a9jgctrx';
 const accessToken = MAPBOX_ACCESS_TOKEN;
@@ -111,7 +118,7 @@ function renderMarkers(locations) {
       const targetCard = document.querySelector(`[data-card-id="${cardId}"]`);
       if (targetCard) {
         targetCard.classList.add('highlighted');
-        targetCard.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        targetCard.scrollIntoView({ behavior: 'instant', block: 'nearest' });
       }
     });
 
@@ -283,49 +290,49 @@ fetchSheetData();
 // pins
 const pinBlue = L.icon({
   iconUrl: 'img/pin_blue.png',
-  iconSize: [16, 16],
-  iconAnchor: [8, 8],
-  popupAnchor: [0, -8]
+  iconSize: [20, 20],
+  iconAnchor: [10, 10],
+  popupAnchor: [0, -10]
 });
 const pinHoverBlue = L.icon({
   iconUrl: 'img/pinhover_blue.png',
-  iconSize: [18, 18],
-  iconAnchor: [9, 9],
-  popupAnchor: [0, -9]
+  iconSize: [28, 28],
+  iconAnchor: [14, 14],
+  popupAnchor: [0, -14]
 });
 const pinRed = L.icon({
   iconUrl: 'img/pin_red.png',
-  iconSize: [16, 16],
-  iconAnchor: [8, 8],
-  popupAnchor: [0, -8]
+  iconSize: [20, 20],
+  iconAnchor: [10, 10],
+  popupAnchor: [0, -10]
 });
 const pinHoverRed = L.icon({
   iconUrl: 'img/pinhover_red.png',
-  iconSize: [18, 18],
-  iconAnchor: [9, 9],
-  popupAnchor: [0, -9]
+  iconSize: [28, 28],
+  iconAnchor: [14, 14],
+  popupAnchor: [0, -14]
 });
 const pinGreen = L.icon({
   iconUrl: 'img/pin_green.png',
-  iconSize: [16, 16],
-  iconAnchor: [8, 8],
-  popupAnchor: [0, -8]
+  iconSize: [20, 20],
+  iconAnchor: [10, 10],
+  popupAnchor: [0, -10]
 });
 const pinHoverGreen = L.icon({
   iconUrl: 'img/pinhover_green.png',
-  iconSize: [18, 18],
-  iconAnchor: [9, 9],
-  popupAnchor: [0, -9]
+  iconSize: [28, 28],
+  iconAnchor: [14, 14],
+  popupAnchor: [0, -14]
 });
 const pinHeart = L.icon({
   iconUrl: 'img/pin_heart.png',
-  iconSize: [16, 16],
-  iconAnchor: [8, 8],
-  popupAnchor: [0, -8]
+  iconSize: [20, 20],
+  iconAnchor: [10, 10],
+  popupAnchor: [0, -10]
 });
 const pinHoverHeart = L.icon({
   iconUrl: 'img/pinhover_heart.png',
-  iconSize: [18, 18],
-  iconAnchor: [9, 9],
-  popupAnchor: [0, -9]
+  iconSize: [28, 28],
+  iconAnchor: [14, 14],
+  popupAnchor: [0, -14]
 });
