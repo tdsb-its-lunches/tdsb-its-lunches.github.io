@@ -4,12 +4,16 @@ const DEFAULT_ZOOM = 12;
 
 const map = L.map('map').setView(DEFAULT_CENTER, DEFAULT_ZOOM);
 
-const MAPBOX_STYLE = 'mapbox://styles/kevinmao1999/cmvv2pgms008n01s2a9jgctrx';
+// Clean Mapbox Style ID (username/style_id format)
+const MAPBOX_STYLE = 'kevinmao1999/cmvv2pgms008n01s2a9jgctrx';
+
+// Safely retrieve MAPBOX_ACCESS_TOKEN injected from config.js or environment
+const accessToken = (typeof MAPBOX_ACCESS_TOKEN !== 'undefined') ? MAPBOX_ACCESS_TOKEN : '';
 
 // Check if a Mapbox token is present; fallback to free OpenStreetMap tiles if empty
-if (MAPBOX_ACCESS_TOKEN && MAPBOX_ACCESS_TOKEN.trim() !== '') {
+if (accessToken && accessToken.trim() !== '') {
   L.tileLayer(
-    `https://api.mapbox.com/styles/v1/${MAPBOX_STYLE}/tiles/{z}/{x}/{y}?access_token=${MAPBOX_ACCESS_TOKEN}`,
+    `https://api.mapbox.com/styles/v1/${MAPBOX_STYLE}/tiles/512/{z}/{x}/{y}@2x?access_token=${accessToken}`,
     {
       tileSize: 512,
       zoomOffset: -1,
@@ -53,7 +57,7 @@ function fetchSheetData() {
   });
 }
 
-// Define custom 32x32 pin icons (no shadows)
+// Define custom pin icons (no shadows)
 const pinBlue = L.icon({
   iconUrl: 'img/pin_blue.png',
   iconSize: [20, 20],
